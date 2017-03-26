@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PokerCombinationChecker {
     private ArrayList<Card> cards = new ArrayList<Card>(7);
@@ -99,8 +97,35 @@ public class PokerCombinationChecker {
         return isFlush;
     }
 
+    // 10 through Ace straight
+    public boolean isStraight() {
+        int consecutiveCardCount = 0;
+        boolean isStraight = false;
 
+        ArrayList<Card> cards = new ArrayList<Card>();
+        cards.addAll(this.cards);
 
+        Collections.sort(cards);
+
+        System.out.println(cards.toString());
+
+        for (int i = 0; i < 5; i++) {
+            Card currentCard = cards.get(i);
+            Card nextCard = cards.get(i + 1);
+            Card followingCard = cards.get(i + 2);
+
+            if ((currentCard.getValue() == nextCard.getValue() - 1) & (nextCard.getValue() == followingCard.getValue() - 1)) {
+                System.out.println(currentCard.toString());
+                consecutiveCardCount++;
+            }
+        }
+
+        if (consecutiveCardCount >= 3) {
+            isStraight = true;
+        }
+
+        return isStraight;
+    }
     /*
     * Check if
     *

@@ -167,4 +167,58 @@ public class PokerCombinationCheckerTest {
         assertEquals(pcc.isFlush(), true);
     }
 
+    @Test
+    public void testIsStraight () {
+        ArrayList<Card> board = new ArrayList<Card>(5);
+        board.add(0, new Card(7, 1));
+        board.add(1, new Card(8, 2));
+        board.add(2, new Card(9, 3));
+        board.add(3, new Card(1, 4));
+        board.add(4, new Card(3, 1));
+
+        ArrayList<Card> hand = new ArrayList<Card>(2);
+        hand.add(0, new Card(10, 2));
+        hand.add(1, new Card(11, 3));
+
+        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+
+        assertEquals(pcc.isStraight(), true);
+    }
+
+    @Test
+    public void testFourCardStraightIsNotStraight () {
+        ArrayList<Card> board = new ArrayList<Card>(5);
+        board.add(0, new Card(2, 1));
+        board.add(1, new Card(8, 2));
+        board.add(2, new Card(9, 3));
+        board.add(3, new Card(1, 4));
+        board.add(4, new Card(3, 1));
+
+        ArrayList<Card> hand = new ArrayList<Card>(2);
+        hand.add(0, new Card(10, 2));
+        hand.add(1, new Card(11, 3));
+
+        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+
+        assertEquals(pcc.isStraight(), false);
+    }
+
+    @Test
+    public void testSixCardStraightIsStraight () {
+        ArrayList<Card> board = new ArrayList<Card>(5);
+        board.add(0, new Card(7, 1));
+        board.add(1, new Card(8, 2));
+        board.add(2, new Card(9, 3));
+        board.add(3, new Card(12, 4));
+        board.add(4, new Card(3, 1));
+
+        ArrayList<Card> hand = new ArrayList<Card>(2);
+        hand.add(0, new Card(10, 2));
+        hand.add(1, new Card(11, 3));
+
+        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+
+        assertEquals(pcc.isStraight(), true);
+    }
+
 }
