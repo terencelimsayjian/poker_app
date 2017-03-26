@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Card {
+public class Card implements Comparable<Card> {
     public final static int SPADES = 1;
     public final static int HEARTS = 2;
     public final static int CLUBS = 3;
@@ -17,6 +17,10 @@ public class Card {
     public Card(int value, int suit) {
         this.value = value;
         this.suit = suit;
+    }
+
+    public int compareTo(Card c) {
+        return value - c.getValue();
     }
 
     public int getValue() {

@@ -2,22 +2,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by littletinyhippo on 26/3/17.
- */
 public class PokerCombinationChecker {
-    private ArrayList<Card> cards = new ArrayList<>(7);
+    private ArrayList<Card> cards = new ArrayList<Card>(7);
+    private ArrayList<Card> bestHand = new ArrayList<Card>(5);
+
+    private Map<Integer, Integer> valueOccurenceCount;
+    private Map<Integer, Integer> suitOccurenceCount;
 
     public PokerCombinationChecker(ArrayList<Card> board, ArrayList<Card> hand) {
         this.cards.addAll(0, board);
         this.cards.addAll(5, hand);
+
+        valueOccurenceCount = getValueOccurenceCount();
+        suitOccurenceCount = getSuitOccurenceCount();
     }
 
     public ArrayList<Card> getCards() {
         return cards;
     }
 
-    public Map<Integer, Integer> getValueOccurenceCount() {
+    private Map<Integer, Integer> getValueOccurenceCount() {
         Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
 
         for (Card card : cards) {
@@ -33,7 +37,7 @@ public class PokerCombinationChecker {
         return occurrenceMap;
     }
 
-    public Map<Integer, Integer> getSuitOccurenceCount() {
+    private Map<Integer, Integer> getSuitOccurenceCount() {
         Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
 
         for (Card card : cards) {
@@ -52,20 +56,50 @@ public class PokerCombinationChecker {
     // two people with same quads on the board, high card wins
     // Two people hit quads, higher quads wins
     // Still need to return the five winning cards
-
     public boolean isFourOfAKind() {
         boolean isFourOfAKind = false;
-        Map<Integer, Integer> valueOccurenceCount = getValueOccurenceCount();
 
         for (Map.Entry<Integer, Integer> entry : valueOccurenceCount.entrySet()) {
-            if (entry.getValue() >= 4) {
+            if (entry.getValue() == 4) {
                 isFourOfAKind = true;
             }
-//            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
         }
 
         return isFourOfAKind;
     }
+
+    // Need to identify the bigger trips to use
+    // Need to identify the bigger pair to use
+    public boolean isFullHouse() {
+        boolean trips = false;
+        boolean pair = false;
+
+        for (Map.Entry<Integer, Integer> entry : valueOccurenceCount.entrySet()) {
+            if (entry.getValue() == 3) {
+                trips = true;
+            }
+
+            if (entry.getValue() == 2) {
+                pair = true;
+            }
+        }
+
+        return trips & pair;
+    }
+
+    public boolean isFlush() {
+        boolean isFlush = false;
+
+        for (Map.Entry<Integer, Integer> entry : suitOccurenceCount.entrySet()) {
+            if (entry.getValue() >= 5) {
+                isFlush = true;
+            }
+        }
+
+        return isFlush;
+    }
+
+
 
     /*
     * Check if

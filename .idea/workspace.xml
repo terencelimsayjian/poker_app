@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="" />
+    <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Card.java" afterPath="$PROJECT_DIR$/src/Card.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokerCombinationChecker.java" afterPath="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" afterPath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,18 +74,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+            <state relative-caret-position="408">
+              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
+                <element signature="e#165#171#0" expanded="true" />
+                <element signature="e#228#234#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#689#690#0" expanded="true" />
                 <element signature="method#getValueOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#571#589#0" expanded="true" />
+                <element signature="e#810#828#0" expanded="true" />
                 <element signature="method#getSuitOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="e#1303#1321#0" expanded="true" />
+                <element signature="method#isFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="method#isFlush#0;class#PokerCombinationChecker#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -88,27 +100,52 @@
       <file leaf-file-name="PokerCombinationCheckerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+            <state relative-caret-position="278">
+              <caret line="152" column="40" lean-forward="false" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#testIsQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="e#230#236#0" expanded="true" />
                 <element signature="e#477#483#0" expanded="true" />
-                <element signature="e#791#797#0" expanded="true" />
-                <element signature="e#1038#1044#0" expanded="true" />
+                <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#803#809#0" expanded="true" />
+                <element signature="e#1050#1056#0" expanded="true" />
+                <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#1366#1372#0" expanded="true" />
+                <element signature="e#1613#1619#0" expanded="true" />
+                <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#1936#1942#0" expanded="true" />
+                <element signature="e#2183#2189#0" expanded="true" />
+                <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#2504#2510#0" expanded="true" />
+                <element signature="e#2751#2757#0" expanded="true" />
+                <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#3080#3086#0" expanded="true" />
+                <element signature="e#3327#3333#0" expanded="true" />
+                <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#3637#3643#0" expanded="true" />
+                <element signature="e#3884#3890#0" expanded="true" />
+                <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#4202#4208#0" expanded="true" />
+                <element signature="e#4449#4455#0" expanded="true" />
+                <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#4764#4770#0" expanded="true" />
+                <element signature="e#5013#5019#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeckTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/DeckTest.java">
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+            <state relative-caret-position="330">
+              <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#385#391#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#1077#1094#0" expanded="true" />
+                <element signature="e#1460#1477#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,6 +159,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -140,12 +180,12 @@
         <option value="$PROJECT_DIR$/src/Hand.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/test/CardTest.java" />
-        <option value="$PROJECT_DIR$/src/Card.java" />
         <option value="$PROJECT_DIR$/src/PokerCombiChecker.java" />
         <option value="$PROJECT_DIR$/test/PlayerTest.java" />
-        <option value="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
         <option value="$PROJECT_DIR$/test/DeckTest.java" />
+        <option value="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
         <option value="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
+        <option value="$PROJECT_DIR$/src/Card.java" />
       </list>
     </option>
   </component>
@@ -153,6 +193,7 @@
     <option name="width" value="1280" />
     <option name="height" value="800" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -573,39 +614,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 38m 59s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 08m 56s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 42m 00s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 22m 56s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 42m 55s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 33m 14s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 43m 33s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 39m 37s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 44m 27s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 40m 15s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 44m 41s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 41m 21s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 52m 21s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 41m 56s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 53m 28s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 43m 02s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 56m 04s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 46m 13s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 22h 58m 22s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.26 at 23h 46m 23s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -616,10 +658,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38356164" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25616437" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17609046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -672,17 +714,6 @@
         <state relative-caret-position="60">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding>
-            <element signature="e#970#987#0" expanded="true" />
-            <element signature="e#1353#1370#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -743,17 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/DeckTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#385#391#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
@@ -774,31 +794,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
+    <entry file="file://$PROJECT_DIR$/test/DeckTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="40" column="49" lean-forward="true" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="49" />
+        <state relative-caret-position="270">
+          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#385#391#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="152" column="40" lean-forward="false" selection-start-line="152" selection-start-column="40" selection-end-line="152" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testIsQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="e#230#236#0" expanded="true" />
             <element signature="e#477#483#0" expanded="true" />
-            <element signature="e#791#797#0" expanded="true" />
-            <element signature="e#1038#1044#0" expanded="true" />
+            <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#803#809#0" expanded="true" />
+            <element signature="e#1050#1056#0" expanded="true" />
+            <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#1366#1372#0" expanded="true" />
+            <element signature="e#1613#1619#0" expanded="true" />
+            <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#1936#1942#0" expanded="true" />
+            <element signature="e#2183#2189#0" expanded="true" />
+            <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#2504#2510#0" expanded="true" />
+            <element signature="e#2751#2757#0" expanded="true" />
+            <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#3080#3086#0" expanded="true" />
+            <element signature="e#3327#3333#0" expanded="true" />
+            <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#3637#3643#0" expanded="true" />
+            <element signature="e#3884#3890#0" expanded="true" />
+            <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#4202#4208#0" expanded="true" />
+            <element signature="e#4449#4455#0" expanded="true" />
+            <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#4764#4770#0" expanded="true" />
+            <element signature="e#5013#5019#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+        <state relative-caret-position="408">
+          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#165#171#0" expanded="true" />
+            <element signature="e#228#234#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#689#690#0" expanded="true" />
             <element signature="method#getValueOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#571#589#0" expanded="true" />
+            <element signature="e#810#828#0" expanded="true" />
             <element signature="method#getSuitOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#1303#1321#0" expanded="true" />
+            <element signature="method#isFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#isFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#1077#1094#0" expanded="true" />
+            <element signature="e#1460#1477#0" expanded="true" />
           </folding>
         </state>
       </provider>
