@@ -4,7 +4,6 @@
     <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokerCombinationChecker.java" afterPath="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" afterPath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +15,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Deck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="318">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#128#134#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -34,18 +32,8 @@
         <entry file="file://$PROJECT_DIR$/src/GameRound.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding>
-                <element signature="e#103#109#0" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#283#284#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#535#536#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-              </folding>
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,21 +41,9 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-              <folding>
-                <element signature="e#108#114#0" expanded="true" />
-                <element signature="e#169#170#0" expanded="true" />
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#354#355#0" expanded="true" />
-                <element signature="e#431#432#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,21 +51,19 @@
       <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+            <state relative-caret-position="246">
+              <caret line="129" column="4" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
               <folding>
                 <element signature="e#109#115#0" expanded="true" />
                 <element signature="e#172#178#0" expanded="true" />
-                <element signature="e#605#606#0" expanded="true" />
-                <element signature="e#633#634#0" expanded="true" />
                 <element signature="method#getValueOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="e#754#772#0" expanded="true" />
                 <element signature="method#getSuitOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="e#1247#1265#0" expanded="true" />
-                <element signature="method#isFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#3035#3041#0" expanded="true" />
+                <element signature="method#isStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="e#2793#2799#0" expanded="true" />
+                <element signature="method#countXOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -98,43 +72,22 @@
       <file leaf-file-name="PokerCombinationCheckerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="211" column="32" lean-forward="false" selection-start-line="211" selection-start-column="32" selection-end-line="211" selection-end-column="32" />
+            <state relative-caret-position="75">
+              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testIsQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#230#236#0" expanded="true" />
-                <element signature="e#477#483#0" expanded="true" />
                 <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#803#809#0" expanded="true" />
-                <element signature="e#1050#1056#0" expanded="true" />
                 <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#1366#1372#0" expanded="true" />
-                <element signature="e#1613#1619#0" expanded="true" />
                 <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#1936#1942#0" expanded="true" />
-                <element signature="e#2183#2189#0" expanded="true" />
                 <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#2504#2510#0" expanded="true" />
-                <element signature="e#2751#2757#0" expanded="true" />
                 <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#3080#3086#0" expanded="true" />
-                <element signature="e#3327#3333#0" expanded="true" />
                 <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#3637#3643#0" expanded="true" />
-                <element signature="e#3884#3890#0" expanded="true" />
                 <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#4202#4208#0" expanded="true" />
-                <element signature="e#4449#4455#0" expanded="true" />
                 <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#4764#4770#0" expanded="true" />
-                <element signature="e#5013#5019#0" expanded="true" />
-                <element signature="e#5321#5327#0" expanded="true" />
-                <element signature="e#5567#5573#0" expanded="true" />
-                <element signature="e#5899#5905#0" expanded="true" />
-                <element signature="e#6145#6151#0" expanded="true" />
-                <element signature="e#6474#6480#0" expanded="true" />
-                <element signature="e#6721#6727#0" expanded="true" />
+                <element signature="method#testIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="method#testFourCardStraightIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="method#testSixCardStraightIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -198,9 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -243,12 +194,15 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -603,12 +557,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 00h 03m 15s.xml">
-      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 00h 03m 43s.xml">
-      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 00h 05m 52s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
@@ -633,39 +581,45 @@
     <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 00h 13m 33s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 20h 20m 39s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.27 at 20h 24m 00s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39863014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17609046" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39863014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17851374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -680,11 +634,55 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameRound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+          <folding>
+            <element signature="e#109#115#0" expanded="true" />
+            <element signature="e#172#178#0" expanded="true" />
+            <element signature="method#getValueOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#754#772#0" expanded="true" />
+            <element signature="method#getSuitOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#1247#1265#0" expanded="true" />
+            <element signature="method#isFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#isStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#2793#2799#0" expanded="true" />
+            <element signature="method#countXOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/poker_app.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -693,19 +691,12 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#102#103#0" expanded="true" />
+            <element signature="e#102#103#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hand.java" />
     <entry file="file://$PROJECT_DIR$/test/CardTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -734,62 +725,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameRound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" lean-forward="true" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#103#109#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#535#536#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Deck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#128#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#108#114#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/DeckTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#385#391#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#385#391#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -807,66 +749,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameRound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Deck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="211" column="32" lean-forward="false" selection-start-line="211" selection-start-column="32" selection-end-line="211" selection-end-column="32" />
+        <state relative-caret-position="75">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testIsQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#230#236#0" expanded="true" />
-            <element signature="e#477#483#0" expanded="true" />
             <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#803#809#0" expanded="true" />
-            <element signature="e#1050#1056#0" expanded="true" />
             <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#1366#1372#0" expanded="true" />
-            <element signature="e#1613#1619#0" expanded="true" />
             <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#1936#1942#0" expanded="true" />
-            <element signature="e#2183#2189#0" expanded="true" />
             <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#2504#2510#0" expanded="true" />
-            <element signature="e#2751#2757#0" expanded="true" />
             <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#3080#3086#0" expanded="true" />
-            <element signature="e#3327#3333#0" expanded="true" />
             <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#3637#3643#0" expanded="true" />
-            <element signature="e#3884#3890#0" expanded="true" />
             <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#4202#4208#0" expanded="true" />
-            <element signature="e#4449#4455#0" expanded="true" />
             <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#4764#4770#0" expanded="true" />
-            <element signature="e#5013#5019#0" expanded="true" />
-            <element signature="e#5321#5327#0" expanded="true" />
-            <element signature="e#5567#5573#0" expanded="true" />
-            <element signature="e#5899#5905#0" expanded="true" />
-            <element signature="e#6145#6151#0" expanded="true" />
-            <element signature="e#6474#6480#0" expanded="true" />
-            <element signature="e#6721#6727#0" expanded="true" />
+            <element signature="method#testIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="method#testFourCardStraightIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="method#testSixCardStraightIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+        <state relative-caret-position="246">
+          <caret line="129" column="4" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
           <folding>
             <element signature="e#109#115#0" expanded="true" />
             <element signature="e#172#178#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
             <element signature="method#getValueOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="e#754#772#0" expanded="true" />
             <element signature="method#getSuitOccurenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="e#1247#1265#0" expanded="true" />
-            <element signature="method#isFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#3035#3041#0" expanded="true" />
+            <element signature="method#isStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#2793#2799#0" expanded="true" />
+            <element signature="method#countXOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>

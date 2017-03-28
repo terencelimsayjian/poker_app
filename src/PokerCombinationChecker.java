@@ -69,20 +69,9 @@ public class PokerCombinationChecker {
     // Need to identify the bigger trips to use
     // Need to identify the bigger pair to use
     public boolean isFullHouse() {
-        boolean trips = false;
-        boolean pair = false;
+        return ((countXOfAKind(3) == 1) && (countXOfAKind(2) == 1) ||
+                (countXOfAKind(3) == 2));
 
-        for (Map.Entry<Integer, Integer> entry : valueOccurenceCount.entrySet()) {
-            if (entry.getValue() == 3) {
-                trips = true;
-            }
-
-            if (entry.getValue() == 2) {
-                pair = true;
-            }
-        }
-
-        return trips & pair;
     }
 
     public boolean isFlush() {
@@ -126,8 +115,25 @@ public class PokerCombinationChecker {
 
         return isStraight;
     }
+
+    private int countXOfAKind(int x) {
+        int count = 0;
+
+        for (Map.Entry<Integer, Integer> entry : valueOccurenceCount.entrySet()) {
+            if (entry.getValue() == x) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
     /*
     * Check if
+    *
+    * Quads - boolean
+    * Trips count
+    * Pair count
     *
     * straight flush
     * four of a kind
