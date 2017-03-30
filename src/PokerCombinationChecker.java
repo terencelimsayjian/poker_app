@@ -2,7 +2,18 @@ import java.util.*;
 
 public class PokerCombinationChecker {
     private ArrayList<Card> cards = new ArrayList<Card>(7);
+
     private ArrayList<Card> bestHand = new ArrayList<Card>(5);
+    /*
+    * Result:
+    * bestHand
+    * string
+    * hand rank (1-9)
+    * card rank (Sum of cards (and defining characteristic, trips bigger etc)
+    * */
+
+    private Map<Integer, Integer> valueOccurrenceCount;
+    private Map<Integer, Integer> suitOccurrenceCount;
 
     private boolean hasFiveOrMoreConsecutiveValues;
     private boolean hasFiveOrMoreOfSameSuit;
@@ -10,34 +21,30 @@ public class PokerCombinationChecker {
     private int tripsCount;
     private int pairCount;
 
-    private Map<Integer, Integer> valueOccurrenceCount;
-    private Map<Integer, Integer> suitOccurrenceCount;
-
-    /*
-    * Result:
-    * bestHand
-    * string
-    * hand rank
-    * card rank
-    * */
-
     public PokerCombinationChecker(ArrayList<Card> board, ArrayList<Card> hand) {
         this.cards.addAll(0, board);
         this.cards.addAll(5, hand);
+
+        Collections.sort(cards);
 
         valueOccurrenceCount = getValueOccurrenceCount();
         suitOccurrenceCount = getSuitOccurrenceCount();
 
         hasFiveOrMoreOfSameSuit = hasFiveOrMoreOfSameSuit();
         hasFiveOrMoreConsecutiveValues = hasFiveOrMoreConsecutiveValues();
-        hasFourOfAKind = countXOfAKind(4) == 1;
-        tripsCount = countXOfAKind(3);
-        pairCount = countXOfAKind(2);
+        hasFourOfAKind = countRepeatsOfOccurrences(4) == 1;
+        tripsCount = countRepeatsOfOccurrences(3);
+        pairCount = countRepeatsOfOccurrences(2);
     }
 
     public ArrayList<Card> getCards() {
         return cards;
     }
+
+    public ArrayList<Card> getBestHand() {
+        return bestHand;
+    }
+
 
     private Map<Integer, Integer> getValueOccurrenceCount() {
         Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
@@ -84,7 +91,7 @@ public class PokerCombinationChecker {
         return highestCard;
     }
 
-    private int countXOfAKind(int x) {
+    private int countRepeatsOfOccurrences(int x) {
         int count = 0;
 
         for (Map.Entry<Integer, Integer> entry : valueOccurrenceCount.entrySet()) {
@@ -109,6 +116,40 @@ public class PokerCombinationChecker {
         return suit;
     }
 
+    private int getStartingIndexForStraight() {
+        int startingIndex = 7;
+
+        for (int i = 0; i <= 2; i++) {
+            Card currentCard = cards.get(i);
+            Card secondCard = cards.get(i + 1);
+            Card thirdCard = cards.get(i + 2);
+
+            if ((currentCard.getValue() == secondCard.getValue() - 1) && (secondCard.getValue() == thirdCard.getValue() - 1)) {
+                startingIndex = i;
+                break;
+            }
+        }
+        return startingIndex;
+    }
+
+    private int getEndingIndexForStraight(int startingIndex) {
+        int endingIndex = 0;
+
+        Card c5 = cards.get(4);
+        Card c6 = cards.get(5);
+        Card c7 = cards.get(6);
+
+        if (c7.getValue() == c6.getValue() + 1) {
+            endingIndex = 6;
+        } else if (c6.getValue() == c5.getValue() + 1) {
+            endingIndex = 5;
+        } else {
+            endingIndex = 4;
+        }
+
+        return endingIndex;
+    }
+
     private boolean hasFiveOrMoreOfSameSuit() {
         boolean isFlush = false;
 
@@ -128,8 +169,6 @@ public class PokerCombinationChecker {
         ArrayList<Card> cards = new ArrayList<Card>();
         cards.addAll(this.cards);
 
-        Collections.sort(cards);
-
         for (int i = 0; i < 5; i++) {
             Card currentCard = cards.get(i);
             Card nextCard = cards.get(i + 1);
@@ -148,10 +187,6 @@ public class PokerCombinationChecker {
     }
 
 
-
-    public ArrayList<Card> getBestHand() {
-        return bestHand;
-    }
 
     public boolean isFourOfAKind() {
         return hasFourOfAKind;
@@ -206,7 +241,7 @@ public class PokerCombinationChecker {
         return hasFiveOrMoreOfSameSuit && !hasFourOfAKind && !isFullHouse();
     }
 
-    public void getBestFlush() {
+    public ArrayList<Card> getFlushCards() {
         int flushedSuit = getFlushSuit();
         ArrayList<Card> flushedCards = new ArrayList<Card>();
 
@@ -216,7 +251,11 @@ public class PokerCombinationChecker {
             }
         }
 
-        Collections.sort(flushedCards);
+        return flushedCards;
+    }
+
+    public void getBestFlush() {
+        ArrayList<Card> flushedCards = getFlushCards();
 
         while (flushedCards.size() > 5) {
             flushedCards.remove(0);
@@ -225,24 +264,43 @@ public class PokerCombinationChecker {
         bestHand.addAll(0, flushedCards);
     }
 
-    public boolean isThreeOfAKind() {
-        return countXOfAKind(3) == 1 && countXOfAKind(2) == 0 && countXOfAKind(4) == 0;
+    public boolean isStraight() {
+        return !hasFiveOrMoreOfSameSuit && hasFiveOrMoreConsecutiveValues;
     }
 
-    public boolean isTwoPair() {
-        return countXOfAKind(2) >= 2 && countXOfAKind(3) == 0;
+    public ArrayList<Card> getStraightCards() {
+        ArrayList<Card> consecutiveCards = new ArrayList<Card>();
+        int firstCardInStraightIndex = getStartingIndexForStraight();
+        int lastCardInStraightIndex = getEndingIndexForStraight(firstCardInStraightIndex);
+
+        for (int i = firstCardInStraightIndex; i < lastCardInStraightIndex + 1; i++) {
+            consecutiveCards.add(cards.get(i));
+        }
+
+        return consecutiveCards;
     }
+
+    public void getBestStraight() {
+        ArrayList<Card> consecutiveCards = getStraightCards();
+
+        while (consecutiveCards.size() > 5) {
+            consecutiveCards.remove(0);
+        }
+
+        bestHand.addAll(consecutiveCards);
+    }
+
+
+
+//    public boolean isThreeOfAKind() {
+//        return countRepeatsOfOccurrences(3) == 1 && countRepeatsOfOccurrences(2) == 0 && countRepeatsOfOccurrences(4) == 0;
+//    }
+//
+//    public boolean isTwoPair() {
+//        return countRepeatsOfOccurrences(2) >= 2 && countRepeatsOfOccurrences(3) == 0;
+//    }
 
     /*cd
-    * Check if
-    *
-    * State variables
-    * flush: boolean
-    * straight: boolean
-    * quads: boolean
-    * tripsCount: int
-    * pairCount: int
-    *
     *
     * Quads - boolean
     * Trips count
