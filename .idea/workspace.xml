@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BoardParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokerCombinationChecker.java" afterPath="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" afterPath="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
@@ -63,31 +64,46 @@
       <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+            <state relative-caret-position="326">
+              <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
-                <element signature="e#109#115#0" expanded="true" />
-                <element signature="e#173#179#0" expanded="true" />
-                <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getValueOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#1527#1545#0" expanded="true" />
-                <element signature="method#getSuitOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#2020#2038#0" expanded="true" />
-                <element signature="method#getHighestCardOfCombination#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#countRepeatsOfOccurrences#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getFlushSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreOfSameSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#141#147#0" expanded="true" />
+                <element signature="e#205#211#0" expanded="true" />
+                <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getFlushCards#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#7135#7141#0" expanded="true" />
+                <element signature="e#3907#3913#0" expanded="true" />
                 <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
+                <element signature="e#5894#5900#0" expanded="true" />
                 <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoardParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BoardParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getValueOccurrenceCount#0;class#BoardParser#0" expanded="false" />
+                <element signature="e#262#280#0" expanded="true" />
+                <element signature="method#getSuitOccurrenceCount#0;class#BoardParser#0" expanded="false" />
+                <element signature="e#788#806#0" expanded="true" />
+                <element signature="method#getHighestCardOfCombination#0;class#BoardParser#0" expanded="false" />
+                <element signature="method#countNumberOfCombinations#0;class#BoardParser#0" expanded="false" />
+                <element signature="method#getFlushSuit#0;class#BoardParser#0" expanded="false" />
+                <element signature="method#hasFiveOrMoreOfSameSuit#0;class#BoardParser#0" expanded="false" />
+                <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#BoardParser#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,42 +112,48 @@
       <file leaf-file-name="PokerCombinationCheckerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state relative-caret-position="266">
+              <caret line="148" column="65" lean-forward="false" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#testIsStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#238#244#0" expanded="true" />
                 <element signature="e#664#670#0" expanded="true" />
-                <element signature="e#1381#1387#0" expanded="true" />
-                <element signature="e#1807#1813#0" expanded="true" />
-                <element signature="e#2158#2164#0" expanded="true" />
-                <element signature="e#2584#2590#0" expanded="true" />
-                <element signature="e#3344#3350#0" expanded="true" />
+                <element signature="method#testStraightIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#1367#1373#0" expanded="true" />
+                <element signature="e#1793#1799#0" expanded="true" />
+                <element signature="method#testFlushIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#2144#2150#0" expanded="true" />
+                <element signature="e#2570#2576#0" expanded="true" />
+                <element signature="method#testSixCardStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+                <element signature="e#2915#2921#0" expanded="true" />
+                <element signature="e#4452#4458#0" expanded="true" />
                 <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#7440#7446#0" expanded="true" />
-                <element signature="e#7687#7693#0" expanded="true" />
+                <element signature="e#8548#8554#0" expanded="true" />
+                <element signature="e#8795#8801#0" expanded="true" />
                 <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#test10ToAceIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#12121#12127#0" expanded="true" />
-                <element signature="e#12307#12313#0" expanded="true" />
+                <element signature="e#13229#13235#0" expanded="true" />
+                <element signature="e#13415#13421#0" expanded="true" />
                 <element signature="method#testJackToTwoIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#12996#13002#0" expanded="true" />
-                <element signature="e#13243#13249#0" expanded="true" />
+                <element signature="e#14104#14110#0" expanded="true" />
+                <element signature="e#14351#14357#0" expanded="true" />
                 <element signature="method#testFourCardStraightIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
                 <element signature="method#testSixCardStraightIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-                <element signature="e#14579#14585#0" expanded="true" />
-                <element signature="e#15516#15522#0" expanded="true" />
-                <element signature="e#15702#15708#0" expanded="true" />
-                <element signature="e#16633#16639#0" expanded="true" />
-                <marker date="1490854820000" expanded="false" signature="7393:7908" ph="{...}" />
-                <marker date="1490854820000" expanded="false" signature="15226:16286" ph="{...}" />
-                <marker date="1490854820000" expanded="false" signature="16340:16854" ph="{...}" />
+                <element signature="e#15687#15693#0" expanded="true" />
+                <element signature="e#16624#16630#0" expanded="true" />
+                <element signature="e#16810#16816#0" expanded="true" />
+                <element signature="e#17741#17747#0" expanded="true" />
+                <marker date="1490860060000" expanded="false" signature="8501:9016" ph="{...}" />
+                <marker date="1490860060000" expanded="false" signature="16334:17394" ph="{...}" />
+                <marker date="1490860060000" expanded="false" signature="17448:17962" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -151,6 +173,13 @@
       <find>system.out</find>
       <find>sort</find>
       <find>System</find>
+      <find>getValueOccurrenceCount</find>
+      <find>getHighestCardOfCombination</find>
+      <find>gethighe</find>
+      <find>getFlushSuit</find>
+      <find>hasFiveOrMoreOfSameSuit</find>
+      <find>hasFourOfAKind</find>
+      <find>gethighest</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/Card.java" />
         <option value="$PROJECT_DIR$/test/PokerCombinationCheckerTest.java" />
         <option value="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
+        <option value="$PROJECT_DIR$/src/BoardParser.java" />
       </list>
     </option>
   </component>
@@ -610,34 +640,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 12h 41m 13s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 29m 17s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 12h 41m 31s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 29m 31s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 12h 41m 43s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 30m 45s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 08m 18s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 39m 39s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 08m 34s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 41m 36s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 11m 23s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 42m 15s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 11m 47s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 43m 45s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 19m 29s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 45m 23s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 20m 41s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 46m 30s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 14h 20m 54s.xml">
+    <history-entry file="PokerCombinationCheckerTest - 2017.03.30 at 15h 47m 32s.xml">
       <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -654,10 +684,10 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19638555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19638555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22771084" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1746988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18383405" sideWeight="0.49453977" order="0" side_tool="false" content_ui="combo" />
@@ -666,7 +696,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18383405" sideWeight="0.5054602" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -747,38 +777,44 @@
           <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#testIsStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#238#244#0" expanded="true" />
             <element signature="e#664#670#0" expanded="true" />
-            <element signature="e#1381#1387#0" expanded="true" />
-            <element signature="e#1807#1813#0" expanded="true" />
-            <element signature="e#2158#2164#0" expanded="true" />
-            <element signature="e#2584#2590#0" expanded="true" />
-            <element signature="e#3344#3350#0" expanded="true" />
+            <element signature="method#testStraightIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#1367#1373#0" expanded="true" />
+            <element signature="e#1793#1799#0" expanded="true" />
+            <element signature="method#testFlushIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#2144#2150#0" expanded="true" />
+            <element signature="e#2570#2576#0" expanded="true" />
+            <element signature="method#testSixCardStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#2915#2921#0" expanded="true" />
+            <element signature="e#4452#4458#0" expanded="true" />
             <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#7440#7446#0" expanded="true" />
-            <element signature="e#7687#7693#0" expanded="true" />
+            <element signature="e#8548#8554#0" expanded="true" />
+            <element signature="e#8795#8801#0" expanded="true" />
             <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#test10ToAceIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#12121#12127#0" expanded="true" />
-            <element signature="e#12307#12313#0" expanded="true" />
+            <element signature="e#13229#13235#0" expanded="true" />
+            <element signature="e#13415#13421#0" expanded="true" />
             <element signature="method#testJackToTwoIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#12996#13002#0" expanded="true" />
-            <element signature="e#13243#13249#0" expanded="true" />
+            <element signature="e#14104#14110#0" expanded="true" />
+            <element signature="e#14351#14357#0" expanded="true" />
             <element signature="method#testFourCardStraightIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testSixCardStraightIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#14579#14585#0" expanded="true" />
-            <element signature="e#15516#15522#0" expanded="true" />
-            <element signature="e#15702#15708#0" expanded="true" />
-            <element signature="e#16633#16639#0" expanded="true" />
-            <marker date="1490854820000" expanded="false" signature="7393:7908" ph="{...}" />
-            <marker date="1490854820000" expanded="false" signature="15226:16286" ph="{...}" />
-            <marker date="1490854820000" expanded="false" signature="16340:16854" ph="{...}" />
+            <element signature="e#15687#15693#0" expanded="true" />
+            <element signature="e#16624#16630#0" expanded="true" />
+            <element signature="e#16810#16816#0" expanded="true" />
+            <element signature="e#17741#17747#0" expanded="true" />
+            <marker date="1490860060000" expanded="false" signature="8501:9016" ph="{...}" />
+            <marker date="1490860060000" expanded="false" signature="16334:17394" ph="{...}" />
+            <marker date="1490860060000" expanded="false" signature="17448:17962" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -788,27 +824,21 @@
         <state relative-caret-position="780">
           <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
-            <element signature="e#109#115#0" expanded="true" />
-            <element signature="e#173#179#0" expanded="true" />
-            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getValueOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#1527#1545#0" expanded="true" />
-            <element signature="method#getSuitOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2020#2038#0" expanded="true" />
-            <element signature="method#getHighestCardOfCombination#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#countRepeatsOfOccurrences#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getFlushSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreOfSameSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#141#147#0" expanded="true" />
+            <element signature="e#205#211#0" expanded="true" />
+            <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getFlushCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#7135#7141#0" expanded="true" />
+            <element signature="e#3907#3913#0" expanded="true" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#5894#5900#0" expanded="true" />
             <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
@@ -843,27 +873,21 @@
         <state relative-caret-position="765">
           <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
           <folding>
-            <element signature="e#109#115#0" expanded="true" />
-            <element signature="e#173#179#0" expanded="true" />
-            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getValueOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#1527#1545#0" expanded="true" />
-            <element signature="method#getSuitOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2020#2038#0" expanded="true" />
-            <element signature="method#getHighestCardOfCombination#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#countRepeatsOfOccurrences#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getFlushSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreOfSameSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#141#147#0" expanded="true" />
+            <element signature="e#205#211#0" expanded="true" />
+            <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getFlushCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#7135#7141#0" expanded="true" />
+            <element signature="e#3907#3913#0" expanded="true" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#5894#5900#0" expanded="true" />
             <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
@@ -958,72 +982,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        <state relative-caret-position="266">
+          <caret line="148" column="65" lean-forward="false" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#testIsStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#238#244#0" expanded="true" />
             <element signature="e#664#670#0" expanded="true" />
-            <element signature="e#1381#1387#0" expanded="true" />
-            <element signature="e#1807#1813#0" expanded="true" />
-            <element signature="e#2158#2164#0" expanded="true" />
-            <element signature="e#2584#2590#0" expanded="true" />
-            <element signature="e#3344#3350#0" expanded="true" />
+            <element signature="method#testStraightIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#1367#1373#0" expanded="true" />
+            <element signature="e#1793#1799#0" expanded="true" />
+            <element signature="method#testFlushIsNotStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#2144#2150#0" expanded="true" />
+            <element signature="e#2570#2576#0" expanded="true" />
+            <element signature="method#testSixCardStraightFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
+            <element signature="e#2915#2921#0" expanded="true" />
+            <element signature="e#4452#4458#0" expanded="true" />
             <element signature="method#testThreeOfAKindIsNotQuads#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testIsFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testTwoPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testPairIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testThreeOfAKindIsNotFullHouse#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#7440#7446#0" expanded="true" />
-            <element signature="e#7687#7693#0" expanded="true" />
+            <element signature="e#8548#8554#0" expanded="true" />
+            <element signature="e#8795#8801#0" expanded="true" />
             <element signature="method#testIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testFourSuitedIsNotFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testSixSuitedIsFlush#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#test10ToAceIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#12121#12127#0" expanded="true" />
-            <element signature="e#12307#12313#0" expanded="true" />
+            <element signature="e#13229#13235#0" expanded="true" />
+            <element signature="e#13415#13421#0" expanded="true" />
             <element signature="method#testJackToTwoIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#12996#13002#0" expanded="true" />
-            <element signature="e#13243#13249#0" expanded="true" />
+            <element signature="e#14104#14110#0" expanded="true" />
+            <element signature="e#14351#14357#0" expanded="true" />
             <element signature="method#testFourCardStraightIsNotStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
             <element signature="method#testSixCardStraightIsStraight#0;class#PokerCombinationCheckerTest#0" expanded="false" />
-            <element signature="e#14579#14585#0" expanded="true" />
-            <element signature="e#15516#15522#0" expanded="true" />
-            <element signature="e#15702#15708#0" expanded="true" />
-            <element signature="e#16633#16639#0" expanded="true" />
-            <marker date="1490854820000" expanded="false" signature="7393:7908" ph="{...}" />
-            <marker date="1490854820000" expanded="false" signature="15226:16286" ph="{...}" />
-            <marker date="1490854820000" expanded="false" signature="16340:16854" ph="{...}" />
+            <element signature="e#15687#15693#0" expanded="true" />
+            <element signature="e#16624#16630#0" expanded="true" />
+            <element signature="e#16810#16816#0" expanded="true" />
+            <element signature="e#17741#17747#0" expanded="true" />
+            <marker date="1490860060000" expanded="false" signature="8501:9016" ph="{...}" />
+            <marker date="1490860060000" expanded="false" signature="16334:17394" ph="{...}" />
+            <marker date="1490860060000" expanded="false" signature="17448:17962" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoardParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getValueOccurrenceCount#0;class#BoardParser#0" expanded="false" />
+            <element signature="e#262#280#0" expanded="true" />
+            <element signature="method#getSuitOccurrenceCount#0;class#BoardParser#0" expanded="false" />
+            <element signature="e#788#806#0" expanded="true" />
+            <element signature="method#getHighestCardOfCombination#0;class#BoardParser#0" expanded="false" />
+            <element signature="method#countNumberOfCombinations#0;class#BoardParser#0" expanded="false" />
+            <element signature="method#getFlushSuit#0;class#BoardParser#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreOfSameSuit#0;class#BoardParser#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#BoardParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="63" column="59" lean-forward="false" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        <state relative-caret-position="326">
+          <caret line="46" column="5" lean-forward="false" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <element signature="e#109#115#0" expanded="true" />
-            <element signature="e#173#179#0" expanded="true" />
-            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getValueOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#1527#1545#0" expanded="true" />
-            <element signature="method#getSuitOccurrenceCount#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2020#2038#0" expanded="true" />
-            <element signature="method#getHighestCardOfCombination#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#countRepeatsOfOccurrences#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getFlushSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreOfSameSuit#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#141#147#0" expanded="true" />
+            <element signature="e#205#211#0" expanded="true" />
+            <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getFlushCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#7135#7141#0" expanded="true" />
+            <element signature="e#3907#3913#0" expanded="true" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
+            <element signature="e#5894#5900#0" expanded="true" />
             <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
