@@ -31,7 +31,7 @@ public class PokerCombinationChecker {
         suitOccurrenceCount = getSuitOccurrenceCount();
 
         hasFiveOrMoreOfSameSuit = hasFiveOrMoreOfSameSuit();
-        hasFiveOrMoreConsecutiveValues = hasFiveOrMoreConsecutiveValues();
+        hasFiveOrMoreConsecutiveValues = hasFiveOrMoreConsecutiveValues(this.cards);
         hasFourOfAKind = countRepeatsOfOccurrences(4) == 1;
         tripsCount = countRepeatsOfOccurrences(3);
         pairCount = countRepeatsOfOccurrences(2);
@@ -162,14 +162,12 @@ public class PokerCombinationChecker {
         return isFlush;
     }
 
-    private boolean hasFiveOrMoreConsecutiveValues() {
+    private boolean hasFiveOrMoreConsecutiveValues(ArrayList<Card> cards) {
         int consecutiveCardCount = 0;
         boolean isStraight = false;
+        int indexOfThirdLastCard = cards.size() - 2;
 
-        ArrayList<Card> cards = new ArrayList<Card>();
-        cards.addAll(this.cards);
-
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < indexOfThirdLastCard; i++) {
             Card currentCard = cards.get(i);
             Card nextCard = cards.get(i + 1);
             Card followingCard = cards.get(i + 2);
@@ -187,6 +185,14 @@ public class PokerCombinationChecker {
     }
 
 
+    public boolean isStraightFlush() {
+        ArrayList<Card> flushCards = getFlushCards();
+        return hasFiveOrMoreConsecutiveValues(flushCards);
+    }
+
+//    public boolean getBestStraightFlush() {
+//
+//    }
 
     public boolean isFourOfAKind() {
         return hasFourOfAKind;
