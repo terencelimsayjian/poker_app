@@ -9,6 +9,15 @@ public class CardTest {
     }
 
     @Test
+    public void testIsAce() {
+        Card c1 = new Card(Card.ACE, Card.SPADES);
+        assertEquals(c1.isAce(), true);
+
+        Card c2 = new Card(2, Card.SPADES);
+        assertEquals(c2.isAce(), false);
+    }
+
+    @Test
     public void valueToString() {
         Card aceSpades = new Card(1, 1);
         assertEquals(aceSpades.toString(), "Ace of Spades");

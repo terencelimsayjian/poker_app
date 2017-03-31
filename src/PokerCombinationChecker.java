@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class PokerCombinationChecker {
@@ -12,6 +11,12 @@ public class PokerCombinationChecker {
     * hand rank (1-9)
     * card rank (Sum of cards (and defining characteristic, trips bigger etc)
     * */
+
+    private static final int SINGLE_CARD = 1;
+    private static final int PAIR = 2;
+    private static final int THREE_OF_A_KIND = 3;
+    private static final int FOUR_OF_A_KIND = 4;
+
 
     private Map<Integer, Integer> valueOccurrenceCount;
     private Map<Integer, Integer> suitOccurrenceCount;
@@ -28,14 +33,14 @@ public class PokerCombinationChecker {
 
         Collections.sort(this.cards);
 
-        valueOccurrenceCount = BoardParser.getValueOccurrenceCount(this.cards);
-        suitOccurrenceCount = BoardParser.getSuitOccurrenceCount(this.cards);
+        valueOccurrenceCount = getValueOccurrenceCount(this.cards);
+        suitOccurrenceCount = getSuitOccurrenceCount(this.cards);
 
-        hasFiveOrMoreOfSameSuit = BoardParser.hasFiveOrMoreOfSameSuit(suitOccurrenceCount);
-        hasFiveOrMoreConsecutiveValues = BoardParser.hasFiveOrMoreConsecutiveValues(this.cards);
-        hasFourOfAKind = BoardParser.countNumberOfCombinations(valueOccurrenceCount, 4) == 1;
-        tripsCount = BoardParser.countNumberOfCombinations(valueOccurrenceCount, 3);
-        pairCount = BoardParser.countNumberOfCombinations(valueOccurrenceCount, 2);
+        hasFiveOrMoreOfSameSuit = hasFiveOrMoreOfSameSuit(suitOccurrenceCount);
+        hasFiveOrMoreConsecutiveValues = hasFiveOrMoreConsecutiveValues(this.cards);
+        hasFourOfAKind = countNumberOfCombinations(valueOccurrenceCount, FOUR_OF_A_KIND) == 1;
+        tripsCount = countNumberOfCombinations(valueOccurrenceCount, THREE_OF_A_KIND);
+        pairCount = countNumberOfCombinations(valueOccurrenceCount, PAIR);
     }
 
     public ArrayList<Card> getCards() {
@@ -48,44 +53,38 @@ public class PokerCombinationChecker {
 
 
     public boolean isStraightFlush() {
-        ArrayList<Card> flushCards = getFlushCards();
-        return BoardParser.hasFiveOrMoreConsecutiveValues(flushCards);
+        boolean isStraightFlush = false;
+
+        if (hasFiveOrMoreOfSameSuit) {
+            int flushedSuit = getFlushSuit(suitOccurrenceCount);
+            ArrayList<Card> flushCards = getCardsOfASuit(this.cards, flushedSuit);
+            isStraightFlush = hasFiveOrMoreConsecutiveValues(flushCards);
+        }
+
+        return isStraightFlush;
     }
 
     public void getBestStraightFlush() {
-        ArrayList<Card> straightFlushCards = getStraightCards(getFlushCards());
+        int flushedSuit = getFlushSuit(suitOccurrenceCount);
+        ArrayList<Card> straightFlushCards = getStraightCards(getCardsOfASuit(this.cards, flushedSuit));
 
-        while (straightFlushCards.size() > 5) {
-            straightFlushCards.remove(0);
-        }
-
-        System.out.println(straightFlushCards.toString());
+        removeLowestCardsUntilFiveCardsRemain(straightFlushCards);
         bestHand.addAll(straightFlushCards);
     }
+
 
     public boolean isFourOfAKind() {
         return hasFourOfAKind;
     }
 
     public void getBestFourOfAKind() {
-        int biggestQuadsCard = BoardParser.getHighestCardOfCombination(valueOccurrenceCount, 4);
-        int biggestSingleCard = BoardParser.getHighestCardOfCombination(valueOccurrenceCount, 1);
-        int index = 0;
+        int biggestFourOfAKindCardValue = getHighestCardOfCombination(valueOccurrenceCount, FOUR_OF_A_KIND);
+        int biggestSingleCardValue = getHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD);
 
-        for (Card card : cards) {
-            if (card.getValue() == biggestQuadsCard) {
-                bestHand.add(index, card);
-                index++;
-            }
-        }
-
-        for (Card card : cards) {
-            if (card.getValue() == biggestSingleCard) {
-                bestHand.add(index, card);
-                break;
-            }
-        }
+        addCardsWithValueToBestHand(biggestFourOfAKindCardValue);
+        addCardsWithValueToBestHand(biggestSingleCardValue);
     }
+
 
     public boolean isFullHouse() {
         return ((!hasFourOfAKind) &&
@@ -93,58 +92,98 @@ public class PokerCombinationChecker {
     }
 
     public void getBestFullHouse() {
-        int biggestTripsCard = BoardParser.getHighestCardOfCombination(valueOccurrenceCount, 3);
-        int biggestPairCard = BoardParser.getHighestCardOfCombination(valueOccurrenceCount, 2);
-        int index = 0;
+        int biggestThreeOfAKindCardValue = getHighestCardOfCombination(valueOccurrenceCount, THREE_OF_A_KIND);
+        int biggestPairCardValue = getHighestCardOfCombination(valueOccurrenceCount, PAIR);
 
-        for (Card card : cards) {
-            if (card.getValue() == biggestTripsCard) {
-                bestHand.add(index, card);
-                index++;
-            }
-        }
-
-        for (Card card : cards) {
-            if (card.getValue() == biggestPairCard) {
-                bestHand.add(index, card);
-                index++;
-            }
-        }
+        addCardsWithValueToBestHand(biggestThreeOfAKindCardValue);
+        addCardsWithValueToBestHand(biggestPairCardValue);
     }
+
 
     public boolean isFlush() {
         return hasFiveOrMoreOfSameSuit && !hasFourOfAKind && !isFullHouse();
     }
 
-    public ArrayList<Card> getFlushCards() {
-        int flushedSuit = BoardParser.getFlushSuit(suitOccurrenceCount);
-        ArrayList<Card> flushedCards = new ArrayList<Card>();
-
-        for (Card card : cards) {
-            if (card.getSuit() == flushedSuit) {
-                flushedCards.add(card);
-            }
-        }
-
-        return flushedCards;
-    }
-
     public void getBestFlush() {
-        ArrayList<Card> flushedCards = getFlushCards();
+        int flushedSuit = getFlushSuit(suitOccurrenceCount);
+        ArrayList<Card> flushedCards = getCardsOfASuit(this.cards, flushedSuit);
 
-        while (flushedCards.size() > 5) {
-            flushedCards.remove(0);
-        }
-
-        bestHand.addAll(0, flushedCards);
+        removeLowestCardsUntilFiveCardsRemain(flushedCards);
+        bestHand.addAll(flushedCards);
     }
+
 
     public boolean isStraight() {
         return !hasFiveOrMoreOfSameSuit && hasFiveOrMoreConsecutiveValues;
     }
 
-    private int getStartingIndexForStraight(ArrayList<Card> sortedStraightCards) {
-        int startingIndex = 7;
+    public void getBestStraight() {
+        ArrayList<Card> consecutiveCards = getStraightCards(this.cards);
+
+        removeLowestCardsUntilFiveCardsRemain(consecutiveCards);
+        bestHand.addAll(consecutiveCards);
+    }
+
+
+    public boolean isThreeOfAKind() {
+        return !hasFiveOrMoreOfSameSuit && !hasFiveOrMoreConsecutiveValues
+                && !hasFourOfAKind && (tripsCount == 1) && pairCount == 0;
+    }
+
+    public void getBestThreeOfAKind() {
+        int highestThreeOfAKind = getHighestCardOfCombination(valueOccurrenceCount,THREE_OF_A_KIND);
+        int highestCard = getHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD);
+        int secondHighestCard = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, highestCard);
+
+        addCardsWithValueToBestHand(7);
+        addCardsWithValueToBestHand(highestCard);
+        addCardsWithValueToBestHand(secondHighestCard);
+    }
+
+
+    public boolean isTwoPair() {
+        return (!hasFiveOrMoreConsecutiveValues && !hasFiveOrMoreOfSameSuit && !hasFourOfAKind &&
+                tripsCount == 0 & pairCount == 2);
+    }
+
+    public void getBestTwoPair() {
+        int highestPairCardValue = getHighestCardOfCombination(valueOccurrenceCount, PAIR);
+        int secondHighestPairCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, PAIR, highestPairCardValue);
+        int highestSingleCardValue = getHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD);
+
+        addCardsWithValueToBestHand(highestPairCardValue);
+        addCardsWithValueToBestHand(secondHighestPairCardValue);
+        addCardsWithValueToBestHand(highestSingleCardValue);
+    }
+
+
+    public boolean isPair() {
+        return (!hasFiveOrMoreConsecutiveValues && !hasFiveOrMoreOfSameSuit && !hasFourOfAKind &&
+                tripsCount == 0 & pairCount == 1);
+    }
+
+    public void getBestPair() {
+        int highestPairCardValue = getHighestCardOfCombination(valueOccurrenceCount, PAIR);
+
+        int highestSingleCardValue = getHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD);
+        int secondHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, highestSingleCardValue);
+        int thirdHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, secondHighestSingleCardValue);
+
+        addCardsWithValueToBestHand(highestPairCardValue);
+        addCardsWithValueToBestHand(highestSingleCardValue);
+        addCardsWithValueToBestHand(secondHighestSingleCardValue);
+        addCardsWithValueToBestHand(thirdHighestSingleCardValue);
+    }
+
+
+    public boolean isHighCard() {
+        return (!hasFiveOrMoreConsecutiveValues && !hasFiveOrMoreOfSameSuit && !hasFourOfAKind &&
+                tripsCount == 0 & pairCount == 0);
+    }
+
+
+    private final int getStartingIndexForStraight(ArrayList<Card> sortedStraightCards) {
+        int startingIndex = 0;
 
         for (int i = 0; i <= 2; i++) {
             Card currentCard = sortedStraightCards.get(i);
@@ -159,7 +198,7 @@ public class PokerCombinationChecker {
         return startingIndex;
     }
 
-    private int getEndingIndexForStraight(ArrayList<Card> sortedStraightCards) {
+    private final int getEndingIndexForStraight(ArrayList<Card> sortedStraightCards) {
         int endingIndex = 0;
         int lastCardIndex = sortedStraightCards.size() - 1;
 
@@ -178,7 +217,7 @@ public class PokerCombinationChecker {
         return endingIndex;
     }
 
-    public ArrayList<Card> getStraightCards(ArrayList<Card> sortedStraightCards) {
+    private final ArrayList<Card> getStraightCards(ArrayList<Card> sortedStraightCards) {
         ArrayList<Card> consecutiveCards = new ArrayList<Card>();
 
         int firstCardInStraightIndex = getStartingIndexForStraight(sortedStraightCards);
@@ -191,42 +230,200 @@ public class PokerCombinationChecker {
         return consecutiveCards;
     }
 
-    public void getBestStraight() {
-        ArrayList<Card> consecutiveCards = getStraightCards(this.cards);
+    private final ArrayList<Card> getCardsOfASuit(ArrayList<Card> cards, int suit) {
+        ArrayList<Card> flushedCards = new ArrayList<Card>();
 
-        while (consecutiveCards.size() > 5) {
-            consecutiveCards.remove(0);
+        for (Card card : cards) {
+            if (card.getSuit() == suit) {
+                flushedCards.add(card);
+            }
         }
 
-        bestHand.addAll(consecutiveCards);
+        return flushedCards;
+    }
+
+
+    private final int getFlushSuit(Map<Integer, Integer> suitOccurrenceCount) {
+        int suit = 0;
+
+        for (Map.Entry<Integer, Integer> entry : suitOccurrenceCount.entrySet()) {
+            if (entry.getValue() >= 5) {
+                suit = entry.getKey();
+                break;
+            }
+        }
+
+        return suit;
+    }
+
+    private final int getHighestCardOfCombination(Map<Integer, Integer> valueOccurrenceCount, int combination) {
+        int highestCard = 0;
+
+        for (Map.Entry<Integer, Integer> entry : valueOccurrenceCount.entrySet()) {
+            if (entry.getValue() == combination) {
+                if (entry.getKey() > highestCard) {
+                    highestCard = entry.getKey();
+                }
+            }
+        }
+
+        return highestCard;
+    }
+
+    private final int getNextHighestCardOfCombination(Map<Integer, Integer> valueOccurrenceCount, int combination, int highCard) {
+        int highestCard = highCard;
+        int secondHighestCard = 0;
+
+        for (Map.Entry<Integer, Integer> entry : valueOccurrenceCount.entrySet()) {
+            if (entry.getValue() == combination) {
+                if (entry.getKey() < highestCard && entry.getKey() > secondHighestCard) {
+                    secondHighestCard = entry.getKey();
+                }
+            }
+        }
+
+        return secondHighestCard;
+    }
+
+    private final void addCardsWithValueToBestHand(int cardValue) {
+        for (Card card : cards) {
+            if (card.getValue() == cardValue) {
+                bestHand.add(card);
+            }
+        }
+    }
+
+    private final ArrayList<Card> removeLowestCardsUntilFiveCardsRemain(ArrayList<Card> sortedCards) {
+        while (sortedCards.size() > 5) {
+            sortedCards.remove(0);
+        }
+        return sortedCards;
     }
 
 
 
-//    public boolean isThreeOfAKind() {
-//        return BoardParser.countNumberOfCombinations(3) == 1 && BoardParser.countNumberOfCombinations(2) == 0 && BoardParser.countNumberOfCombinations(4) == 0;
-//    }
-//
-//    public boolean isTwoPair() {
-//        return BoardParser.countNumberOfCombinations(2) >= 2 && BoardParser.countNumberOfCombinations(3) == 0;
-//    }
+    private final Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
+        Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
 
-    /*cd
-    *
-    * Quads - boolean
-    * Trips count
-    * Pair count
-    *
-    * straight flush
-    * four of a kind
-    * full house
-    * flush
-    * straight
-    * three of a kind
-    * two pair
-    * pair
-    * high card
-    *
-    * */
+        for (Card card : cards) {
+            Integer numOccurrence = occurrenceMap.get(card.getValue());
+
+            if(numOccurrence == null){
+                occurrenceMap.put(card.getValue(), 1);
+            } else {
+                occurrenceMap.put(card.getValue(), ++numOccurrence);
+            }
+        }
+        return occurrenceMap;
+    }
+
+    private final Map<Integer, Integer> getSuitOccurrenceCount(ArrayList<Card> cards) {
+        Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
+
+        for (Card card : cards) {
+            Integer numOccurrence = occurrenceMap.get(card.getSuit());
+
+            if(numOccurrence == null){
+                occurrenceMap.put(card.getSuit(), 1);
+            } else {
+                occurrenceMap.put(card.getSuit(), ++numOccurrence);
+            }
+        }
+
+        return occurrenceMap;
+    }
+
+    private final int countNumberOfCombinations(Map<Integer, Integer> valueOccurrenceCount, int combination) {
+        int count = 0;
+
+        for (Map.Entry<Integer, Integer> entry : valueOccurrenceCount.entrySet()) {
+            if (entry.getValue() == combination) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+
+    private final boolean hasFiveOrMoreOfSameSuit(Map<Integer, Integer> suitOccurrenceCount) {
+        boolean isFlush = false;
+
+        for (Map.Entry<Integer, Integer> entry : suitOccurrenceCount.entrySet()) {
+            if (entry.getValue() >= 5) {
+                isFlush = true;
+            }
+        }
+
+        return isFlush;
+    }
+
+    private final boolean hasFiveOrMoreConsecutiveValues(ArrayList<Card> sortedCards) {
+        return hasStraightNotStartingWithAce(sortedCards) || hasStraightStartingWithAce(sortedCards);
+    }
+
+    private final boolean hasStraightNotStartingWithAce(ArrayList<Card> sortedCards) {
+        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedCards);
+
+        int consecutiveCardCount = 0;
+        boolean isStraight = false;
+
+        int indexOfThirdLastCard = cardsWithoutDuplicates.size() - 3;
+
+        for (int i = 0; i <= indexOfThirdLastCard; i++) {
+            Card currentCard = cardsWithoutDuplicates.get(i);
+            Card nextCard = cardsWithoutDuplicates.get(i + 1);
+            Card followingCard = cardsWithoutDuplicates.get(i + 2);
+
+            if ((currentCard.getValue() == nextCard.getValue() - 1) &&
+                    (nextCard.getValue() == followingCard.getValue() - 1)) {
+                consecutiveCardCount++;
+            }
+        }
+
+        if (consecutiveCardCount >= 3) {
+            isStraight = true;
+        }
+
+        return isStraight;
+    }
+
+    private final boolean hasStraightStartingWithAce(ArrayList<Card> sortedCards) {
+        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedCards);
+
+        boolean lastCardIsAnAce = (cardsWithoutDuplicates.get(cardsWithoutDuplicates.size() - 1).isAce());
+
+        if (!lastCardIsAnAce) { return false; }
+
+        boolean isStraightStartingWithAce = true;
+
+        int currentValueInStraight = 2;
+        for (int i = 0; i < 4; i++) {
+            if (cardsWithoutDuplicates.get(i).getValue() != currentValueInStraight) {
+                isStraightStartingWithAce = false;
+                // Break also avoids exceeding sortedCards size in the case of many duplicates
+                break;
+            }
+            currentValueInStraight++;
+        }
+
+        return isStraightStartingWithAce;
+    }
+
+    private ArrayList<Card> removeValueDuplicates(ArrayList<Card> sortedCards) {
+        ArrayList<Card> cardsWithoutDuplicates = new ArrayList<Card>();
+
+        cardsWithoutDuplicates.add(sortedCards.get(0));
+
+        for (int i = 1; i < sortedCards.size(); i++) {
+            Card previousCard = sortedCards.get(i - 1);
+            Card currentCard = sortedCards.get(i);
+
+            if (currentCard.getValue() != previousCard.getValue()) {
+                cardsWithoutDuplicates.add(currentCard);
+            }
+        }
+
+        return cardsWithoutDuplicates;
+    }
 
 }

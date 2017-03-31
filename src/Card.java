@@ -33,6 +33,10 @@ public class Card implements Comparable<Card> {
         return pokerValue;
     }
 
+    public boolean isAce() {
+        return this.value == 1;
+    }
+
     public int getSuit() {
         return suit;
     }
