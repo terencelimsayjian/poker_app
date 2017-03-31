@@ -481,14 +481,14 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-//        pcc.getBestStraight();
-//        ArrayList<Card> bestHand = pcc.getBestHand();
-//        assertEquals(bestHand.contains(c1), true);
-//        assertEquals(bestHand.contains(c2), true);
-//        assertEquals(bestHand.contains(c3), true);
-//        assertEquals(bestHand.contains(c6), true);
-//        assertEquals(bestHand.contains(c7), true);
-//        assertEquals(bestHand.size() == 5, true);
+        pcc.getBestStraight();
+        ArrayList<Card> bestHand = pcc.getBestHand();
+        assertEquals(bestHand.contains(c1), true);
+        assertEquals(bestHand.contains(c2), true);
+        assertEquals(bestHand.contains(c3), true);
+        assertEquals(bestHand.contains(c6), true);
+        assertEquals(bestHand.contains(c7), true);
+        assertEquals(bestHand.size() == 5, true);
     }
 
     @Test
@@ -1085,14 +1085,14 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isHighCard(), true);
 
-//        pcc.getBestHighCard();
-//        ArrayList<Card> bestHand = pcc.getBestHand();
-//        assertEquals(bestHand.contains(c2), true);
-//        assertEquals(bestHand.contains(c3), true);
-//        assertEquals(bestHand.contains(c4), true);
-//        assertEquals(bestHand.contains(c5), true);
-//        assertEquals(bestHand.contains(c6), true);
-//        assertEquals(bestHand.size() == 5, true);
+        pcc.getBestHighCard();
+        ArrayList<Card> bestHand = pcc.getBestHand();
+        assertEquals(bestHand.contains(c2), true);
+        assertEquals(bestHand.contains(c3), true);
+        assertEquals(bestHand.contains(c4), true);
+        assertEquals(bestHand.contains(c5), true);
+        assertEquals(bestHand.contains(c6), true);
+        assertEquals(bestHand.size() == 5, true);
     }
 
     @Test

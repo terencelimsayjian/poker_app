@@ -181,6 +181,19 @@ public class PokerCombinationChecker {
                 tripsCount == 0 & pairCount == 0);
     }
 
+    public void getBestHighCard() {
+        int highestSingleCardValue = getHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD);
+        int secondHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, highestSingleCardValue);
+        int thirdHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, secondHighestSingleCardValue);
+        int fourthHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, thirdHighestSingleCardValue);
+        int fifthHighestSingleCardValue = getNextHighestCardOfCombination(valueOccurrenceCount, SINGLE_CARD, fourthHighestSingleCardValue);
+
+        addCardsWithValueToBestHand(highestSingleCardValue);
+        addCardsWithValueToBestHand(secondHighestSingleCardValue);
+        addCardsWithValueToBestHand(thirdHighestSingleCardValue);
+        addCardsWithValueToBestHand(fourthHighestSingleCardValue);
+        addCardsWithValueToBestHand(fifthHighestSingleCardValue);
+    }
 
     private final int getStartingIndexForStraight(ArrayList<Card> sortedStraightCards) {
         int startingIndex = 0;
@@ -229,6 +242,10 @@ public class PokerCombinationChecker {
 
         return consecutiveCards;
     }
+
+    // have another function which gets ace straight cards
+    // create a third function that calls the original two functions.
+    // getBestStraight removes cards from beginning. This will be a problem for 23456A
 
     private final ArrayList<Card> getCardsOfASuit(ArrayList<Card> cards, int suit) {
         ArrayList<Card> flushedCards = new ArrayList<Card>();
@@ -299,7 +316,6 @@ public class PokerCombinationChecker {
         }
         return sortedCards;
     }
-
 
 
     private final Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
