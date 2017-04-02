@@ -6,16 +6,21 @@ public class PokerCombinationChecker {
     private ArrayList<Card> bestHand = new ArrayList<Card>(5);
     /*
     * Result:
-    * bestHand
-    * string
-    * hand rank (1-9)
-    * card rank (Sum of cards (and defining characteristic, trips bigger etc)
+    * bestHand: ArrayList<Card>(5)
+    * handrank: int (1-9) straightFlush - highCard
     * */
 
     private static final int SINGLE_CARD = 1;
     private static final int PAIR = 2;
     private static final int THREE_OF_A_KIND = 3;
     private static final int FOUR_OF_A_KIND = 4;
+
+//    private static final int STRAIGHT_FLUSH = 1;
+//    private static final int FOUR_OF_A_KIND = 2;
+//    private static final int FULL_HOUSE = 3;
+//    private static final int FLUSH = 4;
+//    private static final int STRAIGHT = 5;
+//    private static final int THREE_OF_KIND = 5;
 
 
     private Map<Integer, Integer> valueOccurrenceCount;
@@ -50,7 +55,6 @@ public class PokerCombinationChecker {
     public ArrayList<Card> getBestHand() {
         return bestHand;
     }
-
 
     public boolean isStraightFlush() {
         boolean isStraightFlush = false;
@@ -195,6 +199,7 @@ public class PokerCombinationChecker {
         addCardsWithValueToBestHand(fifthHighestSingleCardValue);
     }
 
+    // Straight methods
     private final int getStartingIndexForStraight(ArrayList<Card> sortedStraightCards) {
         int startingIndex = 0;
 
@@ -231,6 +236,18 @@ public class PokerCombinationChecker {
     }
 
     private final ArrayList<Card> getStraightCards(ArrayList<Card> sortedStraightCards) {
+        ArrayList<Card> straightCards = new ArrayList<Card>();
+
+        if (hasStraightNotStartingWithAce(sortedStraightCards)) {
+            straightCards.addAll(getStraightCardsNotStartingWithAce(sortedStraightCards));
+        } else if (hasStraightStartingWithAce(sortedStraightCards)) {
+            straightCards.addAll(getStraightCardsStartingWithAce(sortedStraightCards));
+        }
+
+        return straightCards;
+    }
+
+    private ArrayList<Card> getStraightCardsNotStartingWithAce(ArrayList<Card> sortedStraightCards) {
         ArrayList<Card> consecutiveCards = new ArrayList<Card>();
 
         int firstCardInStraightIndex = getStartingIndexForStraight(sortedStraightCards);
@@ -243,9 +260,32 @@ public class PokerCombinationChecker {
         return consecutiveCards;
     }
 
-    // have another function which gets ace straight cards
-    // create a third function that calls the original two functions.
-    // getBestStraight removes cards from beginning. This will be a problem for 23456A
+    private ArrayList<Card> getStraightCardsStartingWithAce(ArrayList<Card> sortedStraightCards) {
+        // Assumes A+ straight exists => Hence Only need to deal with cards[5] and cards[6]
+        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedStraightCards);
+
+        ArrayList<Card> consecutiveCards = new ArrayList<Card>();
+
+        for (int i = 0; i <= 3; i++) {
+            consecutiveCards.add(cardsWithoutDuplicates.get(i));
+        }
+
+        for (int i = 4; i < cardsWithoutDuplicates.size() - 1; i++) {
+            Card previousCard = cardsWithoutDuplicates.get(i - 1);
+            Card currentCard = cardsWithoutDuplicates.get(i);
+
+            if (currentCard.getValue() == previousCard.getValue() + 1) {
+                consecutiveCards.add(currentCard);
+            } else {
+                // break to avoid consecutive cards such as 9, 10
+                break;
+            }
+        }
+
+        consecutiveCards.add(cardsWithoutDuplicates.get(cardsWithoutDuplicates.size() - 1));
+
+        return consecutiveCards;
+    }
 
     private final ArrayList<Card> getCardsOfASuit(ArrayList<Card> cards, int suit) {
         ArrayList<Card> flushedCards = new ArrayList<Card>();
@@ -260,6 +300,7 @@ public class PokerCombinationChecker {
     }
 
 
+    // Helper methods
     private final int getFlushSuit(Map<Integer, Integer> suitOccurrenceCount) {
         int suit = 0;
 
@@ -317,7 +358,25 @@ public class PokerCombinationChecker {
         return sortedCards;
     }
 
+    private final ArrayList<Card> removeValueDuplicates(ArrayList<Card> sortedCards) {
+        ArrayList<Card> cardsWithoutDuplicates = new ArrayList<Card>();
 
+        cardsWithoutDuplicates.add(sortedCards.get(0));
+
+        for (int i = 1; i < sortedCards.size(); i++) {
+            Card previousCard = sortedCards.get(i - 1);
+            Card currentCard = sortedCards.get(i);
+
+            if (currentCard.getValue() != previousCard.getValue()) {
+                cardsWithoutDuplicates.add(currentCard);
+            }
+        }
+
+        return cardsWithoutDuplicates;
+    }
+
+
+    // Setup methods
     private final Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
         Map<Integer, Integer> occurrenceMap = new HashMap<Integer, Integer>();
 
@@ -423,23 +482,6 @@ public class PokerCombinationChecker {
         }
 
         return isStraightStartingWithAce;
-    }
-
-    private ArrayList<Card> removeValueDuplicates(ArrayList<Card> sortedCards) {
-        ArrayList<Card> cardsWithoutDuplicates = new ArrayList<Card>();
-
-        cardsWithoutDuplicates.add(sortedCards.get(0));
-
-        for (int i = 1; i < sortedCards.size(); i++) {
-            Card previousCard = sortedCards.get(i - 1);
-            Card currentCard = sortedCards.get(i);
-
-            if (currentCard.getValue() != previousCard.getValue()) {
-                cardsWithoutDuplicates.add(currentCard);
-            }
-        }
-
-        return cardsWithoutDuplicates;
     }
 
 }
