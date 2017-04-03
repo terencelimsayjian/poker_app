@@ -27,7 +27,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraightFlush(), true);
 
-        pcc.getBestStraightFlush();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -113,7 +112,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraightFlush(), true);
 
-        pcc.getBestStraightFlush();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c2), true);
         assertEquals(bestHand.contains(c3), true);
@@ -147,7 +145,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isFourOfAKind(), true);
 
-        pcc.getBestFourOfAKind();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c3), true);
@@ -202,7 +199,6 @@ public class PokerCombinationCheckerTest {
 
         assertEquals(pcc.isFullHouse(), true);
 
-        pcc.getBestFullHouse();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c3), true);
@@ -308,7 +304,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isFlush(), true);
 
-        pcc.getBestFlush();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -360,7 +355,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isFlush(), true);
 
-        pcc.getBestFlush();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -395,7 +389,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -447,7 +440,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -481,7 +473,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -515,7 +506,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -585,7 +575,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c2), true);
         assertEquals(bestHand.contains(c3), true);
@@ -619,7 +608,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
-        pcc.getBestStraight();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c3), true);
         assertEquals(bestHand.contains(c4), true);
@@ -671,7 +659,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isThreeOfAKind(), true);
 
-        pcc.getBestThreeOfAKind();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -795,7 +782,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isTwoPair(), true);
 
-        pcc.getBestTwoPair();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -941,7 +927,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isPair(), true);
 
-        pcc.getBestPair();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c2), true);
         assertEquals(bestHand.contains(c3), true);
@@ -1119,7 +1104,6 @@ public class PokerCombinationCheckerTest {
         PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
         assertEquals(pcc.isHighCard(), true);
 
-        pcc.getBestHighCard();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c2), true);
         assertEquals(bestHand.contains(c3), true);
