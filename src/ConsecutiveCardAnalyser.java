@@ -3,52 +3,44 @@ import java.util.Collections;
 
 public class ConsecutiveCardAnalyser {
 
-    /*
-    * PROPERTIES
-    * hasConsecutive: boolean
-    * hasAceStartingStraight: boolean
-    *
-    * getConsecutiveCards
-    *   startingWithAce
-    *   noAce
-    * */
-
     private boolean hasFiveOrMoreConsecutiveValues;
     private ArrayList<Card> cards;
+    private ArrayList<Card> straightCards = new ArrayList<Card>();
 
-    // boolean for existence of Ace
-    // boolean for straight starting with Ace?
-    // cards: ArrayList<Card>
 
     public ConsecutiveCardAnalyser(ArrayList<Card> cards) {
         Collections.sort(cards);
         this.cards = removeValueDuplicates(cards);
-
         hasFiveOrMoreConsecutiveValues = hasFiveOrMoreConsecutiveValues();
+
+        if (hasFiveOrMoreConsecutiveValues) {
+            addStraightCards();
+        }
     }
 
-    public ArrayList<Card> getCards() {
-        return cards;
+    public ArrayList<Card> getStraightCards() {
+        return straightCards;
     }
 
     public boolean getHasFiveOrMoreConsecutiveValues() {
         return hasFiveOrMoreConsecutiveValues;
     }
 
+
     private final boolean hasFiveOrMoreConsecutiveValues() {
-        return hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce() || hasFiveOrMoreConsecutiveValuesStartingWithAce();
+        return hasFiveOrMoreConsecutiveValuesExcludingAceToFive() || hasAceToFiveStraight();
     }
 
-    private final boolean hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce() {
+    private final boolean hasFiveOrMoreConsecutiveValuesExcludingAceToFive() {
         int consecutiveCardCount = 0;
         boolean isStraight = false;
 
-        int indexOfThirdLastCard = this.cards.size() - 3;
+        int indexOfThirdLastCard = cards.size() - 3;
 
         for (int i = 0; i <= indexOfThirdLastCard; i++) {
-            Card currentCard = this.cards.get(i);
-            Card nextCard = this.cards.get(i + 1);
-            Card followingCard = this.cards.get(i + 2);
+            Card currentCard = cards.get(i);
+            Card nextCard = cards.get(i + 1);
+            Card followingCard = cards.get(i + 2);
 
             if ((currentCard.getValue() == nextCard.getValue() - 1) &&
                     (nextCard.getValue() == followingCard.getValue() - 1)) {
@@ -63,8 +55,8 @@ public class ConsecutiveCardAnalyser {
         return isStraight;
     }
 
-    private final boolean hasFiveOrMoreConsecutiveValuesStartingWithAce() {
-        boolean lastCardIsAnAce = (this.cards.get(this.cards.size() - 1).isAce());
+    private final boolean hasAceToFiveStraight() {
+        boolean lastCardIsAnAce = (cards.get(cards.size() - 1).isAce());
 
         if (!lastCardIsAnAce) { return false; }
 
@@ -72,7 +64,7 @@ public class ConsecutiveCardAnalyser {
 
         int currentValueInStraight = 2;
         for (int i = 0; i < 4; i++) {
-            if (this.cards.get(i).getValue() != currentValueInStraight) {
+            if (cards.get(i).getValue() != currentValueInStraight) {
                 isStraightStartingWithAce = false;
                 // Break also avoids exceeding sortedCards size in the case of many duplicates
                 break;
@@ -98,5 +90,47 @@ public class ConsecutiveCardAnalyser {
         }
 
         return cardsWithoutDuplicates;
+    }
+
+
+    private final void addStraightCards() {
+        if (hasFiveOrMoreConsecutiveValuesExcludingAceToFive()) {
+            addTopFiveConsecutiveCardsToStraightCards();
+        } else if (hasAceToFiveStraight()) {
+            addAceToFiveToStraightCards();
+        }
+    }
+
+    private void addTopFiveConsecutiveCardsToStraightCards() {
+        int lastCardIndex = cards.size() - 1;
+        int thirdLastCardIndex = cards.size() - 3;
+
+        for (int i = lastCardIndex; i >= thirdLastCardIndex; i--) {
+            Card lastCard = cards.get(i);
+            Card secondLastCard = cards.get(i - 1);
+            Card thirdLastCard = cards.get(i - 2);
+            Card fourthLastCard = cards.get(i - 3);
+            Card fifthLastCard = cards.get(i - 4);
+
+            if (lastCard.getValue() == secondLastCard.getValue() + 1
+                    && secondLastCard.getValue() == thirdLastCard.getValue() + 1
+                    && thirdLastCard.getValue() == fourthLastCard.getValue() + 1
+                    && fourthLastCard.getValue() == fifthLastCard.getValue() + 1) {
+                straightCards.add(fifthLastCard);
+                straightCards.add(fourthLastCard);
+                straightCards.add(thirdLastCard);
+                straightCards.add(secondLastCard);
+                straightCards.add(lastCard);
+                break;
+            }
+        }
+    }
+
+    private void addAceToFiveToStraightCards() {
+        for (int i = 0; i <= 3; i++) {
+            straightCards.add(cards.get(i));
+        }
+
+        straightCards.add(cards.get(cards.size() - 1));
     }
 }

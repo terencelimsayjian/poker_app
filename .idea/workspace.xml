@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/PokerCombinationChecker.class" afterPath="$PROJECT_DIR$/out/production/poker_app/PokerCombinationChecker.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CardSuitAnalyser.java" afterPath="$PROJECT_DIR$/src/CardSuitAnalyser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java" afterPath="$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokerCombinationChecker.java" afterPath="$PROJECT_DIR$/src/PokerCombinationChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/CardSuitAnalyserTest.java" afterPath="$PROJECT_DIR$/test/CardSuitAnalyserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java" afterPath="$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,21 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PokerCombinationChecker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="254" column="0" lean-forward="true" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="27" />
               <folding>
+                <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#calculateBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="e#2845#2884#0" expanded="false" />
+                <element signature="e#3039#3078#0" expanded="false" />
                 <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isTwoPair#0;class#PokerCombinationChecker#0" expanded="false" />
@@ -47,37 +44,28 @@
                 <element signature="method#getBestPair#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#isHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getBestHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getStraightCardsNotStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#getStraightCardsStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#getCardsOfASuit#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#addCardsWithValueToBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#removeLowestCardsUntilFiveCardsRemain#0;class#PokerCombinationChecker#0" expanded="false" />
                 <element signature="method#removeValueDuplicates#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsecutiveCardAnalyser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsecutiveCardAnalyser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="270">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
                 <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-                <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+                <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingAceToFive#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+                <element signature="method#hasAceToFiveStraight#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
                 <element signature="method#removeValueDuplicates#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-                <element signature="e#2679#2685#0" expanded="true" />
+                <element signature="method#addStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+                <element signature="method#addTopFiveConsecutiveCardsToStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+                <element signature="method#addAceToFiveToStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,14 +74,17 @@
       <file leaf-file-name="ConsecutiveCardAnalyserTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
+            <state relative-caret-position="372">
+              <caret line="222" column="46" lean-forward="false" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#241#247#0" expanded="true" />
-                <element signature="e#767#773#0" expanded="true" />
-                <element signature="e#1304#1310#0" expanded="true" />
-                <element signature="e#1837#1843#0" expanded="true" />
+                <element signature="method#testHasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testDoesNotHasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testHasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testHasFiveOrMoreConsecutiveValuesWithDuplicates#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testGetStraightCardsWithDuplicates#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testGetStraightCardsWithOtherConsecutiveCards#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testAceToFiveStraight#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+                <element signature="method#testSixCardStraightAceStraightReturnsTwoToSixStraight#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -136,6 +127,8 @@
       <find>hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce</find>
       <find>hasFiveOrMoreConsecutiveValues</find>
       <find>getCardsOfASuit</find>
+      <find>getStraightCards</find>
+      <find>this</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -270,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CardValueAnalyserTest">
+  <component name="RunManager" selected="JUnit.PokerCombinationCheckerTest">
     <configuration default="false" name="PokerCombinationCheckerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="poker_app" />
@@ -589,9 +582,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CardValueAnalyserTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PokerCombinationCheckerTest" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.ConsecutiveCardAnalyserTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PokerCombinationCheckerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CardValueAnalyserTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.CardSuitAnalyserTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CardValueAnalyserTest.testGetHighestSingle_Card" />
       </list>
@@ -611,35 +604,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CardValueAnalyserTest - 2017.04.03 at 18h 26m 58s.xml">
-      <configuration name="CardValueAnalyserTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 06m 01s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 12m 20s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 06m 37s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 12m 30s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 06m 56s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 14m 08s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 07m 54s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 14m 42s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 08m 35s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 14m 47s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 10m 39s.xml">
+    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.04 at 00h 18m 29s.xml">
       <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 19m 18s.xml">
-      <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
+    <history-entry file="PokerCombinationCheckerTest - 2017.04.04 at 00h 18m 32s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 20m 15s.xml">
-      <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
+    <history-entry file="PokerCombinationCheckerTest - 2017.04.04 at 00h 19m 46s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsecutiveCardAnalyserTest - 2017.04.03 at 18h 26m 54s.xml">
-      <configuration name="ConsecutiveCardAnalyserTest" configurationId="JUnit" />
+    <history-entry file="PokerCombinationCheckerTest - 2017.04.04 at 00h 21m 16s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerCombinationCheckerTest - 2017.04.04 at 00h 23m 06s.xml">
+      <configuration name="PokerCombinationCheckerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -655,8 +648,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2253012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2253012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16385542" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -757,15 +750,15 @@
         <state relative-caret-position="255">
           <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
+            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#calculateBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2845#2884#0" expanded="false" />
+            <element signature="e#3039#3078#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isTwoPair#0;class#PokerCombinationChecker#0" expanded="false" />
@@ -774,18 +767,10 @@
             <element signature="method#getBestPair#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsNotStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getCardsOfASuit#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#addCardsWithValueToBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeLowestCardsUntilFiveCardsRemain#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeValueDuplicates#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1131,15 +1116,15 @@
         <state relative-caret-position="780">
           <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
           <folding>
+            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#calculateBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2845#2884#0" expanded="false" />
+            <element signature="e#3039#3078#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isTwoPair#0;class#PokerCombinationChecker#0" expanded="false" />
@@ -1148,18 +1133,10 @@
             <element signature="method#getBestPair#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsNotStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getCardsOfASuit#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#addCardsWithValueToBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeLowestCardsUntilFiveCardsRemain#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeValueDuplicates#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1193,15 +1170,15 @@
         <state relative-caret-position="765">
           <caret line="114" column="41" lean-forward="true" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
           <folding>
+            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#calculateBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2845#2884#0" expanded="false" />
+            <element signature="e#3039#3078#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isTwoPair#0;class#PokerCombinationChecker#0" expanded="false" />
@@ -1210,18 +1187,10 @@
             <element signature="method#getBestPair#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsNotStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getCardsOfASuit#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#addCardsWithValueToBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeLowestCardsUntilFiveCardsRemain#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeValueDuplicates#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1314,11 +1283,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/CardValueAnalyserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="20" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#221#227#0" expanded="true" />
+            <element signature="e#724#730#0" expanded="true" />
+            <element signature="e#1223#1229#0" expanded="true" />
+            <element signature="e#1726#1732#0" expanded="true" />
+            <element signature="e#2239#2245#0" expanded="true" />
+            <element signature="e#2755#2761#0" expanded="true" />
+            <element signature="e#3283#3289#0" expanded="true" />
+            <element signature="e#3801#3807#0" expanded="true" />
+            <element signature="e#4319#4325#0" expanded="true" />
+            <element signature="e#4850#4856#0" expanded="true" />
+            <element signature="e#5385#5391#0" expanded="true" />
+            <element signature="e#5926#5932#0" expanded="true" />
+            <element signature="e#6465#6471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CardSuitAnalyserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#230#236#0" expanded="true" />
+            <element signature="e#721#727#0" expanded="true" />
+            <element signature="e#1199#1205#0" expanded="true" />
+            <element signature="e#1669#1675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardSuitAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding>
+            <element signature="method#getSuitOccurrenceCount#0;class#CardSuitAnalyser#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreOfTheSameSuit#0;class#CardSuitAnalyser#0" expanded="false" />
+            <element signature="method#getFlushSuit#0;class#CardSuitAnalyser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CardValueAnalyser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="55" />
+          <folding>
+            <element signature="method#getValueOccurrenceCount#0;class#CardValueAnalyser#0" expanded="false" />
+            <element signature="method#countCombinations#0;class#CardValueAnalyser#0" expanded="false" />
+            <element signature="method#getHighestCardOfCombination#0;class#CardValueAnalyser#0" expanded="false" />
+            <element signature="method#getNextHighestCardOfCombination#0;class#CardValueAnalyser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/PokerCombinationCheckerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2745">
-          <caret line="357" column="8" lean-forward="false" selection-start-line="357" selection-start-column="8" selection-end-line="357" selection-end-column="8" />
-          <caret line="306" column="8" lean-forward="false" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+        <state relative-caret-position="413">
+          <caret line="307" column="50" lean-forward="true" selection-start-line="307" selection-start-column="8" selection-end-line="307" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#236#242#0" expanded="true" />
@@ -1471,90 +1509,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CardValueAnalyserTest.java">
+    <entry file="file://$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="20" selection-end-column="86" />
+        <state relative-caret-position="372">
+          <caret line="222" column="46" lean-forward="false" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#221#227#0" expanded="true" />
-            <element signature="e#724#730#0" expanded="true" />
-            <element signature="e#1223#1229#0" expanded="true" />
-            <element signature="e#1726#1732#0" expanded="true" />
-            <element signature="e#2239#2245#0" expanded="true" />
-            <element signature="e#2755#2761#0" expanded="true" />
-            <element signature="e#3283#3289#0" expanded="true" />
-            <element signature="e#3801#3807#0" expanded="true" />
-            <element signature="e#4319#4325#0" expanded="true" />
-            <element signature="e#4850#4856#0" expanded="true" />
-            <element signature="e#5385#5391#0" expanded="true" />
-            <element signature="e#5926#5932#0" expanded="true" />
-            <element signature="e#6465#6471#0" expanded="true" />
+            <element signature="method#testHasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testDoesNotHasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testHasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testHasFiveOrMoreConsecutiveValuesWithDuplicates#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testGetStraightCardsWithDuplicates#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testGetStraightCardsWithOtherConsecutiveCards#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testAceToFiveStraight#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
+            <element signature="method#testSixCardStraightAceStraightReturnsTwoToSixStraight#0;class#ConsecutiveCardAnalyserTest#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CardSuitAnalyserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="63" column="31" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
+        <state relative-caret-position="270">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#230#236#0" expanded="true" />
-            <element signature="e#721#727#0" expanded="true" />
-            <element signature="e#1199#1205#0" expanded="true" />
-            <element signature="e#1669#1675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardValueAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="55" />
-          <folding>
-            <element signature="method#getValueOccurrenceCount#0;class#CardValueAnalyser#0" expanded="false" />
-            <element signature="method#countCombinations#0;class#CardValueAnalyser#0" expanded="false" />
-            <element signature="method#getHighestCardOfCombination#0;class#CardValueAnalyser#0" expanded="false" />
-            <element signature="method#getNextHighestCardOfCombination#0;class#CardValueAnalyser#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="105" column="13" lean-forward="false" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CardSuitAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="method#getSuitOccurrenceCount#0;class#CardSuitAnalyser#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreOfTheSameSuit#0;class#CardSuitAnalyser#0" expanded="false" />
-            <element signature="method#getFlushSuit#0;class#CardSuitAnalyser#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingAceToFive#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#hasAceToFiveStraight#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#removeValueDuplicates#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#addStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#addTopFiveConsecutiveCardsToStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
+            <element signature="method#addAceToFiveToStraightCards#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PokerCombinationChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="254" column="0" lean-forward="true" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="27" />
           <folding>
+            <element signature="method#PokerCombinationChecker#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#calculateBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestStraightFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="e#2845#2884#0" expanded="false" />
+            <element signature="e#3039#3078#0" expanded="false" />
             <element signature="method#getBestFourOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFullHouse#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestFlush#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getBestStraight#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestThreeOfAKind#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isTwoPair#0;class#PokerCombinationChecker#0" expanded="false" />
@@ -1563,49 +1564,10 @@
             <element signature="method#getBestPair#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#isHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getBestHighCard#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStartingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getEndingIndexForStraight#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCards#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsNotStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#getStraightCardsStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#getCardsOfASuit#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#addCardsWithValueToBestHand#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeLowestCardsUntilFiveCardsRemain#0;class#PokerCombinationChecker#0" expanded="false" />
             <element signature="method#removeValueDuplicates#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#PokerCombinationChecker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/ConsecutiveCardAnalyserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="70" column="43" lean-forward="false" selection-start-line="70" selection-start-column="43" selection-end-line="70" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#241#247#0" expanded="true" />
-            <element signature="e#767#773#0" expanded="true" />
-            <element signature="e#1304#1310#0" expanded="true" />
-            <element signature="e#1837#1843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConsecutiveCardAnalyser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesStartingWithAce#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-            <element signature="method#removeValueDuplicates#0;class#ConsecutiveCardAnalyser#0" expanded="false" />
-            <element signature="e#2679#2685#0" expanded="true" />
           </folding>
         </state>
       </provider>

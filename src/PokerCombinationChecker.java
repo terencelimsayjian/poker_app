@@ -67,17 +67,22 @@ public class PokerCombinationChecker {
         if (hasFiveOrMoreOfSameSuit) {
             int flushedSuit = cardSuitAnalyser.getFlushSuit();
             ArrayList<Card> flushCards = getCardsOfASuit(this.cards, flushedSuit);
-            isStraightFlush = hasFiveOrMoreConsecutiveValues(flushCards);
+
+            ConsecutiveCardAnalyser csa = new ConsecutiveCardAnalyser(flushCards);
+            isStraightFlush = csa.getHasFiveOrMoreConsecutiveValues();
         }
 
         return isStraightFlush;
     }
 
     public void getBestStraightFlush() {
+        // TODO: Same as isStraightFlush() - Keep it DRY
         int flushedSuit = cardSuitAnalyser.getFlushSuit();
-        ArrayList<Card> straightFlushCards = getStraightCards(getCardsOfASuit(this.cards, flushedSuit));
+        ArrayList<Card> flushCards = getCardsOfASuit(this.cards, flushedSuit);
 
-        removeLowestCardsUntilFiveCardsRemain(straightFlushCards);
+        ConsecutiveCardAnalyser csa = new ConsecutiveCardAnalyser(flushCards);
+        ArrayList<Card> straightFlushCards = csa.getStraightCards();
+
         bestHand.addAll(straightFlushCards);
     }
     // TODO: Take ACE straight into account
@@ -128,10 +133,7 @@ public class PokerCombinationChecker {
     }
 
     public void getBestStraight() {
-        ArrayList<Card> consecutiveCards = getStraightCards(this.cards);
-
-        removeLowestCardsUntilFiveCardsRemain(consecutiveCards);
-        bestHand.addAll(consecutiveCards);
+        bestHand.addAll(consecutiveCardAnalyser.getStraightCards());
     }
 
 
@@ -205,93 +207,6 @@ public class PokerCombinationChecker {
         addCardsWithValueToBestHand(fifthHighestSingleCardValue);
     }
 
-    // Straight methods
-    private final int getStartingIndexForStraight(ArrayList<Card> sortedStraightCards) {
-        int startingIndex = 0;
-
-        for (int i = 0; i <= 2; i++) {
-            Card currentCard = sortedStraightCards.get(i);
-            Card secondCard = sortedStraightCards.get(i + 1);
-            Card thirdCard = sortedStraightCards.get(i + 2);
-
-            if ((currentCard.getValue() == secondCard.getValue() - 1) && (secondCard.getValue() == thirdCard.getValue() - 1)) {
-                startingIndex = i;
-                break;
-            }
-        }
-        return startingIndex;
-    }
-
-    private final int getEndingIndexForStraight(ArrayList<Card> sortedStraightCards) {
-        int endingIndex = 0;
-        int lastCardIndex = sortedStraightCards.size() - 1;
-
-        Card thirdLastCard = sortedStraightCards.get(lastCardIndex - 2);
-        Card secondLastCard = sortedStraightCards.get(lastCardIndex - 1);
-        Card lastCard = sortedStraightCards.get(lastCardIndex);
-
-        if (lastCard.getValue() == secondLastCard.getValue() + 1) {
-            endingIndex = lastCardIndex;
-        } else if (secondLastCard.getValue() == thirdLastCard.getValue() + 1) {
-            endingIndex = lastCardIndex - 1;
-        } else {
-            endingIndex = lastCardIndex - 2;
-        }
-
-        return endingIndex;
-    }
-
-    private final ArrayList<Card> getStraightCards(ArrayList<Card> sortedStraightCards) {
-        ArrayList<Card> straightCards = new ArrayList<Card>();
-
-        if (hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce(sortedStraightCards)) {
-            straightCards.addAll(getStraightCardsNotStartingWithAce(sortedStraightCards));
-        } else if (hasFiveOrMoreConsecutiveValuesStartingWithAce(sortedStraightCards)) {
-            straightCards.addAll(getStraightCardsStartingWithAce(sortedStraightCards));
-        }
-
-        return straightCards;
-    }
-
-    private ArrayList<Card> getStraightCardsNotStartingWithAce(ArrayList<Card> sortedStraightCards) {
-        ArrayList<Card> consecutiveCards = new ArrayList<Card>();
-
-        int firstCardInStraightIndex = getStartingIndexForStraight(sortedStraightCards);
-        int lastCardInStraightIndex = getEndingIndexForStraight(sortedStraightCards);
-
-        for (int i = firstCardInStraightIndex; i < lastCardInStraightIndex + 1; i++) {
-            consecutiveCards.add(sortedStraightCards.get(i));
-        }
-
-        return consecutiveCards;
-    }
-
-    private ArrayList<Card> getStraightCardsStartingWithAce(ArrayList<Card> sortedStraightCards) {
-        // Assumes A+ straight exists => Hence Only need to deal with cards[5] and cards[6]
-        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedStraightCards);
-
-        ArrayList<Card> consecutiveCards = new ArrayList<Card>();
-
-        for (int i = 0; i <= 3; i++) {
-            consecutiveCards.add(cardsWithoutDuplicates.get(i));
-        }
-
-        for (int i = 4; i < cardsWithoutDuplicates.size() - 1; i++) {
-            Card previousCard = cardsWithoutDuplicates.get(i - 1);
-            Card currentCard = cardsWithoutDuplicates.get(i);
-
-            if (currentCard.getValue() == previousCard.getValue() + 1) {
-                consecutiveCards.add(currentCard);
-            } else {
-                // break to avoid consecutive cards such as 9, 10
-                break;
-            }
-        }
-
-        consecutiveCards.add(cardsWithoutDuplicates.get(cardsWithoutDuplicates.size() - 1));
-
-        return consecutiveCards;
-    }
 
     private final ArrayList<Card> getCardsOfASuit(ArrayList<Card> cards, int suit) {
         ArrayList<Card> flushedCards = new ArrayList<Card>();
@@ -305,8 +220,6 @@ public class PokerCombinationChecker {
         return flushedCards;
     }
 
-
-    // Helper methods
     private final void addCardsWithValueToBestHand(int cardValue) {
         for (Card card : cards) {
             if (card.getValue() == cardValue) {
@@ -338,59 +251,4 @@ public class PokerCombinationChecker {
 
         return cardsWithoutDuplicates;
     }
-
-
-    // Setup methods
-    private final boolean hasFiveOrMoreConsecutiveValues(ArrayList<Card> sortedCards) {
-        return hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce(sortedCards) || hasFiveOrMoreConsecutiveValuesStartingWithAce(sortedCards);
-    }
-
-    private final boolean hasFiveOrMoreConsecutiveValuesExcludingStartingWithAce(ArrayList<Card> sortedCards) {
-        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedCards);
-
-        int consecutiveCardCount = 0;
-        boolean isStraight = false;
-
-        int indexOfThirdLastCard = cardsWithoutDuplicates.size() - 3;
-
-        for (int i = 0; i <= indexOfThirdLastCard; i++) {
-            Card currentCard = cardsWithoutDuplicates.get(i);
-            Card nextCard = cardsWithoutDuplicates.get(i + 1);
-            Card followingCard = cardsWithoutDuplicates.get(i + 2);
-
-            if ((currentCard.getValue() == nextCard.getValue() - 1) &&
-                    (nextCard.getValue() == followingCard.getValue() - 1)) {
-                consecutiveCardCount++;
-            }
-        }
-
-        if (consecutiveCardCount >= 3) {
-            isStraight = true;
-        }
-
-        return isStraight;
-    }
-
-    private final boolean hasFiveOrMoreConsecutiveValuesStartingWithAce(ArrayList<Card> sortedCards) {
-        ArrayList<Card> cardsWithoutDuplicates = removeValueDuplicates(sortedCards);
-
-        boolean lastCardIsAnAce = (cardsWithoutDuplicates.get(cardsWithoutDuplicates.size() - 1).isAce());
-
-        if (!lastCardIsAnAce) { return false; }
-
-        boolean isStraightStartingWithAce = true;
-
-        int currentValueInStraight = 2;
-        for (int i = 0; i < 4; i++) {
-            if (cardsWithoutDuplicates.get(i).getValue() != currentValueInStraight) {
-                isStraightStartingWithAce = false;
-                // Break also avoids exceeding sortedCards size in the case of many duplicates
-                break;
-            }
-            currentValueInStraight++;
-        }
-
-        return isStraightStartingWithAce;
-    }
-
 }
