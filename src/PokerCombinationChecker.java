@@ -41,23 +41,23 @@ public class PokerCombinationChecker {
 
     public void calculateBestHand() {
          if (isStraightFlush()) {
-            getBestStraightFlush();
+            addBestStraightFlushToBestHand();
         } else if (isFourOfAKind()) {
-            getBestFourOfAKind();
+            addBestFourOfAKindToBestHand();
         } else if (isFullHouse()) {
-            getBestFullHouse();
+            addBestFullHouseToBestHand();
         } else if (isFlush()) {
-            getBestFlush();
+            addBestFlushToBestHand();
         } else if (isStraight()) {
-            getBestStraight();
+            addBestStraightToBestHand();
         } else if (isThreeOfAKind()) {
-            getBestThreeOfAKind();
+            addBestThreeOfAKindToBestHand();
         } else if (isTwoPair()) {
-            getBestTwoPair();
+            addBestTwoPairToBestHand();
         } else if (isPair()) {
-            getBestPair();
+            addBestPairToBestHand();
         } else if (isHighCard()) {
-            getBestHighCard();
+            adBestHighCardToBestHand();
         }
     }
 
@@ -75,7 +75,7 @@ public class PokerCombinationChecker {
         return isStraightFlush;
     }
 
-    public void getBestStraightFlush() {
+    public void addBestStraightFlushToBestHand() {
         // TODO: Same as isStraightFlush() - Keep it DRY
         int flushedSuit = cardSuitAnalyser.getFlushSuit();
         ArrayList<Card> flushCards = getCardsOfASuit(this.cards, flushedSuit);
@@ -92,7 +92,7 @@ public class PokerCombinationChecker {
         return hasFourOfAKind;
     }
 
-    public void getBestFourOfAKind() {
+    public void addBestFourOfAKindToBestHand() {
         int biggestFourOfAKindCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.FOUR_OF_A_KIND);
         int biggestSingleCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD);
 
@@ -106,7 +106,7 @@ public class PokerCombinationChecker {
                 ((tripsCount == 1) && (pairCount >= 1) || (tripsCount == 2)));
     }
 
-    public void getBestFullHouse() {
+    public void addBestFullHouseToBestHand() {
         int biggestThreeOfAKindCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.THREE_OF_A_KIND);
         int biggestPairCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.PAIR);
 
@@ -119,7 +119,7 @@ public class PokerCombinationChecker {
         return hasFiveOrMoreOfSameSuit && !hasFourOfAKind && !isFullHouse();
     }
 
-    public void getBestFlush() {
+    public void addBestFlushToBestHand() {
         int flushedSuit = cardSuitAnalyser.getFlushSuit();
         ArrayList<Card> flushedCards = getCardsOfASuit(this.cards, flushedSuit);
 
@@ -132,7 +132,7 @@ public class PokerCombinationChecker {
         return !hasFiveOrMoreOfSameSuit && hasFiveOrMoreConsecutiveValues;
     }
 
-    public void getBestStraight() {
+    public void addBestStraightToBestHand() {
         bestHand.addAll(consecutiveCardAnalyser.getStraightCards());
     }
 
@@ -142,7 +142,7 @@ public class PokerCombinationChecker {
                 && !hasFourOfAKind && (tripsCount == 1) && pairCount == 0;
     }
 
-    public void getBestThreeOfAKind() {
+    public void addBestThreeOfAKindToBestHand() {
         int highestThreeOfAKind = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.THREE_OF_A_KIND);
         int highestCard = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD);
         int secondHighestCard = cardValueAnalyser.getNextHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD, highestCard);
@@ -158,7 +158,7 @@ public class PokerCombinationChecker {
                 tripsCount == 0 & pairCount == 2);
     }
 
-    public void getBestTwoPair() {
+    public void addBestTwoPairToBestHand() {
         int highestPairCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.PAIR);
         int secondHighestPairCardValue = cardValueAnalyser.getNextHighestCardOfCombination(CardValueAnalyser.PAIR, highestPairCardValue);
         int highestSingleCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD);
@@ -174,7 +174,7 @@ public class PokerCombinationChecker {
                 tripsCount == 0 & pairCount == 1);
     }
 
-    public void getBestPair() {
+    public void addBestPairToBestHand() {
         int highestPairCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.PAIR);
 
         int highestSingleCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD);
@@ -193,7 +193,7 @@ public class PokerCombinationChecker {
                 tripsCount == 0 & pairCount == 0);
     }
 
-    public void getBestHighCard() {
+    public void adBestHighCardToBestHand() {
         int highestSingleCardValue = cardValueAnalyser.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD);
         int secondHighestSingleCardValue = cardValueAnalyser.getNextHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD, highestSingleCardValue);
         int thirdHighestSingleCardValue = cardValueAnalyser.getNextHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD, secondHighestSingleCardValue);
@@ -233,22 +233,5 @@ public class PokerCombinationChecker {
             sortedCards.remove(0);
         }
         return sortedCards;
-    }
-
-    private final ArrayList<Card> removeValueDuplicates(ArrayList<Card> sortedCards) {
-        ArrayList<Card> cardsWithoutDuplicates = new ArrayList<Card>();
-
-        cardsWithoutDuplicates.add(sortedCards.get(0));
-
-        for (int i = 1; i < sortedCards.size(); i++) {
-            Card previousCard = sortedCards.get(i - 1);
-            Card currentCard = sortedCards.get(i);
-
-            if (currentCard.getValue() != previousCard.getValue()) {
-                cardsWithoutDuplicates.add(currentCard);
-            }
-        }
-
-        return cardsWithoutDuplicates;
     }
 }
