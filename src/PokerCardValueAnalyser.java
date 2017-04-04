@@ -3,12 +3,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PokerCardValueAnalyser {
-    private Map<Integer, Integer> valueOccurrenceCount;
-
     public static final int SINGLE_CARD = 1;
     public static final int PAIR = 2;
     public static final int THREE_OF_A_KIND = 3;
     public static final int FOUR_OF_A_KIND = 4;
+
+    private Map<Integer, Integer> valueOccurrenceCount;
 
     public PokerCardValueAnalyser(ArrayList<Card> cards) {
         valueOccurrenceCount = getValueOccurrenceCount(cards);

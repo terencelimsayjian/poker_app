@@ -166,7 +166,6 @@ public class PokerHandChecker {
         bestHand.addAll(flushedCards);
     }
 
-
     private void addBestStraightToBestHand() {
         ArrayList<Card> straightCards = pokerStraightsAnalyser.getBestMadeStraight();
         bestHand.addAll(straightCards);
