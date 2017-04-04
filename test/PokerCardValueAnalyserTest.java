@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class CardValueAnalyserTest {
+public class PokerCardValueAnalyserTest {
     @Test
     public void testCountSingleCards() {
         ArrayList<Card> cards = new ArrayList<Card>();
@@ -17,8 +17,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(6, 1));
         cards.add(new Card(7, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.countCombinations(CardValueAnalyser.SINGLE_CARD) == 7, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.countCombinations(PokerCardValueAnalyser.SINGLE_CARD) == 7, true);
     }
 
     @Test
@@ -33,8 +33,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(6, 1));
         cards.add(new Card(7, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.countCombinations(CardValueAnalyser.PAIR) == 1, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.countCombinations(PokerCardValueAnalyser.PAIR) == 1, true);
     }
 
     @Test
@@ -49,8 +49,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(6, 1));
         cards.add(new Card(7, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.countCombinations(CardValueAnalyser.PAIR) == 2, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.countCombinations(PokerCardValueAnalyser.PAIR) == 2, true);
     }
 
     @Test
@@ -65,8 +65,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(6, 1));
         cards.add(new Card(7, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.countCombinations(CardValueAnalyser.THREE_OF_A_KIND) == 1, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.countCombinations(PokerCardValueAnalyser.THREE_OF_A_KIND) == 1, true);
     }
 
     @Test
@@ -81,8 +81,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(7, 1));
         cards.add(new Card(7, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.countCombinations(CardValueAnalyser.FOUR_OF_A_KIND) == 1, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.countCombinations(PokerCardValueAnalyser.FOUR_OF_A_KIND) == 1, true);
     }
 
     @Test
@@ -97,8 +97,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(7, 1));
         cards.add(new Card(13, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD) == 13, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getHighestCardOfCombination(PokerCardValueAnalyser.SINGLE_CARD) == 13, true);
     }
 
     @Test
@@ -113,8 +113,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(7, 1));
         cards.add(new Card(1, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD) == 14, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getHighestCardOfCombination(PokerCardValueAnalyser.SINGLE_CARD) == 14, true);
     }
 
     @Test
@@ -129,8 +129,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(4, 2));
         cards.add(new Card(1, 3));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getHighestCardOfCombination(CardValueAnalyser.PAIR) == 4, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getHighestCardOfCombination(PokerCardValueAnalyser.PAIR) == 4, true);
     }
 
     @Test
@@ -145,8 +145,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(13,3));
         cards.add(new Card(1, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getHighestCardOfCombination(CardValueAnalyser.THREE_OF_A_KIND) == 13, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getHighestCardOfCombination(PokerCardValueAnalyser.THREE_OF_A_KIND) == 13, true);
     }
 
     @Test
@@ -161,8 +161,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(12, 1));
         cards.add(new Card(12, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getHighestCardOfCombination(CardValueAnalyser.FOUR_OF_A_KIND) == 12, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getHighestCardOfCombination(PokerCardValueAnalyser.FOUR_OF_A_KIND) == 12, true);
     }
 
     @Test
@@ -177,8 +177,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(12, 1));
         cards.add(new Card(13, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getNextHighestCardOfCombination(CardValueAnalyser.SINGLE_CARD, Card.KING) == 12, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getNextHighestCardOfCombination(PokerCardValueAnalyser.SINGLE_CARD, Card.KING) == 12, true);
     }
 
     @Test
@@ -193,8 +193,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(11, 2));
         cards.add(new Card(11, 3));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getNextHighestCardOfCombination(CardValueAnalyser.PAIR, Card.JACK) == 9, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getNextHighestCardOfCombination(PokerCardValueAnalyser.PAIR, Card.JACK) == 9, true);
     }
 
     @Test
@@ -209,8 +209,8 @@ public class CardValueAnalyserTest {
         cards.add(new Card(13, 1));
         cards.add(new Card(13, 1));
 
-        CardValueAnalyser cva = new CardValueAnalyser(cards);
-        assertEquals(cva.getNextHighestCardOfCombination(CardValueAnalyser.THREE_OF_A_KIND, Card.KING) == 8, true);
+        PokerCardValueAnalyser cva = new PokerCardValueAnalyser(cards);
+        assertEquals(cva.getNextHighestCardOfCombination(PokerCardValueAnalyser.THREE_OF_A_KIND, Card.KING) == 8, true);
     }
 
 }

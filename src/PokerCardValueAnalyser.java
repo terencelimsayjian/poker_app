@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CardValueAnalyser {
+public class PokerCardValueAnalyser {
     private Map<Integer, Integer> valueOccurrenceCount;
 
     public static final int SINGLE_CARD = 1;
@@ -10,11 +10,11 @@ public class CardValueAnalyser {
     public static final int THREE_OF_A_KIND = 3;
     public static final int FOUR_OF_A_KIND = 4;
 
-    public CardValueAnalyser(ArrayList<Card> cards) {
+    public PokerCardValueAnalyser(ArrayList<Card> cards) {
         valueOccurrenceCount = getValueOccurrenceCount(cards);
     }
 
-    private final Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
+    private Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
         Map<Integer, Integer> valueOccurrenceMap = new HashMap<Integer, Integer>();
 
         for (Card card : cards) {

@@ -2,7 +2,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 
-public class PokerCombinationCheckerTest {
+public class PokerHandCheckerTest {
     @Test
     public void testIsStraightFlush () {
         ArrayList<Card> board = new ArrayList<Card>(5);
@@ -24,7 +24,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraightFlush(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -57,7 +57,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
         assertEquals(pcc.isStraightFlush(), false);
     }
@@ -83,7 +83,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isFlush(), true);
         assertEquals(pcc.isStraightFlush(), false);
     }
@@ -109,7 +109,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraightFlush(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -142,7 +142,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isFourOfAKind(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -167,7 +167,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(7, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFourOfAKind(), false);
 
@@ -195,7 +195,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFullHouse(), true);
 
@@ -221,7 +221,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(7, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFullHouse(), false);
     }
@@ -239,7 +239,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(8, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFullHouse(), false);
     }
@@ -257,7 +257,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(8, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFullHouse(), false);
     }
@@ -275,7 +275,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(13, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFullHouse(), false);
     }
@@ -301,9 +301,10 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isFlush(), true);
 
+        pcc.getBestHand();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -326,7 +327,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(8, 2));
         hand.add(1, new Card(4, 1));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isFlush(), false);
     }
@@ -352,9 +353,10 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isFlush(), true);
 
+        pcc.getBestHand();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c1), true);
         assertEquals(bestHand.contains(c2), true);
@@ -386,7 +388,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -411,7 +413,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(4, 2));
         hand.add(1, new Card(4, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), true);
     }
@@ -437,7 +439,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -470,7 +472,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -503,7 +505,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -528,7 +530,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(12, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), false);
     }
@@ -546,7 +548,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(10, 2));
         hand.add(1, new Card(11, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), false);
     }
@@ -572,7 +574,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -605,7 +607,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isStraight(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -630,7 +632,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(10, 1));
         hand.add(1, new Card(11, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), false);
     }
@@ -656,7 +658,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isThreeOfAKind(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -681,7 +683,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(10, 2));
         hand.add(1, new Card(11, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isThreeOfAKind(), false);
     }
@@ -699,7 +701,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 2));
         hand.add(1, new Card(11, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isThreeOfAKind(), false);
     }
@@ -717,7 +719,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(3, 1));
         hand.add(1, new Card(6, 1));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isThreeOfAKind(), false);
     }
@@ -735,7 +737,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(5, 2));
         hand.add(1, new Card(6, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isThreeOfAKind(), false);
     }
@@ -753,7 +755,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(12, 2));
         hand.add(1, new Card(12, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isThreeOfAKind(), false);
     }
@@ -779,7 +781,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isTwoPair(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -812,7 +814,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isTwoPair(), false);
     }
@@ -838,7 +840,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isTwoPair(), false);
     }
@@ -864,7 +866,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isTwoPair(), false);
     }
@@ -882,7 +884,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(1, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isTwoPair(), false);
     }
 
@@ -899,7 +901,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(2, 2));
         hand.add(1, new Card(3, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isTwoPair(), false);
     }
 
@@ -924,9 +926,10 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isPair(), true);
 
+        pcc.getBestHand();
         ArrayList<Card> bestHand = pcc.getBestHand();
         assertEquals(bestHand.contains(c2), true);
         assertEquals(bestHand.contains(c3), true);
@@ -949,7 +952,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(2, 2));
         hand.add(1, new Card(3, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -967,7 +970,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(1, 3));
         hand.add(1, new Card(11, 1));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -985,7 +988,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(9, 2));
         hand.add(1, new Card(9, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1003,7 +1006,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(9, 2));
         hand.add(1, new Card(9, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1021,7 +1024,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(13, 1));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1039,7 +1042,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1057,7 +1060,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1075,7 +1078,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(13, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isPair(), false);
     }
@@ -1101,7 +1104,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, c6);
         hand.add(1, c7);
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
         assertEquals(pcc.isHighCard(), true);
 
         ArrayList<Card> bestHand = pcc.getBestHand();
@@ -1126,7 +1129,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(2, 3));
         hand.add(1, new Card(11, 1));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1144,7 +1147,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(9, 2));
         hand.add(1, new Card(1, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1162,7 +1165,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(9, 2));
         hand.add(1, new Card(9, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1180,7 +1183,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 3));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1198,7 +1201,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1216,7 +1219,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(11, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1234,7 +1237,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(13, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isHighCard(), false);
     }
@@ -1252,7 +1255,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(13, 2));
         hand.add(1, new Card(13, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), true);
     }
@@ -1270,7 +1273,7 @@ public class PokerCombinationCheckerTest {
         hand.add(0, new Card(7, 2));
         hand.add(1, new Card(8, 3));
 
-        PokerCombinationChecker pcc = new PokerCombinationChecker(board, hand);
+        PokerHandChecker pcc = new PokerHandChecker(board, hand);
 
         assertEquals(pcc.isStraight(), false);
     }

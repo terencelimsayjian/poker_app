@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class ConsecutiveCardAnalyserTest {
+public class PokerStraightsAnalyserTest {
     @Test
     public void testHasFiveOrMoreConsecutiveValues() {
         ArrayList<Card> cards = new ArrayList<Card>();
@@ -17,7 +17,7 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(new Card(2, 1));
         cards.add(new Card(11, 1));
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
         assertEquals(cca.getHasFiveOrMoreConsecutiveValues(), true);
     }
 
@@ -33,7 +33,7 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(new Card(2, 1));
         cards.add(new Card(11, 1));
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
         assertEquals(cca.getHasFiveOrMoreConsecutiveValues(), false);
     }
 
@@ -49,7 +49,7 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(new Card(2, 1));
         cards.add(new Card(11, 1));
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
         assertEquals(cca.getHasFiveOrMoreConsecutiveValues(), true);
     }
 
@@ -65,7 +65,7 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(new Card(5, 2));
         cards.add(new Card(2, 1));
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
 
         assertEquals(cca.getHasFiveOrMoreConsecutiveValues(), true);
     }
@@ -90,8 +90,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
         assertEquals(straightCards.contains(c3), true);
@@ -120,8 +120,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
         assertEquals(straightCards.contains(c3), true);
@@ -150,8 +150,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
@@ -181,8 +181,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
@@ -212,8 +212,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c2), true);
         assertEquals(straightCards.contains(c4), true);
@@ -243,8 +243,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c2), true);
         assertEquals(straightCards.contains(c4), true);
@@ -274,8 +274,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
@@ -305,8 +305,8 @@ public class ConsecutiveCardAnalyserTest {
         cards.add(c6);
         cards.add(c7);
 
-        ConsecutiveCardAnalyser cca = new ConsecutiveCardAnalyser(cards);
-        ArrayList<Card> straightCards = cca.getStraightCards();
+        PokerStraightsAnalyser cca = new PokerStraightsAnalyser(cards);
+        ArrayList<Card> straightCards = cca.getBestMadeStraight();
         System.out.println(straightCards.toString());
         assertEquals(straightCards.contains(c1), true);
         assertEquals(straightCards.contains(c2), true);
