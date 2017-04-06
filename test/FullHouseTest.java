@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class FullHouseTest {
-
-
     @Test
     public void testBestFullHouse() {
         Card c1 = new Card(3, 1);

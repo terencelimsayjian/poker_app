@@ -31,6 +31,8 @@ public class FourOfAKindTest {
         assertEquals(bestFourOfAKind.contains(c3),true);
         assertEquals(bestFourOfAKind.contains(c4),true);
         assertEquals(bestFourOfAKind.contains(c7),true);
+        assertEquals(bestFourOfAKind.contains(c5),false);
+        assertEquals(bestFourOfAKind.contains(c6),false);
         assertEquals(bestFourOfAKind.size() == 5,true);
     }
 
@@ -60,7 +62,8 @@ public class FourOfAKindTest {
         assertEquals(bestFourOfAKind.contains(c3),true);
         assertEquals(bestFourOfAKind.contains(c4),true);
         assertEquals(bestFourOfAKind.contains(c6),true);
-
+        assertEquals(bestFourOfAKind.contains(c5),false);
+        assertEquals(bestFourOfAKind.contains(c7),false);
         assertEquals(bestFourOfAKind.size() == 5,true);
     }
 
@@ -90,7 +93,8 @@ public class FourOfAKindTest {
         assertEquals(bestFourOfAKind.contains(c3),true);
         assertEquals(bestFourOfAKind.contains(c4),true);
         assertEquals(bestFourOfAKind.contains(c5),true);
-
+        assertEquals(bestFourOfAKind.contains(c6),false);
+        assertEquals(bestFourOfAKind.contains(c7),false);
         assertEquals(bestFourOfAKind.size() == 5,true);
     }
 

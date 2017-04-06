@@ -1,34 +1,18 @@
 import java.util.ArrayList;
 
-public class FullHouse extends PokerHandChecker {
-    int threeOfAKindCount;
-    int pairCount;
-    CardValueCounter cardValueCounter;
-
+public class FullHouse extends PokerHand {
     public FullHouse(ArrayList<Card> cards) {
         super(cards);
-        cardValueCounter = new CardValueCounter(cards);
 
-        threeOfAKindCount = cardValueCounter.countCombinations(cardValueCounter.THREE_OF_A_KIND);
-        pairCount = cardValueCounter.countCombinations(cardValueCounter.PAIR);
-
-        if (isTrue()) {
-            calculateBestHand();
-        }
-    }
-
-    public boolean isTrue() {
-        return threeOfAKindCount == 1 && pairCount >= 1
-                || threeOfAKindCount > 1;
-    }
-
-    @Override
-    public ArrayList<Card> getBestHand() {
-        return bestHand;
+        calculateBestHand();
     }
 
     @Override
     protected void calculateBestHand() {
+        CardValueCounter cardValueCounter = new CardValueCounter(cards);
+
+        int threeOfAKindCount = cardValueCounter.countCombinations(cardValueCounter.THREE_OF_A_KIND);
+
         int highestThreeOfAKindValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.THREE_OF_A_KIND);
         int highestPairValue;
 

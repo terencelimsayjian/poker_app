@@ -5,37 +5,7 @@ import java.util.Collections;
 
 import static org.junit.Assert.*;
 
-public class FlushHandTest {
-    @Test
-    public void testFlushIsTrue () {
-        ArrayList<Integer> randomUniqueCardValues = CardRandomiser.generateRandomUniqueCardValues(5);
-
-        ArrayList<Card> cards = new ArrayList<Card>();
-        cards.add(new Card(randomUniqueCardValues.get(0), 1));
-        cards.add(new Card(randomUniqueCardValues.get(1), 1));
-        cards.add(new Card(randomUniqueCardValues.get(2), 1));
-        cards.add(new Card(randomUniqueCardValues.get(3), 1));
-        cards.add(new Card(randomUniqueCardValues.get(4), 1));
-
-        FlushHand fhc = new FlushHand(cards);
-        assertEquals(fhc.isTrue(),true);
-    }
-
-    @Test
-    public void testNoFlushIsNotTrue () {
-        ArrayList<Card> cards = new ArrayList<Card>();
-        cards.add(new Card(1, 1));
-        cards.add(new Card(2, 1));
-        cards.add(new Card(3, 1));
-        cards.add(new Card(4, 1));
-        cards.add(new Card(5, 2));
-        cards.add(new Card(6, 3));
-        cards.add(new Card(7, 4));
-
-        FlushHand fhc = new FlushHand(cards);
-        assertEquals(fhc.isTrue(),false);
-    }
-
+public class FlushTest {
     @Test
     public void testGetBestFlush () {
 
@@ -59,22 +29,19 @@ public class FlushHandTest {
             cards.add(c6);
             cards.add(c7);
 
-            FlushHand flushHand = new FlushHand(cards);
-            ArrayList<Card> bestFlush = flushHand.getBestHand();
+            Flush flush = new Flush(cards);
+            ArrayList<Card> bestFlush = flush.getBestHand();
 
             Collections.sort(cards);
 
-            assertEquals(flushHand.isTrue(), true);
             assertEquals(bestFlush.contains(cards.get(2)), true);
             assertEquals(bestFlush.contains(cards.get(3)), true);
             assertEquals(bestFlush.contains(cards.get(4)), true);
             assertEquals(bestFlush.contains(cards.get(5)), true);
             assertEquals(bestFlush.contains(cards.get(6)), true);
+            assertEquals(bestFlush.contains(cards.get(0)), false);
+            assertEquals(bestFlush.contains(cards.get(1)), false);
             assertEquals(bestFlush.size() == 5, true);
         }
     }
-
-
-
-
 }
