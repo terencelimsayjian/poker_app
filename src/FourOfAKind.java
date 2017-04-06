@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //asdf.isTrue()
 //asdf.getBestHand() => Empty arrayList
 
-public class FourOfAKind extends PokerHand {
+public class FourOfAKind extends PokerHandChecker {
     private CardValueCounter cardValueCounter;
     private boolean hasFourOfAKind;
 

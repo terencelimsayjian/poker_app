@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class FlushHand extends PokerHand {
+public class FlushHand extends PokerHandChecker {
     private CardSuitCounter cardSuitCounter;
 
     public FlushHand(ArrayList<Card> cards) {

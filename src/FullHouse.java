@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class FullHouse extends PokerHand {
+public class FullHouse extends PokerHandChecker {
     int threeOfAKindCount;
     int pairCount;
     CardValueCounter cardValueCounter;

@@ -6,60 +6,6 @@ import static org.junit.Assert.*;
 
 public class FullHouseTest {
 
-    @Test
-    public void testIsFullHouse() {
-        ArrayList<Card> cards = new ArrayList<Card>(5);
-        cards.add(new Card(1, 1));
-        cards.add(new Card(1, 2));
-        cards.add(new Card(1, 3));
-        cards.add(new Card(2, 1));
-        cards.add(new Card(2, 2));
-
-        FullHouse fullHouse = new FullHouse(cards);
-        assertEquals(fullHouse.isTrue(), true);
-    }
-
-    @Test
-    public void testIsNotFullHouse() {
-        ArrayList<Card> cards = new ArrayList<Card>(5);
-        cards.add(new Card(1, 1));
-        cards.add(new Card(1, 2));
-        cards.add(new Card(3, 3));
-        cards.add(new Card(2, 1));
-        cards.add(new Card(2, 2));
-
-        FullHouse fullHouse = new FullHouse(cards);
-        assertEquals(fullHouse.isTrue(), false);
-    }
-
-    @Test
-    public void testTwoThreeOfAKindIsFullHouse() {
-        ArrayList<Card> cards = new ArrayList<Card>(5);
-        cards.add(new Card(3, 1));
-        cards.add(new Card(3, 2));
-        cards.add(new Card(3, 3));
-        cards.add(new Card(2, 1));
-        cards.add(new Card(2, 2));
-        cards.add(new Card(2, 3));
-
-        FullHouse fullHouse = new FullHouse(cards);
-        assertEquals(fullHouse.isTrue(), true);
-    }
-
-    @Test
-    public void testThreeOfAKindAndTwoPairsIsFullHouse() {
-        ArrayList<Card> cards = new ArrayList<Card>(5);
-        cards.add(new Card(3, 1));
-        cards.add(new Card(3, 2));
-        cards.add(new Card(3, 3));
-        cards.add(new Card(2, 1));
-        cards.add(new Card(2, 2));
-        cards.add(new Card(4, 1));
-        cards.add(new Card(4, 2));
-
-        FullHouse fullHouse = new FullHouse(cards);
-        assertEquals(fullHouse.isTrue(), true);
-    }
 
     @Test
     public void testBestFullHouse() {
