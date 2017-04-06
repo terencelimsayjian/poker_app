@@ -1,6 +1,9 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class CardTest {
     @Test
     public void aceValue() {
@@ -45,6 +48,28 @@ public class CardTest {
         assertEquals(queenClubs.toString(), "Queen of Clubs");
         Card kingDiamonds = new Card(13, 4);
         assertEquals(kingDiamonds.toString(), "King of Diamonds");
+    }
+
+    @Test
+    public void testCardSort() {
+        ArrayList<Card> cards = new ArrayList<Card>();
+        int cardQuantity = 10;
+
+        ArrayList<Integer> randomUniqueCardValues = CardRandomiser.generateRandomUniqueCardValues(cardQuantity);
+
+        for (int i = 0; i < cardQuantity; i++) {
+            cards.add(new Card(randomUniqueCardValues.get(i), 1));
+        }
+
+        Collections.sort(cards);
+
+        for (int i = 1; i < cardQuantity; i++) {
+            Card previousCard = cards.get(i - 1);
+            Card currentCard = cards.get(i - 1);
+            assertEquals(previousCard.getValue() <= currentCard.getValue(), true);
+        }
+
+
     }
 
 }

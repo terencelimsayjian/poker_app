@@ -3,23 +3,15 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PokerFlushAnalyser {
+public class CardSuitCounter {
     private Map<Integer, Integer> suitOccurrenceCount;
     private ArrayList<Card> cards;
-    private ArrayList<Card> bestMadeFlush = new ArrayList<Card>();
 
-    public PokerFlushAnalyser(ArrayList<Card> cards) {
+    public CardSuitCounter(ArrayList<Card> cards) {
         Collections.sort(cards);
         this.cards = cards;
 
         suitOccurrenceCount =  getSuitOccurrenceCount(cards);
-        addTopFiveFlushCardsToBestMadeFlush();
-    }
-
-    // TODO: Get ALL flush cards for use in the straight flush algo
-
-    public ArrayList<Card> getBestMadeFlush() {
-        return bestMadeFlush;
     }
 
     private Map<Integer, Integer> getSuitOccurrenceCount(ArrayList<Card> cards) {
@@ -38,15 +30,15 @@ public class PokerFlushAnalyser {
         return suitOccurrenceMap;
     }
 
-    public boolean hasFiveOrMoreOfTheSameSuit() {
-        boolean hasFiveOrMoreOfTheSameSuit = false;
+    public int getHighestOccurrenceOfAnySuit() {
+        int highestOccurrence = 0;
 
         for (Map.Entry<Integer, Integer> entry : suitOccurrenceCount.entrySet()) {
-            if (entry.getValue() >= 5) {
-                hasFiveOrMoreOfTheSameSuit = true;
+            if (entry.getValue() > highestOccurrence) {
+                highestOccurrence = entry.getValue();
             }
         }
-        return hasFiveOrMoreOfTheSameSuit;
+        return highestOccurrence;
     }
 
     public int getFlushSuit() {
@@ -61,19 +53,6 @@ public class PokerFlushAnalyser {
 
         return suit;
     }
-
-    private void addTopFiveFlushCardsToBestMadeFlush() {
-        int flushedSuit = getFlushSuit();
-
-        for (int i = cards.size() - 1; i >= 0; i--) {
-            Card currentCard = cards.get(i);
-
-            if (currentCard.getSuit() == flushedSuit && bestMadeFlush.size() < 5) {
-                getBestMadeFlush().add(currentCard);
-            }
-        }
-    }
-
 
 }
 

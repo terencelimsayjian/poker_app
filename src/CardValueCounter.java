@@ -2,16 +2,28 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PokerCardValueAnalyser {
+public class CardValueCounter {
     public static final int SINGLE_CARD = 1;
     public static final int PAIR = 2;
     public static final int THREE_OF_A_KIND = 3;
     public static final int FOUR_OF_A_KIND = 4;
 
+    private boolean hasFourOfAKind;
+    private int tripsCount;
+    private int pairCount;
     private Map<Integer, Integer> valueOccurrenceCount;
 
-    public PokerCardValueAnalyser(ArrayList<Card> cards) {
+    private ArrayList<Card> bestHand = new ArrayList<Card>(5);
+    private ArrayList<Card> cards = new ArrayList<Card>(7);
+
+
+    public CardValueCounter(ArrayList<Card> cards) {
         valueOccurrenceCount = getValueOccurrenceCount(cards);
+        this.cards.addAll(cards);
+
+        hasFourOfAKind = countCombinations(CardValueCounter.FOUR_OF_A_KIND) == 1;
+        tripsCount = countCombinations(CardValueCounter.THREE_OF_A_KIND);
+        pairCount = countCombinations(CardValueCounter.PAIR);
     }
 
     private Map<Integer, Integer> getValueOccurrenceCount(ArrayList<Card> cards) {
@@ -70,4 +82,6 @@ public class PokerCardValueAnalyser {
 
         return secondHighestCard;
     }
+
+
 }
