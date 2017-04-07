@@ -5,6 +5,8 @@ public abstract class FourOfAKindHandChecker {
         if (cards.size() < 5) { return false; }
 
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
-        return cardValueCounter.countCombinations(cardValueCounter.FOUR_OF_A_KIND) >= 1;
+        boolean isFourOfAKind = cardValueCounter.countCombinations(cardValueCounter.FOUR_OF_A_KIND) >= 1;
+
+        return isFourOfAKind;
     }
 }
