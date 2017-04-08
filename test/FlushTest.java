@@ -10,7 +10,7 @@ public class FlushTest {
     public void testGetBestFlush () {
 
         for (int i = 0; i < 10; i++) {
-            ArrayList<Integer> randomUniqueCardValues = CardRandomiser.generateRandomUniqueCardValues(7);
+            ArrayList<Integer> randomUniqueCardValues = generateRandomUniqueCardValues(7);
 
             Card c1 = new Card(randomUniqueCardValues.get(0), 1);
             Card c2 = new Card(randomUniqueCardValues.get(1), 1);
@@ -29,7 +29,7 @@ public class FlushTest {
             cards.add(c6);
             cards.add(c7);
 
-            Flush flush = new Flush(cards);
+            PokerHand flush = new Flush(cards);
             ArrayList<Card> bestFlush = flush.getBestHand();
 
             Collections.sort(cards);
@@ -43,5 +43,19 @@ public class FlushTest {
             assertEquals(bestFlush.contains(cards.get(1)), false);
             assertEquals(bestFlush.size() == 5, true);
         }
+    }
+
+    private ArrayList<Integer> generateRandomUniqueCardValues(int numberOfCards) {
+        ArrayList<Integer> randomUniqueCardValues = new ArrayList<Integer>(numberOfCards);
+
+        while (randomUniqueCardValues.size() < numberOfCards) {
+            int cardValue = (int) (Math.random() * 12 + 1);
+
+            if (!randomUniqueCardValues.contains(cardValue)) {
+                randomUniqueCardValues.add(cardValue);
+            }
+        }
+
+        return randomUniqueCardValues;
     }
 }

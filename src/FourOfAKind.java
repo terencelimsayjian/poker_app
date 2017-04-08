@@ -24,4 +24,8 @@ public class FourOfAKind extends PokerHand {
         addCardsWithValueToBestHand(highestSingleCardValue, 1);
     }
 
+    @Override
+    public int compareTo(PokerHand o) {
+        return 0;
+    }
 }

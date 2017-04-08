@@ -2,32 +2,29 @@ import java.util.ArrayList;
 
 public abstract class BestPokerCombination {
 
-//     get best Poker Hand = Something that inherits from poker hand
-
     public static PokerHand get(ArrayList<Card> cards) {
-        PokerHand bestPokerHand;
+        PokerHand bestPokerHand = null;
 
-        // Straight Flush
-//        if (FourOfAKindHandChecker.isTrue(cards)) {
+        if (StraightFlushHandChecker.isTrue(cards)) {
+            bestPokerHand = new StraightFlush(cards);
+        } else if (FourOfAKindHandChecker.isTrue(cards)) {
             bestPokerHand = new FourOfAKind(cards);
-//        }
-//
-// else if (FullHouseHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.FULL_HOUSE;
-//        } else if (FlushHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.FLUSH;
-//        } else if (StraightHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.STRAIGHT;
-//        } else if (ThreeOfAKindHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.THREE_OF_A_KIND;
-//        } else if (TwoPairHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.TWO_PAIR;
-//        } else if (PairHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.PAIR;
-//        } else if (HighCardHandChecker.isTrue(cards)) {
-//            bestPokerHand = PokerHand.HIGH_CARD;
-//        }
-//
+        } else if (FullHouseHandChecker.isTrue(cards)) {
+            bestPokerHand = new FullHouse(cards);
+        } else if (FlushHandChecker.isTrue(cards)) {
+            bestPokerHand = new Flush(cards);
+        } else if (StraightHandChecker.isTrue(cards)) {
+            bestPokerHand = new Straight(cards);
+        } else if (ThreeOfAKindHandChecker.isTrue(cards)) {
+            bestPokerHand = new ThreeOfAKind(cards);
+        } else if (TwoPairHandChecker.isTrue(cards)) {
+            bestPokerHand = new TwoPair(cards);
+        } else if (PairHandChecker.isTrue(cards)) {
+            bestPokerHand = new Pair(cards);
+        } else if (HighCardHandChecker.isTrue(cards)) {
+            bestPokerHand = new HighCard(cards);
+        }
+
         return bestPokerHand;
     }
 

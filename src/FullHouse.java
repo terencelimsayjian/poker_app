@@ -12,8 +12,8 @@ public class FullHouse extends PokerHand {
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
 
         int threeOfAKindCount = cardValueCounter.countCombinations(cardValueCounter.THREE_OF_A_KIND);
-
         int highestThreeOfAKindValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.THREE_OF_A_KIND);
+
         int highestPairValue;
 
         if (threeOfAKindCount > 1) {
@@ -26,4 +26,8 @@ public class FullHouse extends PokerHand {
         addCardsWithValueToBestHand(highestPairValue, 2);
     }
 
+    @Override
+    public int compareTo(PokerHand o) {
+        return 0;
+    }
 }

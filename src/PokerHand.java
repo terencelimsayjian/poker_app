@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 
-public abstract class PokerHand {
-    public final int STRAIGHT_FLUSH =  1;
-    public final int FOUR_OF_A_KIND =  2;
-    public final int FULL_HOUSE = 3;
-    public final int FLUSH =  4;
-    public final int STRAIGHT  =  5;
-    public final int THREE_OF_A_KIND =  6;
-    public final int TWO_PAIR  =  7;
-    public final int PAIR  =  8;
-    public final int HIGH_CARD =  9;
+public abstract class PokerHand implements Comparable<PokerHand> {
+    public static final int STRAIGHT_FLUSH =  1;
+    public static final int FOUR_OF_A_KIND =  2;
+    public static final int FULL_HOUSE = 3;
+    public static final int FLUSH =  4;
+    public static final int STRAIGHT  =  5;
+    public static final int THREE_OF_A_KIND =  6;
+    public static final int TWO_PAIR  =  7;
+    public static final int PAIR  =  8;
+    public static final int HIGH_CARD =  9;
 
     protected ArrayList<Card> cards = new ArrayList<Card>();
     protected ArrayList<Card> bestHand = new ArrayList<Card>();
+    protected int ranking;
 
     public PokerHand(ArrayList<Card> cards) {
         this.cards = cards;
@@ -20,6 +21,10 @@ public abstract class PokerHand {
 
     public ArrayList<Card> getBestHand() {
         return bestHand;
+    }
+
+    public int getRanking() {
+        return ranking;
     }
 
     protected abstract void calculateBestHand();
@@ -35,5 +40,7 @@ public abstract class PokerHand {
         }
     }
 
+    @Override
+    public abstract int compareTo(PokerHand o);
 
 }

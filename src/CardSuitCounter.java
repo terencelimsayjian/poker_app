@@ -3,34 +3,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CardSuitCounter {
-    private Map<Integer, Integer> suitOccurrenceCount;
-    private ArrayList<Card> cards;
-
-    public CardSuitCounter(ArrayList<Card> cards) {
-        Collections.sort(cards);
-        this.cards = cards;
-
-        suitOccurrenceCount =  getSuitOccurrenceCount(cards);
-    }
-
-    private Map<Integer, Integer> getSuitOccurrenceCount(ArrayList<Card> cards) {
-        Map<Integer, Integer> suitOccurrenceMap = new HashMap<Integer, Integer>();
-
-        for (Card card : cards) {
-            Integer numOccurrence = suitOccurrenceMap.get(card.getSuit());
-
-            if(numOccurrence == null){
-                suitOccurrenceMap.put(card.getSuit(), 1);
-            } else {
-                suitOccurrenceMap.put(card.getSuit(), ++numOccurrence);
-            }
-        }
-
-        return suitOccurrenceMap;
-    }
-
-    public int getHighestOccurrenceOfAnySuit() {
+public abstract class CardSuitCounter {
+    public static int getHighestOccurrenceOfAnySuit(ArrayList<Card> cards) {
+        Map<Integer, Integer> suitOccurrenceCount = getSuitOccurrenceCount(cards);
         int highestOccurrence = 0;
 
         for (Map.Entry<Integer, Integer> entry : suitOccurrenceCount.entrySet()) {
@@ -38,10 +13,13 @@ public class CardSuitCounter {
                 highestOccurrence = entry.getValue();
             }
         }
+
         return highestOccurrence;
     }
 
-    public int getFlushSuit() {
+    public static int getFlushSuit(ArrayList<Card> cards) {
+        Map<Integer, Integer> suitOccurrenceCount = getSuitOccurrenceCount(cards);
+
         int suit = 0;
 
         for (Map.Entry<Integer, Integer> entry : suitOccurrenceCount.entrySet()) {
@@ -52,6 +30,22 @@ public class CardSuitCounter {
         }
 
         return suit;
+    }
+
+    private static Map<Integer, Integer> getSuitOccurrenceCount(ArrayList<Card> cards) {
+        Map<Integer, Integer> suitOccurrenceMap = new HashMap<Integer, Integer>();
+
+        for (Card card : cards) {
+            Integer numOccurrence = suitOccurrenceMap.get(card.getSuit());
+
+            if (numOccurrence == null) {
+                suitOccurrenceMap.put(card.getSuit(), 1);
+            } else {
+                suitOccurrenceMap.put(card.getSuit(), ++numOccurrence);
+            }
+        }
+
+        return suitOccurrenceMap;
     }
 
 }

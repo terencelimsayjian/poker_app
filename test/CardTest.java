@@ -53,12 +53,11 @@ public class CardTest {
     @Test
     public void testCardSort() {
         ArrayList<Card> cards = new ArrayList<Card>();
-        int cardQuantity = 10;
-
-        ArrayList<Integer> randomUniqueCardValues = CardRandomiser.generateRandomUniqueCardValues(cardQuantity);
+        int cardQuantity = 50;
 
         for (int i = 0; i < cardQuantity; i++) {
-            cards.add(new Card(randomUniqueCardValues.get(i), 1));
+            int randomCardNumber = (int) Math.random() * 13 + 1;
+            cards.add(new Card(randomCardNumber, 1));
         }
 
         Collections.sort(cards);

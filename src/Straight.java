@@ -10,6 +10,7 @@ public class Straight extends PokerHand {
     @Override
     protected void calculateBestHand() {
         Collections.sort(cards);
+        cards = RemoveCardValueDuplicates.call(cards);
 
         if (StraightHandChecker.hasFiveOrMoreConsecutiveValuesIgnoringAceToFive(cards)) {
             ArrayList<Card> topFiveCardsOfStraight = getTopFiveCardsOfStraight();
@@ -33,13 +34,13 @@ public class Straight extends PokerHand {
 
     private boolean isAceToFiveStraight() {
         boolean lastCardIsAce = cards.get(cards.size() - 1).isAce();
-        boolean firstFourCardsAreTwoToFive = isFirstFourCardsAreTwoToFive();
+        boolean firstFourCardsAreTwoToFive = areFirstFourCardsTwoToFive();
 
         return lastCardIsAce && firstFourCardsAreTwoToFive;
     }
 
-    private boolean isFirstFourCardsAreTwoToFive() {
-        boolean firstFourCardsAreTwoToFive = true;
+    private boolean areFirstFourCardsTwoToFive() {
+        boolean firstFourCardsAreTwoToFive = true ;
 
         int cardValue = 2;
         for (int i = 0; i < 4; i++) {
@@ -59,7 +60,7 @@ public class Straight extends PokerHand {
             Card previousCard = cards.get(i - 1);
             Card secondPreviousCard = cards.get(i - 2);
 
-            if (areCardsConsecutive(secondPreviousCard, previousCard, currentCard)) {
+            if (areCardsConsecutiveInAscendingOrder(secondPreviousCard, previousCard, currentCard)) {
                 Card thirdPreviousCard = cards.get(i - 3);
                 Card fourthPreviousCard = cards.get(i - 4);
 
@@ -75,8 +76,13 @@ public class Straight extends PokerHand {
         return topFiveStraightCards;
     }
 
-    private boolean areCardsConsecutive(Card secondPreviousCard, Card previousCard, Card currentCard) {
-        return secondPreviousCard.getValue() == previousCard.getValue() - 1
-                && previousCard.getValue() == currentCard.getValue() - 1;
+    private boolean areCardsConsecutiveInAscendingOrder(Card card1, Card card2, Card card3) {
+        return card1.getValue() == card2.getValue() - 1
+                && card2.getValue() == card3.getValue() - 1;
+    }
+
+    @Override
+    public int compareTo(PokerHand o) {
+        return 0;
     }
 }

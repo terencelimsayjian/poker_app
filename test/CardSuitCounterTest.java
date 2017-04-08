@@ -17,8 +17,7 @@ public class CardSuitCounterTest {
         cards.add(new Card(6, 2));
         cards.add(new Card(7, 2));
 
-        CardSuitCounter csa = new CardSuitCounter(cards);
-        assertEquals(csa.getHighestOccurrenceOfAnySuit() == 4,true);
+        assertEquals(CardSuitCounter.getHighestOccurrenceOfAnySuit(cards) == 4,true);
     }
 
     @Test
@@ -33,8 +32,22 @@ public class CardSuitCounterTest {
         cards.add(new Card(6, 2));
         cards.add(new Card(7, 2));
 
-        CardSuitCounter csa = new CardSuitCounter(cards);
-        assertEquals(csa.getHighestOccurrenceOfAnySuit() == 5,true);
+        assertEquals(CardSuitCounter.getHighestOccurrenceOfAnySuit(cards) == 5,true);
+    }
+
+    @Test
+    public void testGetFlushSuit() {
+        ArrayList<Card> cards = new ArrayList<Card>();
+
+        cards.add(new Card(1, 2));
+        cards.add(new Card(2, 1));
+        cards.add(new Card(3, 3));
+        cards.add(new Card(4, 2));
+        cards.add(new Card(5, 2));
+        cards.add(new Card(6, 2));
+        cards.add(new Card(7, 2));
+
+        assertEquals(CardSuitCounter.getFlushSuit(cards) == 2, true);
     }
 
 

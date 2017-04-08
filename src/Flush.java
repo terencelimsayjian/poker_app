@@ -10,16 +10,10 @@ public class Flush extends PokerHand {
 
     @Override
     protected void calculateBestHand () {
-        int flushSuit = getFlushSuit();
-
-        addCardsWithSuitToBestHand(flushSuit);
+        ArrayList<Card> flushCards = GetFlushCards.call(cards);
+        bestHand.addAll(flushCards);
         Collections.sort(bestHand);
         shiftCardsFromBestHandUntilFiveRemain();
-    }
-
-    private int getFlushSuit() {
-        CardSuitCounter cardSuitCounter = new CardSuitCounter(cards);
-        return cardSuitCounter.getFlushSuit();
     }
 
     private void shiftCardsFromBestHandUntilFiveRemain() {
@@ -28,12 +22,8 @@ public class Flush extends PokerHand {
         }
     }
 
-    private void addCardsWithSuitToBestHand(int suit) {
-        for (Card card : cards) {
-            if (card.getSuit() == suit) {
-                bestHand.add(card);
-            }
-        }
+    @Override
+    public int compareTo(PokerHand o) {
+        return 0;
     }
-
 }
