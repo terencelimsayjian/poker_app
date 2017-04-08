@@ -18,15 +18,14 @@ public class StraightFlush extends PokerHand {
 
     @Override
     public int compareTo(PokerHand o) {
+//        int rankingComparison = o.getRanking() - getRanking();
         int rankingComparison = o.getRanking() - getRanking();
 
-        if (rankingComparison != 0) {
-//            return
+        if (rankingComparison == 0) {
+            // bestCard - bestCard
         }
 
         return rankingComparison;
-
     }
 
-    // if same ranking, need to compare high card for straight flush
 }
