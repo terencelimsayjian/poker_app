@@ -26,14 +26,14 @@ public class FourOfAKindTest {
 
         FourOfAKind fourOfAKind = new FourOfAKind(cards);
         ArrayList<Card> bestFourOfAKind = fourOfAKind.getBestHand();
-        assertEquals(bestFourOfAKind.contains(c1),true);
-        assertEquals(bestFourOfAKind.contains(c2),true);
-        assertEquals(bestFourOfAKind.contains(c3),true);
-        assertEquals(bestFourOfAKind.contains(c4),true);
-        assertEquals(bestFourOfAKind.contains(c7),true);
-        assertEquals(bestFourOfAKind.contains(c5),false);
-        assertEquals(bestFourOfAKind.contains(c6),false);
-        assertEquals(bestFourOfAKind.size() == 5,true);
+        assertEquals(bestFourOfAKind.contains(c1), true);
+        assertEquals(bestFourOfAKind.contains(c2), true);
+        assertEquals(bestFourOfAKind.contains(c3), true);
+        assertEquals(bestFourOfAKind.contains(c4), true);
+        assertEquals(bestFourOfAKind.contains(c7), true);
+        assertEquals(bestFourOfAKind.contains(c5), false);
+        assertEquals(bestFourOfAKind.contains(c6), false);
+        assertEquals(bestFourOfAKind.size() == 5, true);
     }
 
     @Test
@@ -57,14 +57,14 @@ public class FourOfAKindTest {
 
         FourOfAKind fourOfAKind = new FourOfAKind(cards);
         ArrayList<Card> bestFourOfAKind = fourOfAKind.getBestHand();
-        assertEquals(bestFourOfAKind.contains(c1),true);
-        assertEquals(bestFourOfAKind.contains(c2),true);
-        assertEquals(bestFourOfAKind.contains(c3),true);
-        assertEquals(bestFourOfAKind.contains(c4),true);
-        assertEquals(bestFourOfAKind.contains(c6),true);
-        assertEquals(bestFourOfAKind.contains(c5),false);
-        assertEquals(bestFourOfAKind.contains(c7),false);
-        assertEquals(bestFourOfAKind.size() == 5,true);
+        assertEquals(bestFourOfAKind.contains(c1), true);
+        assertEquals(bestFourOfAKind.contains(c2), true);
+        assertEquals(bestFourOfAKind.contains(c3), true);
+        assertEquals(bestFourOfAKind.contains(c4), true);
+        assertEquals(bestFourOfAKind.contains(c6), true);
+        assertEquals(bestFourOfAKind.contains(c5), false);
+        assertEquals(bestFourOfAKind.contains(c7), false);
+        assertEquals(bestFourOfAKind.size() == 5, true);
     }
 
     @Test
@@ -88,15 +88,70 @@ public class FourOfAKindTest {
 
         FourOfAKind fourOfAKind = new FourOfAKind(cards);
         ArrayList<Card> bestFourOfAKind = fourOfAKind.getBestHand();
-        assertEquals(bestFourOfAKind.contains(c1),true);
-        assertEquals(bestFourOfAKind.contains(c2),true);
-        assertEquals(bestFourOfAKind.contains(c3),true);
-        assertEquals(bestFourOfAKind.contains(c4),true);
-        assertEquals(bestFourOfAKind.contains(c5),true);
-        assertEquals(bestFourOfAKind.contains(c6),false);
-        assertEquals(bestFourOfAKind.contains(c7),false);
-        assertEquals(bestFourOfAKind.size() == 5,true);
+        assertEquals(bestFourOfAKind.contains(c1), true);
+        assertEquals(bestFourOfAKind.contains(c2), true);
+        assertEquals(bestFourOfAKind.contains(c3), true);
+        assertEquals(bestFourOfAKind.contains(c4), true);
+        assertEquals(bestFourOfAKind.contains(c5), true);
+        assertEquals(bestFourOfAKind.contains(c6), false);
+        assertEquals(bestFourOfAKind.contains(c7), false);
+        assertEquals(bestFourOfAKind.size() == 5, true);
     }
 
+    @Test
+    public void testCompareQuadsOverQuads() {
+        ArrayList<Card> fourOfAKindCards1 = new ArrayList<Card>(7);
+        fourOfAKindCards1.add(new Card(1, 1));
+        fourOfAKindCards1.add(new Card(1, 4));
+        fourOfAKindCards1.add(new Card(13, 2));
+        fourOfAKindCards1.add(new Card(9, 2));
+        fourOfAKindCards1.add(new Card(3, 1));
+        fourOfAKindCards1.add(new Card(1, 2));
+        fourOfAKindCards1.add(new Card(1, 3));
+
+        PokerHand fourOfAKindAces = new FourOfAKind(fourOfAKindCards1);
+
+        ArrayList<Card> fourOfAKindCards2 = new ArrayList<Card>(7);
+        fourOfAKindCards2.add(new Card(13, 1));
+        fourOfAKindCards2.add(new Card(13, 2));
+        fourOfAKindCards2.add(new Card(13, 3));
+        fourOfAKindCards2.add(new Card(13, 4));
+        fourOfAKindCards2.add(new Card(10, 2));
+        fourOfAKindCards2.add(new Card(2, 1));
+        fourOfAKindCards2.add(new Card(2, 1));
+
+        PokerHand fourOfAKindKings = new FourOfAKind(fourOfAKindCards2);
+
+        int compareNum = fourOfAKindAces.compareTo(fourOfAKindKings);
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareHighCardOverHighCard() {
+        ArrayList<Card> fourOfAKindCards1 = new ArrayList<Card>(7);
+        fourOfAKindCards1.add(new Card(1, 1));
+        fourOfAKindCards1.add(new Card(13, 4));
+        fourOfAKindCards1.add(new Card(13, 3));
+        fourOfAKindCards1.add(new Card(13, 2));
+        fourOfAKindCards1.add(new Card(13, 1));
+        fourOfAKindCards1.add(new Card(3, 2));
+        fourOfAKindCards1.add(new Card(4, 3));
+
+        PokerHand fourOfAKindKingsWithAce = new FourOfAKind(fourOfAKindCards1);
+
+        ArrayList<Card> fourOfAKindCards2 = new ArrayList<Card>(7);
+        fourOfAKindCards2.add(new Card(13, 1));
+        fourOfAKindCards2.add(new Card(13, 2));
+        fourOfAKindCards2.add(new Card(13, 3));
+        fourOfAKindCards2.add(new Card(13, 4));
+        fourOfAKindCards2.add(new Card(10, 2));
+        fourOfAKindCards2.add(new Card(2, 1));
+        fourOfAKindCards2.add(new Card(2, 1));
+
+        PokerHand fourOfAKindKingsWithTen = new FourOfAKind(fourOfAKindCards2);
+
+        int compareNum = fourOfAKindKingsWithAce.compareTo(fourOfAKindKingsWithTen);
+        assertTrue(compareNum > 0);
+    }
 
 }

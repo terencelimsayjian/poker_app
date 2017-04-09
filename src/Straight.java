@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class Straight extends PokerHand {
     public Straight(ArrayList<Card> cards) {
-        super(cards);
+        super(cards, PokerHand.STRAIGHT);
         calculateBestHand();
     }
 
@@ -81,8 +81,4 @@ public class Straight extends PokerHand {
                 && card2.getValue() == card3.getValue() - 1;
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
-    }
 }

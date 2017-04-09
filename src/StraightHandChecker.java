@@ -10,12 +10,12 @@ public abstract class StraightHandChecker {
 
     private static boolean hasFiveOrMoreConsecutiveValues(ArrayList<Card> cards) {
         Collections.sort(cards);
-        cards = RemoveCardValueDuplicates.call(cards);
-
         return hasFiveOrMoreConsecutiveValuesIgnoringAceToFive(cards) || hasAceToFiveStraight(cards);
     }
 
     public static boolean hasFiveOrMoreConsecutiveValuesIgnoringAceToFive(ArrayList<Card> sortedCards) {
+        sortedCards = RemoveCardValueDuplicates.call(sortedCards);
+
         int consecutiveCardCount = 0;
         boolean isStraight = false;
 
@@ -39,7 +39,9 @@ public abstract class StraightHandChecker {
         return isStraight;
     }
 
-    private static boolean hasAceToFiveStraight(ArrayList<Card> sortedCards) {
+    public static boolean hasAceToFiveStraight(ArrayList<Card> sortedCards) {
+        sortedCards = RemoveCardValueDuplicates.call(sortedCards);
+
         boolean lastCardIsAnAce = (sortedCards.get(sortedCards.size() - 1).isAce());
 
         if (!lastCardIsAnAce) { return false; }

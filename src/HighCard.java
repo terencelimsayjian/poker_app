@@ -2,8 +2,7 @@ import java.util.ArrayList;
 
 public class HighCard extends PokerHand {
     public HighCard (ArrayList<Card> cards) {
-        super(cards);
-
+        super(cards, PokerHand.HIGH_CARD);
         calculateBestHand();
     }
 
@@ -24,8 +23,4 @@ public class HighCard extends PokerHand {
         addCardsWithValueToBestHand(fifthHighestSingleCardValue, 1);
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
-    }
 }

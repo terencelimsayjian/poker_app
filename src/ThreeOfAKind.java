@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ThreeOfAKind extends PokerHand {
     public ThreeOfAKind(ArrayList<Card> cards) {
-        super(cards);
+        super(cards, PokerHand.THREE_OF_A_KIND);
 
         calculateBestHand();
     }
@@ -20,8 +20,4 @@ public class ThreeOfAKind extends PokerHand {
         addCardsWithValueToBestHand(secondHighestCardValue, 1);
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
-    }
 }

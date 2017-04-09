@@ -2,8 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3c96b35-acd7-4793-bd24-7319e255b671" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/PokerHandTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/Flush.class" afterPath="$PROJECT_DIR$/out/production/poker_app/Flush.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/FourOfAKind.class" afterPath="$PROJECT_DIR$/out/production/poker_app/FourOfAKind.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/FullHouse.class" afterPath="$PROJECT_DIR$/out/production/poker_app/FullHouse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/HighCard.class" afterPath="$PROJECT_DIR$/out/production/poker_app/HighCard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/Pair.class" afterPath="$PROJECT_DIR$/out/production/poker_app/Pair.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/PokerHand.class" afterPath="$PROJECT_DIR$/out/production/poker_app/PokerHand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/Straight.class" afterPath="$PROJECT_DIR$/out/production/poker_app/Straight.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/StraightFlush.class" afterPath="$PROJECT_DIR$/out/production/poker_app/StraightFlush.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/StraightHandChecker.class" afterPath="$PROJECT_DIR$/out/production/poker_app/StraightHandChecker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/ThreeOfAKind.class" afterPath="$PROJECT_DIR$/out/production/poker_app/ThreeOfAKind.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/poker_app/TwoPair.class" afterPath="$PROJECT_DIR$/out/production/poker_app/TwoPair.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/poker_app/FourOfAKindTest.class" afterPath="$PROJECT_DIR$/out/test/poker_app/FourOfAKindTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/poker_app/StraightFlushTest.class" afterPath="$PROJECT_DIR$/out/test/poker_app/StraightFlushTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/poker_app/StraightHandCheckerTest.class" afterPath="$PROJECT_DIR$/out/test/poker_app/StraightHandCheckerTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Flush.java" afterPath="$PROJECT_DIR$/src/Flush.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FourOfAKind.java" afterPath="$PROJECT_DIR$/src/FourOfAKind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FullHouse.java" afterPath="$PROJECT_DIR$/src/FullHouse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HighCard.java" afterPath="$PROJECT_DIR$/src/HighCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Pair.java" afterPath="$PROJECT_DIR$/src/Pair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PokerHand.java" afterPath="$PROJECT_DIR$/src/PokerHand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Straight.java" afterPath="$PROJECT_DIR$/src/Straight.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StraightFlush.java" afterPath="$PROJECT_DIR$/src/StraightFlush.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StraightHandChecker.java" afterPath="$PROJECT_DIR$/src/StraightHandChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ThreeOfAKind.java" afterPath="$PROJECT_DIR$/src/ThreeOfAKind.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TwoPair.java" afterPath="$PROJECT_DIR$/src/TwoPair.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/FourOfAKindTest.java" afterPath="$PROJECT_DIR$/test/FourOfAKindTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/StraightFlushTest.java" afterPath="$PROJECT_DIR$/test/StraightFlushTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/StraightHandCheckerTest.java" afterPath="$PROJECT_DIR$/test/StraightHandCheckerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,24 +50,73 @@
       <file leaf-file-name="StraightFlush.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StraightFlush.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+              <folding>
+                <element signature="method#calculateBestHand#0;class#StraightFlush#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StraightFlushTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/StraightFlushTest.java">
+      <file leaf-file-name="FourOfAKind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FourOfAKind.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+            <state relative-caret-position="-70">
+              <caret line="9" column="93" lean-forward="false" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#testStraightFlush#0;class#StraightFlushTest#0" expanded="false" />
-                <element signature="e#455#461#0" expanded="true" />
-                <element signature="e#1596#1602#0" expanded="true" />
-                <element signature="e#2134#2140#0" expanded="true" />
+                <element signature="method#calculateBestHand#0;class#FourOfAKind#0" expanded="false" />
+                <element signature="e#1190#1191#0" expanded="true" />
+                <element signature="e#1228#1229#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FourOfAKindTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/FourOfAKindTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+              <folding>
+                <element signature="e#3571#3577#0" expanded="true" />
+                <element signature="e#4043#4049#0" expanded="true" />
+                <element signature="e#4695#4701#0" expanded="true" />
+                <element signature="e#5178#5184#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokerHand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PokerHand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+              <folding>
+                <element signature="method#PokerHand#0;class#PokerHand#0" expanded="false" />
+                <element signature="method#addCardsWithValueToBestHand#0;class#PokerHand#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokerHandTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/PokerHandTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+              <folding>
+                <element signature="e#243#254#0" expanded="true" />
+                <element signature="e#317#323#0" expanded="true" />
+                <element signature="e#698#704#0" expanded="true" />
+                <element signature="e#1065#1071#0" expanded="true" />
+                <element signature="e#1408#1414#0" expanded="true" />
+                <element signature="e#1722#1728#0" expanded="true" />
+                <element signature="e#2064#2070#0" expanded="true" />
+                <element signature="e#2436#2442#0" expanded="true" />
+                <element signature="e#2766#2772#0" expanded="true" />
+                <element signature="e#3072#3078#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,15 +128,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>System.out</find>
       <find>hasStraight</find>
       <find>valueOccurrenceCount</find>
       <find>countSpecificCombinations</find>
@@ -89,6 +165,7 @@
       <find>PairHandChecker</find>
       <find>NotPair</find>
       <find>getHasFiveOrMoreConsecutiveValues</find>
+      <find>System</find>
     </findStrings>
     <replaceStrings>
       <replace>HighCardHandChecker</replace>
@@ -107,8 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/BestPokerHandCheckerTest.java" />
-        <option value="$PROJECT_DIR$/test/PokerHandCheckerTest.java" />
         <option value="$PROJECT_DIR$/test/PokerHandRanking.java" />
         <option value="$PROJECT_DIR$/test/PokerHand.java" />
         <option value="$PROJECT_DIR$/test/BestPokerHandTest.java" />
@@ -116,12 +191,10 @@
         <option value="$PROJECT_DIR$/test/FlushHandTest.java" />
         <option value="$PROJECT_DIR$/src/FlushHand.java" />
         <option value="$PROJECT_DIR$/test/FullHouseTest.java" />
-        <option value="$PROJECT_DIR$/test/FourOfAKindTest.java" />
         <option value="$PROJECT_DIR$/src/FourOfAKindHandChecker.java" />
         <option value="$PROJECT_DIR$/src/FullHouseHandChecker.java" />
         <option value="$PROJECT_DIR$/test/RemoveCardDuplicatesTest.java" />
         <option value="$PROJECT_DIR$/src/RemoveCardDuplicates.java" />
-        <option value="$PROJECT_DIR$/src/StraightHandChecker.java" />
         <option value="$PROJECT_DIR$/src/RemoveCardValueDuplicates.java" />
         <option value="$PROJECT_DIR$/test/RemoveCardValueDuplicatesTest.java" />
         <option value="$PROJECT_DIR$/test/StraightTest.java" />
@@ -147,17 +220,21 @@
         <option value="$PROJECT_DIR$/test/GetFlushCardsTest.java" />
         <option value="$PROJECT_DIR$/src/PokerHandChecker.java" />
         <option value="$PROJECT_DIR$/src/HighCardHandChecker.java" />
-        <option value="$PROJECT_DIR$/src/FourOfAKind.java" />
-        <option value="$PROJECT_DIR$/src/FullHouse.java" />
-        <option value="$PROJECT_DIR$/src/Flush.java" />
-        <option value="$PROJECT_DIR$/src/Straight.java" />
-        <option value="$PROJECT_DIR$/src/ThreeOfAKind.java" />
-        <option value="$PROJECT_DIR$/src/TwoPair.java" />
-        <option value="$PROJECT_DIR$/src/Pair.java" />
-        <option value="$PROJECT_DIR$/src/HighCard.java" />
-        <option value="$PROJECT_DIR$/src/PokerHand.java" />
-        <option value="$PROJECT_DIR$/src/StraightFlush.java" />
+        <option value="$PROJECT_DIR$/test/StraightHandCheckerTest.java" />
+        <option value="$PROJECT_DIR$/src/StraightHandChecker.java" />
         <option value="$PROJECT_DIR$/test/StraightFlushTest.java" />
+        <option value="$PROJECT_DIR$/src/FullHouse.java" />
+        <option value="$PROJECT_DIR$/src/TwoPair.java" />
+        <option value="$PROJECT_DIR$/src/Straight.java" />
+        <option value="$PROJECT_DIR$/src/Pair.java" />
+        <option value="$PROJECT_DIR$/src/ThreeOfAKind.java" />
+        <option value="$PROJECT_DIR$/src/Flush.java" />
+        <option value="$PROJECT_DIR$/src/StraightFlush.java" />
+        <option value="$PROJECT_DIR$/test/FourOfAKindTest.java" />
+        <option value="$PROJECT_DIR$/src/FourOfAKind.java" />
+        <option value="$PROJECT_DIR$/src/PokerHand.java" />
+        <option value="$PROJECT_DIR$/src/HighCard.java" />
+        <option value="$PROJECT_DIR$/test/PokerHandTest.java" />
       </list>
     </option>
   </component>
@@ -267,6 +344,7 @@
     <property name="SearchEverywhereHistoryKey" value="bestpokercom&#9;RUN_CONFIGURATION&#9;BestPokerCombinationTest" />
     <property name="FullScreen" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -291,14 +369,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StraightFlushTest">
-    <configuration default="false" name="FlushTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in poker_app">
+    <configuration default="false" name="StraightFlushTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="poker_app" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FlushTest" />
+      <option name="MAIN_CLASS_NAME" value="StraightFlushTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -313,13 +391,55 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FourOfAKindTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="poker_app" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CardTest" />
+      <option name="MAIN_CLASS_NAME" value="FourOfAKindTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FourOfAKindTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="poker_app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FourOfAKindTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="PokerHandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="poker_app" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PokerHandTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -343,48 +463,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="StraightFlushTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="poker_app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StraightFlushTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="GetFlushCardsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="poker_app" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GetFlushCardsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -602,19 +680,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.FlushTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CardTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in poker_app" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.StraightFlushTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.GetFlushCardsTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.StraightFlushTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FourOfAKindTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FourOfAKindTest (1)" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PokerHandTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in poker_app" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StraightFlushTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in poker_app" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FlushTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GetFlushCardsTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CardTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in poker_app" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.PokerHandTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FourOfAKindTest (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StraightFlushTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FourOfAKindTest" />
       </list>
     </recent_temporary>
   </component>
@@ -635,34 +713,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_poker_app - 2017.04.08 at 16h 25m 17s.xml">
+    <history-entry file="All_in_poker_app - 2017.04.09 at 17h 46m 34s.xml">
       <configuration name="All in poker_app" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_poker_app - 2017.04.08 at 17h 32m 23s.xml">
-      <configuration name="All in poker_app" configurationId="JUnit" />
+    <history-entry file="FourOfAKindTest - 2017.04.09 at 16h 14m 50s.xml">
+      <configuration name="FourOfAKindTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlushTest - 2017.04.08 at 17h 12m 10s.xml">
-      <configuration name="FlushTest" configurationId="JUnit" />
+    <history-entry file="FourOfAKindTest_(1) - 2017.04.09 at 16h 53m 17s.xml">
+      <configuration name="FourOfAKindTest (1)" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GetFlushCardsTest - 2017.04.08 at 17h 11m 29s.xml">
-      <configuration name="GetFlushCardsTest" configurationId="JUnit" />
+    <history-entry file="PokerHandTest - 2017.04.09 at 17h 43m 48s.xml">
+      <configuration name="PokerHandTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 16h 27m 07s.xml">
+    <history-entry file="PokerHandTest - 2017.04.09 at 17h 44m 20s.xml">
+      <configuration name="PokerHandTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerHandTest - 2017.04.09 at 17h 44m 47s.xml">
+      <configuration name="PokerHandTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerHandTest - 2017.04.09 at 17h 44m 57s.xml">
+      <configuration name="PokerHandTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerHandTest - 2017.04.09 at 17h 45m 55s.xml">
+      <configuration name="PokerHandTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StraightFlushTest - 2017.04.09 at 16h 40m 43s.xml">
       <configuration name="StraightFlushTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 16h 30m 29s.xml">
-      <configuration name="StraightFlushTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 16h 30m 41s.xml">
-      <configuration name="StraightFlushTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 17h 12m 38s.xml">
-      <configuration name="StraightFlushTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 18h 15m 36s.xml">
-      <configuration name="StraightFlushTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="StraightFlushTest - 2017.04.08 at 18h 18m 13s.xml">
+    <history-entry file="StraightFlushTest - 2017.04.09 at 16h 53m 15s.xml">
       <configuration name="StraightFlushTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -751,7 +829,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PokerStraightsAnalyser.java" />
     <entry file="file://$PROJECT_DIR$/test/PokerStraightsAnalyserTest.java" />
     <entry file="file://$PROJECT_DIR$/src/GameRound.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -790,14 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/FourOfAKindTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="96" column="57" lean-forward="false" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FullHouseHandChecker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -810,14 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/StraightHandCheckerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -902,25 +963,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StraightHandChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="method#isTrue#0;class#StraightHandChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#StraightHandChecker#0" expanded="false" />
-            <element signature="method#hasFiveOrMoreConsecutiveValuesIgnoringAceToFive#0;class#StraightHandChecker#0" expanded="false" />
-            <element signature="method#hasAceToFiveStraight#0;class#StraightHandChecker#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/CardSuitCounterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="485">
           <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
-            <element signature="e#1141#1147#0" expanded="true" />
+            <element signature="e#1141#1147#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -938,7 +986,7 @@
         <state relative-caret-position="225">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
           <folding>
-            <element signature="e#719#725#0" expanded="true" />
+            <element signature="e#719#725#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -948,9 +996,9 @@
         <state relative-caret-position="545">
           <caret line="60" column="65" lean-forward="false" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
           <folding>
-            <element signature="e#670#676#0" expanded="true" />
-            <element signature="e#1119#1125#0" expanded="true" />
-            <element signature="e#1572#1578#0" expanded="true" />
+            <element signature="e#670#676#0" expanded="false" />
+            <element signature="e#1119#1125#0" expanded="false" />
+            <element signature="e#1572#1578#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1036,7 +1084,7 @@
         <state relative-caret-position="28">
           <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1081,11 +1129,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HighCardHandChecker.java">
+    <entry file="file://$PROJECT_DIR$/src/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
+        <state relative-caret-position="270">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="method#Card#0;class#Card#0" expanded="false" />
+            <element signature="e#618#619#0" expanded="false" />
+            <element signature="e#671#672#0" expanded="false" />
+            <element signature="method#getValue#0;class#Card#0" expanded="false" />
+            <element signature="method#suitToString#0;class#Card#0" expanded="false" />
+            <element signature="method#valueToString#0;class#Card#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1097,112 +1152,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ThreeOfAKind.java">
+    <entry file="file://$PROJECT_DIR$/test/StraightHandCheckerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="35">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#2781#2787#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoPair.java">
+    <entry file="file://$PROJECT_DIR$/src/StraightHandChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="10" column="81" lean-forward="false" selection-start-line="10" selection-start-column="81" selection-end-line="10" selection-end-column="81" />
           <folding>
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
+            <element signature="method#isTrue#0;class#StraightHandChecker#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreConsecutiveValues#0;class#StraightHandChecker#0" expanded="false" />
+            <element signature="method#hasFiveOrMoreConsecutiveValuesIgnoringAceToFive#0;class#StraightHandChecker#0" expanded="false" />
+            <element signature="method#hasAceToFiveStraight#0;class#StraightHandChecker#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HighCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#1423#1424#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FourOfAKind.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
-          <folding>
-            <element signature="method#Card#0;class#Card#0" expanded="false" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#671#672#0" expanded="true" />
-            <element signature="method#getValue#0;class#Card#0" expanded="false" />
-            <element signature="method#suitToString#0;class#Card#0" expanded="false" />
-            <element signature="method#valueToString#0;class#Card#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/StraightFlush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FullHouse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="17" />
-          <folding>
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1072#1073#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Flush.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
-          <folding>
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Straight.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="83" column="8" lean-forward="false" selection-start-line="83" selection-start-column="8" selection-end-line="86" selection-end-column="5" />
+        <state relative-caret-position="673">
+          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding>
-            <element signature="method#Straight#0;class#Straight#0" expanded="false" />
             <element signature="method#calculateBestHand#0;class#Straight#0" expanded="false" />
             <element signature="method#addFirstFourCardsToBestHand#0;class#Straight#0" expanded="false" />
             <element signature="method#isAceToFiveStraight#0;class#Straight#0" expanded="false" />
@@ -1212,24 +1197,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PokerHand.java">
+    <entry file="file://$PROJECT_DIR$/src/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ThreeOfAKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Flush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TwoPair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HighCardHandChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" lean-forward="false" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/PokerHandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="e#243#254#0" expanded="true" />
+            <element signature="e#317#323#0" expanded="true" />
+            <element signature="e#698#704#0" expanded="true" />
+            <element signature="e#1065#1071#0" expanded="true" />
+            <element signature="e#1408#1414#0" expanded="true" />
+            <element signature="e#1722#1728#0" expanded="true" />
+            <element signature="e#2064#2070#0" expanded="true" />
+            <element signature="e#2436#2442#0" expanded="true" />
+            <element signature="e#2766#2772#0" expanded="true" />
+            <element signature="e#3072#3078#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HighCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="42" lean-forward="false" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/StraightFlushTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+        <state relative-caret-position="89">
+          <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="153" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#testStraightFlush#0;class#StraightFlushTest#0" expanded="false" />
             <element signature="e#455#461#0" expanded="true" />
-            <element signature="e#1596#1602#0" expanded="true" />
-            <element signature="e#2134#2140#0" expanded="true" />
+            <element signature="e#1607#1613#0" expanded="true" />
+            <element signature="e#2520#2526#0" expanded="true" />
+            <element signature="e#3022#3028#0" expanded="true" />
+            <element signature="e#3728#3734#0" expanded="true" />
+            <element signature="e#4231#4237#0" expanded="true" />
+            <element signature="e#4934#4940#0" expanded="true" />
+            <element signature="e#5432#5438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PokerHand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          <folding>
+            <element signature="method#PokerHand#0;class#PokerHand#0" expanded="false" />
+            <element signature="method#addCardsWithValueToBestHand#0;class#PokerHand#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FourOfAKind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="9" column="93" lean-forward="false" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
+          <folding>
+            <element signature="method#calculateBestHand#0;class#FourOfAKind#0" expanded="false" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1228#1229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StraightFlush.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="method#calculateBestHand#0;class#StraightFlush#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/FourOfAKindTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="128" column="9" lean-forward="true" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+          <folding>
+            <element signature="e#3571#3577#0" expanded="true" />
+            <element signature="e#4043#4049#0" expanded="true" />
+            <element signature="e#4695#4701#0" expanded="true" />
+            <element signature="e#5178#5184#0" expanded="true" />
           </folding>
         </state>
       </provider>

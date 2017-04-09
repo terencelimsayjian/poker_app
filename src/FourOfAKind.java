@@ -1,14 +1,22 @@
 import java.util.ArrayList;
 
 public class FourOfAKind extends PokerHand {
-    public FourOfAKind(ArrayList<Card> cards) {
-        super(cards);
+    private int fourOfAKindCardValue;
+    private int singleCardValue;
 
+    public FourOfAKind(ArrayList<Card> cards) {
+        super(cards, PokerHand.FOUR_OF_A_KIND);
         calculateBestHand();
+        setHighestFourOfAKindCardValue(); // TODO: Check how much heavy lifting in controller
+        setHighestSingleCardValue();
+    }
+
+    public int getFourOfAKindCardValue() {
+        return fourOfAKindCardValue;
     }
 
     @Override
-    protected void calculateBestHand () {
+    protected void calculateBestHand() {
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
 
         int highestFourOfAKindCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.FOUR_OF_A_KIND);
@@ -24,8 +32,39 @@ public class FourOfAKind extends PokerHand {
         addCardsWithValueToBestHand(highestSingleCardValue, 1);
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
+    public int getSingleCardValue() {
+        return singleCardValue;
     }
+
+    @Override
+    protected int subCompare(PokerHand pokerHand) {
+        int quadCardValueComparison = compareFourOfAKindCardValue(pokerHand);
+
+        if (quadCardValueComparison == 0) {
+            return compareSingleCardValue(pokerHand);
+        }
+
+        return quadCardValueComparison;
+    }
+
+    private int compareFourOfAKindCardValue(PokerHand o) {
+        FourOfAKind fourOfAKind = (FourOfAKind) o;
+        return getFourOfAKindCardValue() - fourOfAKind.getFourOfAKindCardValue();
+    }
+
+    private int compareSingleCardValue(PokerHand o) {
+        FourOfAKind fourOfAKind = (FourOfAKind) o;
+        return getSingleCardValue() - fourOfAKind.getSingleCardValue();
+    }
+
+    private void setHighestFourOfAKindCardValue() {
+        CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
+        fourOfAKindCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.FOUR_OF_A_KIND);
+    }
+
+    private void setHighestSingleCardValue() {
+        CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
+        singleCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.SINGLE_CARD);
+    }
+
 }

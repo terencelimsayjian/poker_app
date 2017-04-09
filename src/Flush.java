@@ -3,7 +3,7 @@ import java.util.Collections;
 
 public class Flush extends PokerHand {
     public Flush(ArrayList<Card> cards) {
-        super(cards);
+        super(cards, PokerHand.FLUSH);
 
         calculateBestHand();
     }
@@ -22,8 +22,4 @@ public class Flush extends PokerHand {
         }
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
-    }
 }

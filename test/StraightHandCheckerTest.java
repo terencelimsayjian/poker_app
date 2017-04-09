@@ -88,4 +88,18 @@ public class StraightHandCheckerTest {
 
         assertEquals(StraightHandChecker.isTrue(cards),true);
     }
+
+    @Test
+    public void testDuplicateCards() {
+        ArrayList<Card> cards = new ArrayList<Card>();
+        cards.add(new Card(1, 1));
+        cards.add(new Card(2, 2));
+        cards.add(new Card(3, 3));
+        cards.add(new Card(1, 4));
+        cards.add(new Card(2, 1));
+        cards.add(new Card(4, 1));
+        cards.add(new Card(5, 3));
+
+        assertEquals(StraightHandChecker.isTrue(cards), true);
+    }
 }

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class FullHouse extends PokerHand {
     public FullHouse(ArrayList<Card> cards) {
-        super(cards);
+        super(cards, PokerHand.FULL_HOUSE);
 
         calculateBestHand();
     }
@@ -26,8 +26,4 @@ public class FullHouse extends PokerHand {
         addCardsWithValueToBestHand(highestPairValue, 2);
     }
 
-    @Override
-    public int compareTo(PokerHand o) {
-        return 0;
-    }
 }

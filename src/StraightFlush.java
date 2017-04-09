@@ -1,11 +1,24 @@
 import java.util.ArrayList;
 
 public class StraightFlush extends PokerHand {
-    private int ranking = PokerHand.STRAIGHT_FLUSH;;
+    private int highestStraightCardValue;
 
     public StraightFlush(ArrayList<Card> cards) {
-        super(cards);
+        super(cards, PokerHand.STRAIGHT_FLUSH);
         calculateBestHand();
+        setHighestStraightCardValue();
+    }
+
+    private void setHighestStraightCardValue() {
+        if (StraightHandChecker.hasAceToFiveStraight(bestHand)) {
+            highestStraightCardValue = bestHand.get(bestHand.size() - 2).getValue();
+        } else {
+            highestStraightCardValue = bestHand.get(bestHand.size() - 1).getValue();
+        }
+    }
+
+    public int getHighestStraightCardValue() {
+        return highestStraightCardValue;
     }
 
     @Override
@@ -17,15 +30,8 @@ public class StraightFlush extends PokerHand {
     }
 
     @Override
-    public int compareTo(PokerHand o) {
-//        int rankingComparison = o.getRanking() - getRanking();
-        int rankingComparison = o.getRanking() - getRanking();
-
-        if (rankingComparison == 0) {
-            // bestCard - bestCard
-        }
-
-        return rankingComparison;
+    protected int subCompare(PokerHand o) {
+        StraightFlush sf = (StraightFlush) o;
+        return highestStraightCardValue - sf.getHighestStraightCardValue();
     }
-
 }
