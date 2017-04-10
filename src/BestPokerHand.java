@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class BestPokerCombination {
+public abstract class BestPokerHand {
 
     public static PokerHand get(ArrayList<Card> cards) {
         PokerHand bestPokerHand = null;

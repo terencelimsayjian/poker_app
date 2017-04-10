@@ -7,8 +7,8 @@ public class FourOfAKind extends PokerHand {
     public FourOfAKind(ArrayList<Card> cards) {
         super(cards, PokerHand.FOUR_OF_A_KIND);
         calculateBestHand();
-        setHighestFourOfAKindCardValue(); // TODO: Check how much heavy lifting in controller
-        setHighestSingleCardValue();
+        setFourOfAKindCardValue(); // TODO: Check how much heavy lifting in controller
+        setSingleCardValue();
     }
 
     public int getFourOfAKindCardValue() {
@@ -57,12 +57,12 @@ public class FourOfAKind extends PokerHand {
         return getSingleCardValue() - fourOfAKind.getSingleCardValue();
     }
 
-    private void setHighestFourOfAKindCardValue() {
+    private void setFourOfAKindCardValue() {
         CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
         fourOfAKindCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.FOUR_OF_A_KIND);
     }
 
-    private void setHighestSingleCardValue() {
+    private void setSingleCardValue() {
         CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
         singleCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.SINGLE_CARD);
     }

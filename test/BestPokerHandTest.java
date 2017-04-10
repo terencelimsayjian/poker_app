@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class BestPokerCombinationTest {
+public class BestPokerHandTest {
     @Test
     public void testStraightFlush() {
         ArrayList<Card> cards = new ArrayList<Card>();
@@ -16,7 +16,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(7, 1));
         cards.add(new Card(8, 1));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof StraightFlush, true);
     }
 
@@ -31,7 +31,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(11, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof FourOfAKind, true);
     }
 
@@ -46,7 +46,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(13, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof FullHouse, true);
     }
 
@@ -61,7 +61,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(11, 2));
         cards.add(new Card(13, 2));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof Flush, true);
     }
 
@@ -76,7 +76,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(7, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof Straight, true);
     }
 
@@ -91,7 +91,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(7, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof ThreeOfAKind, true);
     }
 
@@ -106,7 +106,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(7, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof TwoPair, true);
     }
 
@@ -121,7 +121,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(13, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof Pair, true);
     }
 
@@ -136,7 +136,7 @@ public class BestPokerCombinationTest {
         cards.add(new Card(10, 2));
         cards.add(new Card(13, 3));
 
-        PokerHand bestHand = BestPokerCombination.get(cards);
+        PokerHand bestHand = BestPokerHand.get(cards);
         assertEquals(bestHand instanceof HighCard, true);
     }
 

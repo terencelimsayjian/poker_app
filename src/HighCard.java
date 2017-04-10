@@ -10,11 +10,11 @@ public class HighCard extends PokerHand {
     protected void calculateBestHand() {
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
 
-        int highestSingleCardValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.SINGLE_CARD);
-        int secondHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, highestSingleCardValue);
-        int thirdHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, secondHighestSingleCardValue);
-        int fourthHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, thirdHighestSingleCardValue);
-        int fifthHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, fourthHighestSingleCardValue);
+        int highestSingleCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.SINGLE_CARD);
+        int secondHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, highestSingleCardValue);
+        int thirdHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, secondHighestSingleCardValue);
+        int fourthHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, thirdHighestSingleCardValue);
+        int fifthHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, fourthHighestSingleCardValue);
 
         addCardsWithValueToBestHand(highestSingleCardValue, 1);
         addCardsWithValueToBestHand(secondHighestSingleCardValue, 1);

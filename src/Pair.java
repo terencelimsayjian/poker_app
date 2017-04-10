@@ -11,10 +11,10 @@ public class Pair extends PokerHand {
     protected void calculateBestHand() {
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
 
-        int highestPairValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.PAIR);
-        int highestSingleCardValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.SINGLE_CARD);
-        int secondHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, highestSingleCardValue);
-        int thirdHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.SINGLE_CARD, secondHighestSingleCardValue);
+        int highestPairValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.PAIR);
+        int highestSingleCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.SINGLE_CARD);
+        int secondHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, highestSingleCardValue);
+        int thirdHighestSingleCardValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.SINGLE_CARD, secondHighestSingleCardValue);
 
         addCardsWithValueToBestHand(highestPairValue, 2);
         addCardsWithValueToBestHand(highestSingleCardValue, 1);

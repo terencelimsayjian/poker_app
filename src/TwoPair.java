@@ -11,9 +11,9 @@ public class TwoPair extends PokerHand {
     protected void calculateBestHand() {
         CardValueCounter cardValueCounter = new CardValueCounter(cards);
 
-        int highestPairValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.PAIR);
-        int secondHighestPairValue = cardValueCounter.getNextHighestCardOfCombination(cardValueCounter.PAIR, highestPairValue);
-        int highestCardValue = cardValueCounter.getHighestCardOfCombination(cardValueCounter.SINGLE_CARD);
+        int highestPairValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.PAIR);
+        int secondHighestPairValue = cardValueCounter.getNextHighestCardOfCombination(CardValueCounter.PAIR, highestPairValue);
+        int highestCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.SINGLE_CARD);
 
         addCardsWithValueToBestHand(highestPairValue, 2);
         addCardsWithValueToBestHand(secondHighestPairValue, 2);

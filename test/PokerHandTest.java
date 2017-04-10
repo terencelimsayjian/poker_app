@@ -93,7 +93,6 @@ public class PokerHandTest {
         pokerHands.add(pair);
         pokerHands.add(highCard);
 
-
         Collections.shuffle(pokerHands);
         Collections.sort(pokerHands);
         assertTrue(pokerHands.get(0) instanceof HighCard);
