@@ -1,3 +1,6 @@
+import com.pokerapp.models.Card;
+import com.pokerapp.models.hands.FourOfAKind;
+import com.pokerapp.models.hands.PokerHand;
 import org.junit.Test;
 
 import java.util.ArrayList;

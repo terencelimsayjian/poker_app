@@ -1,3 +1,6 @@
+import com.pokerapp.models.Card;
+import com.pokerapp.models.hands.PokerHand;
+import com.pokerapp.models.hands.StraightFlush;
 import org.junit.Test;
 
 import java.util.ArrayList;

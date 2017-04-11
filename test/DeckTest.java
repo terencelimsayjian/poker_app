@@ -1,4 +1,7 @@
 import static org.junit.Assert.assertEquals;
+
+import com.pokerapp.models.Card;
+import com.pokerapp.models.Deck;
 import org.junit.Test;
 
 import java.util.HashSet;

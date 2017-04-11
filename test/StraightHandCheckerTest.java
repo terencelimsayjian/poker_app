@@ -1,3 +1,5 @@
+import com.pokerapp.PokerCheckers.StraightHandChecker;
+import com.pokerapp.models.Card;
 import org.junit.Test;
 
 import java.util.ArrayList;

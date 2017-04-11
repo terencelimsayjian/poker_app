@@ -1,3 +1,5 @@
+import com.pokerapp.models.Card;
+import com.pokerapp.models.hands.Pair;
 import org.junit.Test;
 
 import java.util.ArrayList;

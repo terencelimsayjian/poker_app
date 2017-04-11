@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+
+import com.pokerapp.models.Card;
 import org.junit.Test;
 
 import java.util.ArrayList;

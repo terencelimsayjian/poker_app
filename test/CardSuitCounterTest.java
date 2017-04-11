@@ -1,3 +1,5 @@
+import com.pokerapp.helpers.CardSuitCounter;
+import com.pokerapp.models.Card;
 import org.junit.Test;
 
 import java.util.ArrayList;
