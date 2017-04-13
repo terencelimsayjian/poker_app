@@ -57,7 +57,6 @@ public class FullHouse extends PokerHand {
 
     private int compareThreeOfAKindCardValue(PokerHand pokerHand) {
         FullHouse fullHouse = (FullHouse) pokerHand;
-
         int threeOfAKindCardValueComparison = getThreeOfAKindCardValue() - fullHouse.getThreeOfAKindCardValue();
 
         if (threeOfAKindCardValueComparison == 0) {
@@ -74,14 +73,12 @@ public class FullHouse extends PokerHand {
 
     private int setThreeOfAKindCardValue() {
         CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
-        threeOfAKindCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.THREE_OF_A_KIND);
-        return threeOfAKindCardValue;
+        return cardValueCounter.getHighestCardOfCombination(CardValueCounter.THREE_OF_A_KIND);
     }
 
     private int setPairCardValue() {
         CardValueCounter cardValueCounter = new CardValueCounter(bestHand);
-        pairCardValue = cardValueCounter.getHighestCardOfCombination(CardValueCounter.PAIR);
-        return pairCardValue;
+        return cardValueCounter.getHighestCardOfCombination(CardValueCounter.PAIR);
     }
 
 }

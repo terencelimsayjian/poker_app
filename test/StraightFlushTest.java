@@ -156,4 +156,32 @@ public class StraightFlushTest {
         assertTrue(compareNum < 0);
     }
 
+    @Test
+    public void testIdenticalStraightFlushes() {
+        ArrayList<Card> straightFlushCards1 = new ArrayList<Card>(7);
+        straightFlushCards1.add(new Card(4, 1));
+        straightFlushCards1.add(new Card(5, 1));
+        straightFlushCards1.add(new Card(6, 1));
+        straightFlushCards1.add(new Card(7, 1));
+        straightFlushCards1.add(new Card(8, 1));
+        straightFlushCards1.add(new Card(2, 1));
+        straightFlushCards1.add(new Card(1, 1));
+
+        PokerHand straightFlush1 = new StraightFlush(straightFlushCards1);
+
+        ArrayList<Card> straightFlushCards2 = new ArrayList<Card>(7);
+        straightFlushCards2.add(new Card(4, 1));
+        straightFlushCards2.add(new Card(5, 1));
+        straightFlushCards2.add(new Card(6, 1));
+        straightFlushCards2.add(new Card(7, 1));
+        straightFlushCards2.add(new Card(8, 1));
+        straightFlushCards2.add(new Card(2, 3));
+        straightFlushCards2.add(new Card(1, 2));
+
+        PokerHand straightFlush2 = new StraightFlush(straightFlushCards2);
+
+        int compareNum = straightFlush1.compareTo(straightFlush2);
+        assertTrue(compareNum == 0);
+    }
+
 }

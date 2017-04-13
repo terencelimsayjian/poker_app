@@ -1,5 +1,5 @@
 import com.pokerapp.models.Card;
-import com.pokerapp.models.hands.ThreeOfAKind;
+import com.pokerapp.models.hands.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -69,4 +69,119 @@ public class ThreeOfAKindTest {
         assertEquals(bestThreeOfAKind.size() == 5, true);
     }
 
+    @Test
+    public void testCompareThreeOfAKind() {
+        ArrayList<Card> threeOfAKindCards1 = new ArrayList<Card>(7);
+        threeOfAKindCards1.add(new Card(6, 1));
+        threeOfAKindCards1.add(new Card(8, 2));
+        threeOfAKindCards1.add(new Card(9, 3));
+        threeOfAKindCards1.add(new Card(2, 4));
+        threeOfAKindCards1.add(new Card(12, 1));
+        threeOfAKindCards1.add(new Card(9, 2));
+        threeOfAKindCards1.add(new Card(9, 4));
+
+        PokerHand nineSetThreeOfAKind = new ThreeOfAKind(threeOfAKindCards1);
+
+        ArrayList<Card> threeOfAKindCards2 = new ArrayList<Card>(7);
+        threeOfAKindCards2.add(new Card(6, 1));
+        threeOfAKindCards2.add(new Card(8, 2));
+        threeOfAKindCards2.add(new Card(9, 3));
+        threeOfAKindCards2.add(new Card(2, 4));
+        threeOfAKindCards2.add(new Card(12, 1));
+        threeOfAKindCards2.add(new Card(8, 2));
+        threeOfAKindCards2.add(new Card(8, 3));
+
+        PokerHand eightSetThreeOfAKind = new ThreeOfAKind(threeOfAKindCards2);
+
+        int compareNum = nineSetThreeOfAKind.compareTo(eightSetThreeOfAKind);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareThreeOfAKindWithDifferentHighCard() {
+        ArrayList<Card> threeOfAKindCards1 = new ArrayList<Card>(7);
+        threeOfAKindCards1.add(new Card(6, 1));
+        threeOfAKindCards1.add(new Card(6, 2));
+        threeOfAKindCards1.add(new Card(6, 3));
+        threeOfAKindCards1.add(new Card(2, 4));
+        threeOfAKindCards1.add(new Card(12, 1));
+        threeOfAKindCards1.add(new Card(9, 2));
+        threeOfAKindCards1.add(new Card(1, 3));
+
+        PokerHand threeOfAKindWithAceHigh = new ThreeOfAKind(threeOfAKindCards1);
+
+        ArrayList<Card> threeOfAKindCards2 = new ArrayList<Card>(7);
+        threeOfAKindCards2.add(new Card(6, 1));
+        threeOfAKindCards2.add(new Card(6, 2));
+        threeOfAKindCards2.add(new Card(6, 3));
+        threeOfAKindCards2.add(new Card(2, 4));
+        threeOfAKindCards2.add(new Card(12, 1));
+        threeOfAKindCards2.add(new Card(8, 2));
+        threeOfAKindCards2.add(new Card(13, 3));
+
+        PokerHand threeOfAKindWithKingHigh = new ThreeOfAKind(threeOfAKindCards2);
+
+        int compareNum = threeOfAKindWithAceHigh.compareTo(threeOfAKindWithKingHigh);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareThreeOfAKindWithDifferentSecondHighCard() {
+        ArrayList<Card> threeOfAKindCards1 = new ArrayList<Card>(7);
+        threeOfAKindCards1.add(new Card(6, 1));
+        threeOfAKindCards1.add(new Card(6, 2));
+        threeOfAKindCards1.add(new Card(6, 3));
+        threeOfAKindCards1.add(new Card(1, 4));
+        threeOfAKindCards1.add(new Card(10, 1));
+        threeOfAKindCards1.add(new Card(13, 2));
+        threeOfAKindCards1.add(new Card(5, 3));
+
+        PokerHand threeOfAKindWithKingSecondHigh = new ThreeOfAKind(threeOfAKindCards1);
+
+        ArrayList<Card> threeOfAKindCards2 = new ArrayList<Card>(7);
+        threeOfAKindCards2.add(new Card(6, 1));
+        threeOfAKindCards2.add(new Card(6, 2));
+        threeOfAKindCards2.add(new Card(6, 3));
+        threeOfAKindCards2.add(new Card(1, 4));
+        threeOfAKindCards2.add(new Card(10, 1));
+        threeOfAKindCards2.add(new Card(8, 2));
+        threeOfAKindCards2.add(new Card(12, 3));
+
+        PokerHand threeOfAKindWithQueenSecondHigh = new ThreeOfAKind(threeOfAKindCards2);
+
+        int compareNum = threeOfAKindWithKingSecondHigh.compareTo(threeOfAKindWithQueenSecondHigh);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareIdenticalThreeOfAKind() {
+        ArrayList<Card> threeOfAKindCards1 = new ArrayList<Card>(7);
+        threeOfAKindCards1.add(new Card(6, 1));
+        threeOfAKindCards1.add(new Card(6, 2));
+        threeOfAKindCards1.add(new Card(6, 3));
+        threeOfAKindCards1.add(new Card(1, 4));
+        threeOfAKindCards1.add(new Card(13, 1));
+        threeOfAKindCards1.add(new Card(2, 2));
+        threeOfAKindCards1.add(new Card(5, 3));
+
+        PokerHand threeOfAKind1 = new ThreeOfAKind(threeOfAKindCards1);
+
+        ArrayList<Card> threeOfAKindCards2 = new ArrayList<Card>(7);
+        threeOfAKindCards2.add(new Card(6, 1));
+        threeOfAKindCards2.add(new Card(6, 2));
+        threeOfAKindCards2.add(new Card(6, 3));
+        threeOfAKindCards2.add(new Card(1, 4));
+        threeOfAKindCards2.add(new Card(13, 1));
+        threeOfAKindCards2.add(new Card(4, 2));
+        threeOfAKindCards2.add(new Card(8, 3));
+
+        PokerHand threeOfAKind2 = new ThreeOfAKind(threeOfAKindCards2);
+
+        int compareNum = threeOfAKind1.compareTo(threeOfAKind2);
+
+        assertTrue(compareNum == 0);
+    }
 }

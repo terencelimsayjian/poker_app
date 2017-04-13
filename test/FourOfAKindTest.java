@@ -157,4 +157,32 @@ public class FourOfAKindTest {
         assertTrue(compareNum > 0);
     }
 
+    @Test
+    public void testIdenticalFourOfAKinds() {
+        ArrayList<Card> fourOfAKindCards1 = new ArrayList<Card>(7);
+        fourOfAKindCards1.add(new Card(1, 1));
+        fourOfAKindCards1.add(new Card(13, 4));
+        fourOfAKindCards1.add(new Card(13, 3));
+        fourOfAKindCards1.add(new Card(13, 2));
+        fourOfAKindCards1.add(new Card(13, 1));
+        fourOfAKindCards1.add(new Card(3, 2));
+        fourOfAKindCards1.add(new Card(4, 3));
+
+        PokerHand fourOfAKind1 = new FourOfAKind(fourOfAKindCards1);
+
+        ArrayList<Card> fourOfAKindCards2 = new ArrayList<Card>(7);
+        fourOfAKindCards2.add(new Card(13, 1));
+        fourOfAKindCards2.add(new Card(13, 2));
+        fourOfAKindCards2.add(new Card(13, 3));
+        fourOfAKindCards2.add(new Card(13, 4));
+        fourOfAKindCards2.add(new Card(1, 2));
+        fourOfAKindCards2.add(new Card(2, 1));
+        fourOfAKindCards2.add(new Card(2, 1));
+
+        PokerHand fourOfAKind2 = new FourOfAKind(fourOfAKindCards2);
+
+        int compareNum = fourOfAKind1.compareTo(fourOfAKind2);
+        assertTrue(compareNum == 0);
+    }
+
 }

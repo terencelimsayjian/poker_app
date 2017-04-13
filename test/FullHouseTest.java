@@ -156,7 +156,6 @@ public class FullHouseTest {
 
         assertTrue(compareNum < 0);
     }
-
     @Test
     public void testCompareFullHouseWithTwoThreeOfAKinds() {
         ArrayList<Card> fullHouseCards1 = new ArrayList<Card>(7);
@@ -185,5 +184,35 @@ public class FullHouseTest {
 
         assertTrue(compareNum < 0);
     }
+
+    @Test
+    public void compareIdenticalFullHouse() {
+        ArrayList<Card> fullHouseCards1 = new ArrayList<Card>(7);
+        fullHouseCards1.add(new Card(13, 1));
+        fullHouseCards1.add(new Card(13, 2));
+        fullHouseCards1.add(new Card(13, 3));
+        fullHouseCards1.add(new Card(10, 2));
+        fullHouseCards1.add(new Card(10, 1));
+        fullHouseCards1.add(new Card(6, 3));
+        fullHouseCards1.add(new Card(4, 3));
+
+        PokerHand fullHouse1 = new FullHouse(fullHouseCards1);
+
+        ArrayList<Card> fullHouseCards2 = new ArrayList<Card>(7);
+        fullHouseCards2.add(new Card(13, 1));
+        fullHouseCards2.add(new Card(13, 2));
+        fullHouseCards2.add(new Card(13, 3));
+        fullHouseCards2.add(new Card(10, 4));
+        fullHouseCards2.add(new Card(10, 2));
+        fullHouseCards2.add(new Card(11, 1));
+        fullHouseCards2.add(new Card(2, 1));
+
+        PokerHand fullHouse2 = new FullHouse(fullHouseCards2);
+
+        int compareNum = fullHouse1.compareTo(fullHouse2);
+
+        assertTrue(compareNum == 0);
+    }
+
 
 }
