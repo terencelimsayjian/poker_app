@@ -172,9 +172,6 @@ public class FlushTest {
 
         PokerHand eightThirdHighestCardFlush = new Flush(flushCards2);
 
-        System.out.println(nineThirdHighestCardFlush.getBestHand().toString());
-        System.out.println(eightThirdHighestCardFlush.getBestHand().toString());
-
         int compareNum = nineThirdHighestCardFlush.compareTo(eightThirdHighestCardFlush);
 
         assertTrue(compareNum == 0);

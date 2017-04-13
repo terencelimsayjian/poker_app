@@ -44,7 +44,7 @@ public abstract class PokerHand implements Comparable<PokerHand> {
         return handStrengthComparison;
     }
 
-    protected int subCompare(PokerHand o) {
+    protected int subCompare(PokerHand pokerHand) {
         return 0;
     }
 

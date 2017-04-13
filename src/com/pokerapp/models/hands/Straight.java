@@ -3,7 +3,6 @@ package com.pokerapp.models.hands;
 import com.pokerapp.PokerCheckers.StraightHandChecker;
 import com.pokerapp.helpers.RemoveCardValueDuplicates;
 import com.pokerapp.models.Card;
-import com.pokerapp.models.hands.PokerHand;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +21,7 @@ public class Straight extends PokerHand {
         if (StraightHandChecker.hasFiveOrMoreConsecutiveValuesIgnoringAceToFive(cards)) {
             ArrayList<Card> topFiveCardsOfStraight = getTopFiveCardsOfStraight();
             bestHand.addAll(topFiveCardsOfStraight);
-        } else if (isAceToFiveStraight()) {
+        } else if (hasAceToFiveStraight(cards)) {
             addFirstFourCardsToBestHand();
             addLastCardToBestHand();
         }
@@ -39,14 +38,14 @@ public class Straight extends PokerHand {
         }
     }
 
-    private boolean isAceToFiveStraight() {
+    private boolean hasAceToFiveStraight(ArrayList<Card> cards) {
         boolean lastCardIsAce = cards.get(cards.size() - 1).isAce();
-        boolean firstFourCardsAreTwoToFive = areFirstFourCardsTwoToFive();
+        boolean firstFourCardsAreTwoToFive = areFirstFourCardsTwoToFive(cards);
 
         return lastCardIsAce && firstFourCardsAreTwoToFive;
     }
 
-    private boolean areFirstFourCardsTwoToFive() {
+    private boolean areFirstFourCardsTwoToFive(ArrayList<Card> cards) {
         boolean firstFourCardsAreTwoToFive = true ;
 
         int cardValue = 2;
@@ -88,4 +87,20 @@ public class Straight extends PokerHand {
                 && card2.getValue() == card3.getValue() - 1;
     }
 
+    @Override
+    protected int subCompare(PokerHand pokerHand) {
+        Straight thatStraight = (Straight) pokerHand;
+
+        if (hasAceToFiveStraight(bestHand) && !thatStraight.hasAceToFiveStraight(thatStraight.getBestHand())) {
+            return -1;
+        }
+
+        if (!hasAceToFiveStraight(bestHand) && thatStraight.hasAceToFiveStraight(thatStraight.getBestHand())) {
+            return 1;
+        }
+
+        Card thisHighestCard = bestHand.get(4);
+        Card thatHighestCard = pokerHand.getBestHand().get(4);
+        return thisHighestCard.getValue() - thatHighestCard.getValue();
+    }
 }

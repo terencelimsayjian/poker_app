@@ -1,5 +1,5 @@
 import com.pokerapp.models.Card;
-import com.pokerapp.models.hands.Straight;
+import com.pokerapp.models.hands.*;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -229,5 +229,92 @@ public class StraightTest {
         assertEquals(bestStraight.contains(c1), false);
         assertEquals(bestStraight.contains(c2), false);
         assertEquals(bestStraight.size() == 5, true);
+    }
+
+    @Test
+    public void testCompareOneHigherStraight() {
+        ArrayList<Card> straightCards1 = new ArrayList<Card>(7);
+        straightCards1.add(new Card(4, 1));
+        straightCards1.add(new Card(5, 2));
+        straightCards1.add(new Card(6, 3));
+        straightCards1.add(new Card(7, 4));
+        straightCards1.add(new Card(8, 1));
+        straightCards1.add(new Card(10, 2));
+        straightCards1.add(new Card(11, 3));
+
+        PokerHand fourToEightStraight = new Straight(straightCards1);
+
+        ArrayList<Card> straightCards2 = new ArrayList<Card>(7);
+        straightCards2.add(new Card(4, 1));
+        straightCards2.add(new Card(5, 2));
+        straightCards2.add(new Card(6, 3));
+        straightCards2.add(new Card(7, 4));
+        straightCards2.add(new Card(8, 1));
+        straightCards2.add(new Card(8, 2));
+        straightCards2.add(new Card(9, 3));
+
+        PokerHand fiveToNineStraight = new Straight(straightCards2);
+
+        int compareNum = fourToEightStraight.compareTo(fiveToNineStraight);
+
+        assertTrue(compareNum < 0);
+    }
+
+    @Test
+    public void testCompareTwoToSixToAceToFiveStraight() {
+        ArrayList<Card> straightCards1 = new ArrayList<Card>(7);
+        straightCards1.add(new Card(2, 1));
+        straightCards1.add(new Card(3, 2));
+        straightCards1.add(new Card(4, 3));
+        straightCards1.add(new Card(5, 4));
+        straightCards1.add(new Card(8, 1));
+        straightCards1.add(new Card(1, 2));
+        straightCards1.add(new Card(10, 3));
+
+        PokerHand aceToFiveStraight = new Straight(straightCards1);
+
+        ArrayList<Card> straightCards2 = new ArrayList<Card>(7);
+        straightCards2.add(new Card(2, 1));
+        straightCards2.add(new Card(3, 2));
+        straightCards2.add(new Card(4, 3));
+        straightCards2.add(new Card(5, 4));
+        straightCards2.add(new Card(8, 1));
+        straightCards2.add(new Card(1, 3));
+        straightCards2.add(new Card(6, 4));
+
+        PokerHand twoToSixStraight = new Straight(straightCards2);
+
+        int compareNum = twoToSixStraight.compareTo(aceToFiveStraight);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareTenToAceStraightToAceToFiveStraight() {
+        ArrayList<Card> straightCards1 = new ArrayList<Card>(7);
+        straightCards1.add(new Card(1, 1));
+        straightCards1.add(new Card(2, 2));
+        straightCards1.add(new Card(3, 3));
+        straightCards1.add(new Card(10, 4));
+        straightCards1.add(new Card(11, 1));
+        straightCards1.add(new Card(4, 2));
+        straightCards1.add(new Card(5, 3));
+
+        PokerHand aceToFiveStraight = new Straight(straightCards1);
+
+        ArrayList<Card> straightCards2 = new ArrayList<Card>(7);
+        straightCards2.add(new Card(1, 1));
+        straightCards2.add(new Card(2, 2));
+        straightCards2.add(new Card(3, 3));
+        straightCards2.add(new Card(10, 4));
+        straightCards2.add(new Card(11, 1));
+        straightCards2.add(new Card(12, 2));
+        straightCards2.add(new Card(13, 3));
+
+        PokerHand tenToAceStraight = new Straight(straightCards2);
+
+        int compareNum = tenToAceStraight.compareTo(aceToFiveStraight);
+
+        assertTrue(compareNum > 0);
     }
 }
