@@ -44,7 +44,7 @@ public abstract class PokerHand implements Comparable<PokerHand> {
         return handStrengthComparison;
     }
 
-        protected int subCompare(PokerHand o) {
+    protected int subCompare(PokerHand o) {
         return 0;
     }
 
@@ -54,28 +54,38 @@ public abstract class PokerHand implements Comparable<PokerHand> {
         return handStrengthString + ": " + getBestHand().toString();
     }
 
-        private String getHandStrengthString() {
+    private String getHandStrengthString() {
         String handStrengthString;
         switch (handStrength) {
-            case 1:  handStrengthString = "High com.pokerapp.models.Card";
+            case 1:
+                handStrengthString = "High Card";
                 break;
-            case 2:  handStrengthString = "com.pokerapp.models.hands.Pair";
+            case 2:
+                handStrengthString = "Pair";
                 break;
-            case 3:  handStrengthString = "Two com.pokerapp.models.hands.Pair";
+            case 3:
+                handStrengthString = "Two Pair";
                 break;
-            case 4:  handStrengthString = "Three Of A Kind";
+            case 4:
+                handStrengthString = "Three Of A Kind";
                 break;
-            case 5:  handStrengthString = "com.pokerapp.models.hands.Straight";
+            case 5:
+                handStrengthString = "Straight";
                 break;
-            case 6:  handStrengthString = "com.pokerapp.models.hands.Flush";
+            case 6:
+                handStrengthString = "Flush";
                 break;
-            case 7:  handStrengthString = "Full House";
+            case 7:
+                handStrengthString = "Full House";
                 break;
-            case 8:  handStrengthString = "Four Of A Kind";
+            case 8:
+                handStrengthString = "Four Of A Kind";
                 break;
-            case 9:  handStrengthString = "com.pokerapp.models.hands.Straight com.pokerapp.models.hands.Flush";
+            case 9:
+                handStrengthString = "Straight Flush";
                 break;
-            default: handStrengthString = "Invalid Hand";
+            default:
+                handStrengthString = "Invalid Hand";
                 break;
         }
         return handStrengthString;

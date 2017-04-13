@@ -27,4 +27,18 @@ public class Flush extends PokerHand {
         }
     }
 
+    @Override
+    protected int subCompare(PokerHand pokerHand) {
+        for (int i = 4; i >= 0; i--) {
+            Card thisFlushCard = bestHand.get(i);
+            Card thatFlushCard = pokerHand.getBestHand().get(i);
+
+            if (thisFlushCard.getValue() - thatFlushCard.getValue() != 0) {
+                return thisFlushCard.getValue() - thatFlushCard.getValue();
+            }
+        }
+
+        return 0;
+    }
+
 }

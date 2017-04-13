@@ -25,31 +25,31 @@ public class CardTest {
     @Test
     public void valueToString() {
         Card aceSpades = new Card(1, 1);
-        assertEquals(aceSpades.toString(), "Ace of Spades");
+        assertEquals(aceSpades.toFullString(), "Ace of Spades");
         Card twoSpades = new Card(2, 1);
-        assertEquals(twoSpades.toString(), "Deuce of Spades");
+        assertEquals(twoSpades.toFullString(), "Deuce of Spades");
         Card threeHearts = new Card(3, 2);
-        assertEquals(threeHearts.toString(), "Three of Hearts");
+        assertEquals(threeHearts.toFullString(), "Three of Hearts");
         Card fourClubs = new Card(4, 3);
-        assertEquals(fourClubs.toString(), "Four of Clubs");
+        assertEquals(fourClubs.toFullString(), "Four of Clubs");
         Card fiveDiamonds = new Card(5, 4);
-        assertEquals(fiveDiamonds.toString(), "Five of Diamonds");
+        assertEquals(fiveDiamonds.toFullString(), "Five of Diamonds");
         Card sixSpades = new Card(6, 1);
-        assertEquals(sixSpades.toString(), "Six of Spades");
+        assertEquals(sixSpades.toFullString(), "Six of Spades");
         Card sevenHearts = new Card(7, 2);
-        assertEquals(sevenHearts.toString(), "Seven of Hearts");
+        assertEquals(sevenHearts.toFullString(), "Seven of Hearts");
         Card eightClubs = new Card(8, 3);
-        assertEquals(eightClubs.toString(), "Eight of Clubs");
+        assertEquals(eightClubs.toFullString(), "Eight of Clubs");
         Card NineDiamonds = new Card(9, 4);
-        assertEquals(NineDiamonds.toString(), "Nine of Diamonds");
+        assertEquals(NineDiamonds.toFullString(), "Nine of Diamonds");
         Card tenSpades = new Card(10, 1);
-        assertEquals(tenSpades.toString(), "Ten of Spades");
+        assertEquals(tenSpades.toFullString(), "Ten of Spades");
         Card jackHearts = new Card(11, 2);
-        assertEquals(jackHearts.toString(), "Jack of Hearts");
+        assertEquals(jackHearts.toFullString(), "Jack of Hearts");
         Card queenClubs = new Card(12, 3);
-        assertEquals(queenClubs.toString(), "Queen of Clubs");
+        assertEquals(queenClubs.toFullString(), "Queen of Clubs");
         Card kingDiamonds = new Card(13, 4);
-        assertEquals(kingDiamonds.toString(), "King of Diamonds");
+        assertEquals(kingDiamonds.toFullString(), "King of Diamonds");
     }
 
     @Test

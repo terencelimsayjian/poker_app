@@ -1,6 +1,5 @@
 import com.pokerapp.models.Card;
-import com.pokerapp.models.hands.Flush;
-import com.pokerapp.models.hands.PokerHand;
+import com.pokerapp.models.hands.*;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -60,5 +59,124 @@ public class FlushTest {
         }
 
         return randomUniqueCardValues;
+    }
+
+    @Test
+    public void testCompareFlush() {
+        ArrayList<Card> flushCards1 = new ArrayList<Card>(7);
+        flushCards1.add(new Card(9, 1));
+        flushCards1.add(new Card(7, 1));
+        flushCards1.add(new Card(5, 1));
+        flushCards1.add(new Card(3, 1));
+        flushCards1.add(new Card(10, 3));
+        flushCards1.add(new Card(1, 1));
+        flushCards1.add(new Card(4, 3));
+
+        PokerHand aceHighFlush = new Flush(flushCards1);
+
+        ArrayList<Card> flushCards2 = new ArrayList<Card>(7);
+        flushCards2.add(new Card(9, 1));
+        flushCards2.add(new Card(7, 1));
+        flushCards2.add(new Card(5, 1));
+        flushCards2.add(new Card(3, 1));
+        flushCards2.add(new Card(11, 2));
+        flushCards2.add(new Card(13, 1));
+        flushCards2.add(new Card(2, 2));
+
+        PokerHand kingHighFlush = new Flush(flushCards2);
+
+        int compareNum = aceHighFlush.compareTo(kingHighFlush);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareSecondHighCardFlush() {
+        ArrayList<Card> flushCards1 = new ArrayList<Card>(7);
+        flushCards1.add(new Card(9, 1));
+        flushCards1.add(new Card(7, 1));
+        flushCards1.add(new Card(5, 1));
+        flushCards1.add(new Card(1, 1));
+        flushCards1.add(new Card(10, 3));
+        flushCards1.add(new Card(10, 1));
+        flushCards1.add(new Card(4, 3));
+
+        PokerHand tenSecondHighestCardFlush = new Flush(flushCards1);
+
+        ArrayList<Card> flushCards2 = new ArrayList<Card>(7);
+        flushCards2.add(new Card(9, 1));
+        flushCards2.add(new Card(7, 1));
+        flushCards2.add(new Card(5, 1));
+        flushCards2.add(new Card(1, 1));
+        flushCards2.add(new Card(11, 2));
+        flushCards2.add(new Card(11, 1));
+        flushCards2.add(new Card(2, 2));
+
+        PokerHand jackSecondHighestCardFlush = new Flush(flushCards2);
+
+        int compareNum = tenSecondHighestCardFlush.compareTo(jackSecondHighestCardFlush);
+
+        assertTrue(compareNum < 0);
+    }
+
+    @Test
+    public void testCompareThirdHighCardFlush() {
+        ArrayList<Card> flushCards1 = new ArrayList<Card>(7);
+        flushCards1.add(new Card(11, 1));
+        flushCards1.add(new Card(7, 1));
+        flushCards1.add(new Card(5, 1));
+        flushCards1.add(new Card(1, 1));
+        flushCards1.add(new Card(10, 3));
+        flushCards1.add(new Card(9, 1));
+        flushCards1.add(new Card(4, 3));
+
+        PokerHand nineThirdHighestCardFlush = new Flush(flushCards1);
+
+        ArrayList<Card> flushCards2 = new ArrayList<Card>(7);
+        flushCards2.add(new Card(11, 1));
+        flushCards2.add(new Card(7, 1));
+        flushCards2.add(new Card(5, 1));
+        flushCards2.add(new Card(1, 1));
+        flushCards2.add(new Card(11, 2));
+        flushCards2.add(new Card(8, 1));
+        flushCards2.add(new Card(2, 2));
+
+        PokerHand eightThirdHighestCardFlush = new Flush(flushCards2);
+
+        int compareNum = nineThirdHighestCardFlush.compareTo(eightThirdHighestCardFlush);
+
+        assertTrue(compareNum > 0);
+    }
+
+    @Test
+    public void testCompareIdenticalFlush() {
+        ArrayList<Card> flushCards1 = new ArrayList<Card>(7);
+        flushCards1.add(new Card(11, 1));
+        flushCards1.add(new Card(7, 1));
+        flushCards1.add(new Card(13, 1));
+        flushCards1.add(new Card(1, 1));
+        flushCards1.add(new Card(10, 1));
+        flushCards1.add(new Card(3, 1));
+        flushCards1.add(new Card(4, 3));
+
+        PokerHand nineThirdHighestCardFlush = new Flush(flushCards1);
+
+        ArrayList<Card> flushCards2 = new ArrayList<Card>(7);
+        flushCards2.add(new Card(11, 1));
+        flushCards2.add(new Card(7, 1));
+        flushCards2.add(new Card(13, 1));
+        flushCards2.add(new Card(1, 1));
+        flushCards2.add(new Card(10, 1));
+        flushCards2.add(new Card(2, 1));
+        flushCards2.add(new Card(2, 2));
+
+        PokerHand eightThirdHighestCardFlush = new Flush(flushCards2);
+
+        System.out.println(nineThirdHighestCardFlush.getBestHand().toString());
+        System.out.println(eightThirdHighestCardFlush.getBestHand().toString());
+
+        int compareNum = nineThirdHighestCardFlush.compareTo(eightThirdHighestCardFlush);
+
+        assertTrue(compareNum == 0);
     }
 }
